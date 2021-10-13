@@ -52,9 +52,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
+    <Compile Include="Migrations\202110132218394_InitialCatalog.cs" />
+    <Compile Include="Migrations\202110132218394_InitialCatalog.designer.cs">
+      <DependentUpon>202110132218394_InitialCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110132218394_InitialCatalog.resx">
+      <DependentUpon>202110132218394_InitialCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
