@@ -41,7 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Concrete\Color.cs" />
+    <Compile Include="Concrete\Match.cs" />
+    <Compile Include="Concrete\Player.cs" />
+    <Compile Include="Concrete\Team.cs" />
+    <Compile Include="Concrete\TeamColor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{1eff4002-1b97-4557-91b1-788d08b6f045}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
