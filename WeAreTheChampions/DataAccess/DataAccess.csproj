@@ -51,6 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IColorDal.cs" />
+    <Compile Include="Abstract\IMatchDal.cs" />
+    <Compile Include="Abstract\IPlayerDal.cs" />
+    <Compile Include="Abstract\ITeamDal.cs" />
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
     <Compile Include="Migrations\202110132218394_InitialCatalog.cs" />
     <Compile Include="Migrations\202110132218394_InitialCatalog.designer.cs">
@@ -69,6 +73,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{1eff4002-1b97-4557-91b1-788d08b6f045}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{498bd0fc-8d9a-408b-a6da-b017c6125f83}</Project>
       <Name>Entities</Name>

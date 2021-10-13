@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Core.Enums;
 
 
-namespace DataAccess.Concrete
+namespace Entities.Concrete
 {
     public class Match:IEntity
     {
