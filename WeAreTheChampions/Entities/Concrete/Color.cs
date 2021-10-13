@@ -15,5 +15,6 @@ namespace DataAccess.Concrete
         public byte Green { get; set; }
         public byte Blue { get; set; }
 
+        public virtual ICollection<Team> Teams { get; set; }
     }
 }

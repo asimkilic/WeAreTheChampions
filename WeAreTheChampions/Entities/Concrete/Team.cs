@@ -12,5 +12,7 @@ namespace DataAccess.Concrete
         public int Id { get; set; }
         public string TeamName { get; set; }
 
+        public virtual ICollection<Player> Players { get; set; }
+        public virtual ICollection<Color> Colors { get; set; }
     }
 }

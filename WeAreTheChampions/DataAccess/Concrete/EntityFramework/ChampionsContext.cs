@@ -13,6 +13,20 @@ namespace DataAccess.Concrete.EntityFramework
         {
 
         }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            // #TeamColor
+            modelBuilder.Entity<TeamColor>().HasIndex(t => new { t.TeamId, t.ColorId }).IsUnique();
+           
+            // #Match
+            modelBuilder.Entity<Match>().Property(m => m.Team1Id).IsRequired();
+            modelBuilder.Entity<Match>().Property(m => m.Team2Id).IsRequired();
+            modelBuilder.Entity<Match>().Property(m => m.MatchTime).IsRequired();
+
+            // #Color
+            modelBuilder.Entity<Color>().HasIndex(c => new { c.Blue, c.Red, c.Green }).IsUnique();
+
+        }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Player> Players { get; set; }

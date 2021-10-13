@@ -13,15 +13,15 @@ namespace DataAccess.Concrete
     {
         public int Id { get; set; }
         public DateTime MatchTime { get; set; }
-        public byte Score1 { get; set; }
-        public byte Score2 { get; set; }
+        public byte? Score1 { get; set; }
+        public byte? Score2 { get; set; }
         public ResultEnum? ResultId { get; set; }
 
         public int Team1Id { get; set; }
-        public Team Team1 { get; set; }
+        public virtual Team Team1 { get; set; }
         public int Team2Id { get; set; }
-        public Team Team2 { get; set; }
+        public virtual Team Team2 { get; set; }
 
-        //TODO : Team1Id and Team2Id must be unique
+     
     }
 }

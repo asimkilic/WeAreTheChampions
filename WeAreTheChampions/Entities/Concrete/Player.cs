@@ -12,5 +12,6 @@ namespace DataAccess.Concrete
         public int Id { get; set; }
         public string PlayerName { get; set; }
 
+
     }
 }
