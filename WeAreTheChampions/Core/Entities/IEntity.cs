@@ -8,6 +8,7 @@ namespace Core.Entities
 {
     public interface IEntity
     {
+        // Represents the entity which is db object used for restriction
 
     }
 }
