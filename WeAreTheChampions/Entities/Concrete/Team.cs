@@ -14,6 +14,9 @@ namespace Entities.Concrete
 
         public virtual ICollection<Player> Players { get; set; }
         public virtual ICollection<TeamColor> TeamColors { get; set; }
+        public virtual ICollection<Match> HomeMatches { get; set; }
+        public virtual ICollection<Match> AwayMatches { get; set; }
+
 
     }
 }
