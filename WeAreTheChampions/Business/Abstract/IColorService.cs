@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IColorService
+    public interface IColorService:IServiceBase<Color>,IEntityServiceBase<Color>
     {
-        Color GetById(int colorId);
-        List<Color> GetAll();
-        void Add(Color color);
-        void Update(Color color);
-        void Delete(Color color);
-        void DeleteById(int colorId);
+       
     }
 }

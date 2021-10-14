@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ITeamService
+    public interface ITeamService:IServiceBase<Team>,IEntityServiceBase<Team>
     {
-        Team GetById(int teamId);
-        List<Team> GetAll();
-        void Add(Team team);
-        void Update(Team team);
-        void Delete(Team team);
-        void DeleteById(int teamId);
+      
     }
 }

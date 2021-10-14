@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ITeamColorService
+    public interface ITeamColorService:IServiceBase<TeamColor>
     {
         TeamColor GetByTeamId(int teamId);
         TeamColor GetByColorId(int colorId);
-        List<TeamColor> GetAll();
-        void Add(TeamColor teamColor);
-        void Update(TeamColor teamColor);
-        void Delete(TeamColor teamColor);
+    
         
     }
 }

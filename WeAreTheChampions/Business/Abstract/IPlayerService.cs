@@ -7,13 +7,8 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IPlayerService
+    public interface IPlayerService:IServiceBase<Player>,IEntityServiceBase<Player>
     {
-        Player GetById(int playerId);
-        List<Player> GetAll();
-        void Add(Player player);
-        void Update(Player player);
-        void Delete(Player player);
-        void DeleteById(int playerId);
+    
     }
 }
