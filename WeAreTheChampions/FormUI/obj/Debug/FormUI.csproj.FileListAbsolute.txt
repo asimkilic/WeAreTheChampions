@@ -1,0 +1,9 @@
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\FormUI.exe.config
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\FormUI.exe
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\FormUI.pdb
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.csproj.AssemblyReference.cache
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Properties.Resources.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.csproj.GenerateResource.cache
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.csproj.CoreCompileInputs.cache
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.exe
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.pdb

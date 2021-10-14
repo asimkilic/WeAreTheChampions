@@ -45,12 +45,22 @@
     <Compile Include="Abstract\IMatchService.cs" />
     <Compile Include="Abstract\IPlayerService.cs" />
     <Compile Include="Abstract\ITeamService.cs" />
+    <Compile Include="Concrete\ColorManager.cs" />
+    <Compile Include="Concrete\MatchManager.cs" />
+    <Compile Include="Concrete\PlayerManager.cs" />
+    <Compile Include="Concrete\TeamManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Concrete\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{1EFF4002-1B97-4557-91B1-788D08B6F045}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{984CD8BE-58C7-451F-A196-AE28B317DA8B}</Project>
+      <Name>DataAccess</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{498BD0FC-8D9A-408B-A6DA-B017C6125F83}</Project>
       <Name>Entities</Name>
