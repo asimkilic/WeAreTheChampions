@@ -45,6 +45,7 @@
     <Compile Include="Concrete\Match.cs" />
     <Compile Include="Concrete\Player.cs" />
     <Compile Include="Concrete\Team.cs" />
+    <Compile Include="Concrete\TeamColor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-    public class Team:IEntity
+    public class Team : IEntity
     {
+        public Team()
+        {
+            Players = new HashSet<Player>();
+            TeamColors = new HashSet<TeamColor>();
+            HomeMatches = new HashSet<Match>();
+            AwayMatches = new HashSet<Match>();
+
+        }
         public int Id { get; set; }
         public string TeamName { get; set; }
 

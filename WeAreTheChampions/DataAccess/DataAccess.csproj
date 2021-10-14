@@ -54,23 +54,19 @@
     <Compile Include="Abstract\IColorDal.cs" />
     <Compile Include="Abstract\IMatchDal.cs" />
     <Compile Include="Abstract\IPlayerDal.cs" />
+    <Compile Include="Abstract\ITeamColorDal.cs" />
     <Compile Include="Abstract\ITeamDal.cs" />
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
     <Compile Include="Concrete\EntityFramework\EfColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMatchDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPlayerDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfTeamColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTeamDal.cs" />
-    <Compile Include="Migrations\202110132218394_InitialCatalog.cs" />
-    <Compile Include="Migrations\202110132218394_InitialCatalog.designer.cs">
-      <DependentUpon>202110132218394_InitialCatalog.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Concrete\EntityFramework\EntityConfigurations\ColorConfiguration.cs" />
+    <Compile Include="Concrete\EntityFramework\EntityConfigurations\MatchConfiguration.cs" />
+    <Compile Include="Concrete\EntityFramework\EntityConfigurations\TeamColorConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202110132218394_InitialCatalog.resx">
-      <DependentUpon>202110132218394_InitialCatalog.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
