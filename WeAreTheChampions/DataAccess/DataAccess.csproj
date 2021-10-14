@@ -56,6 +56,10 @@
     <Compile Include="Abstract\IPlayerDal.cs" />
     <Compile Include="Abstract\ITeamDal.cs" />
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
+    <Compile Include="Concrete\EntityFramework\EfColorDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfMatchDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfPlayerDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfTeamDal.cs" />
     <Compile Include="Migrations\202110132218394_InitialCatalog.cs" />
     <Compile Include="Migrations\202110132218394_InitialCatalog.designer.cs">
       <DependentUpon>202110132218394_InitialCatalog.cs</DependentUpon>
