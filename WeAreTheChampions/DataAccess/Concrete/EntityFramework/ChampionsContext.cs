@@ -20,8 +20,9 @@ namespace DataAccess.Concrete.EntityFramework
            // modelBuilder.Entity<TeamColor>().HasIndex(t => new { t.TeamId, t.ColorId }).IsUnique();
            
             // #Match
-            modelBuilder.Entity<Match>().Property(m => m.Team1Id).IsRequired();
-            modelBuilder.Entity<Match>().Property(m => m.Team2Id).IsRequired();
+            //modelBuilder.Entity<Match>().Property(m => m.HomeTeam).IsRequired();
+            //modelBuilder.Entity<Match>().Property(m => m.Team2Id).IsRequired();
+          
             modelBuilder.Entity<Match>().Property(m => m.MatchTime).IsRequired();
 
             // #Color
@@ -30,6 +31,7 @@ namespace DataAccess.Concrete.EntityFramework
             //200 200 201
             //200 200 200
         }
+        public DbSet<TeamColor> TeamColors { get; set; }
         public DbSet<Color> Colors { get; set; }
         public DbSet<Match> Matches { get; set; }
         public DbSet<Player> Players { get; set; }

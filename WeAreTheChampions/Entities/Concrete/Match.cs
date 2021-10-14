@@ -17,10 +17,10 @@ namespace Entities.Concrete
         public byte? Score2 { get; set; }
         public ResultEnum? ResultId { get; set; }
 
-        public int Team1Id { get; set; }
-        public virtual Team Team1 { get; set; }
-        public int Team2Id { get; set; }
-        public virtual Team Team2 { get; set; }
+        public int HomeTeamId { get; set; }
+        public virtual Team HomeTeam { get; set; }
+        public int AwayTeamId { get; set; }
+        public virtual Team AwayTeam { get; set; }
 
      
     }

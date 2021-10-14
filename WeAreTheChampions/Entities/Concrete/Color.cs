@@ -15,6 +15,7 @@ namespace Entities.Concrete
         public byte Green { get; set; }
         public byte Blue { get; set; }
 
-        public virtual ICollection<Team> Teams { get; set; }
+
+        public virtual ICollection<TeamColor> TeamColors { get; set; }
     }
 }

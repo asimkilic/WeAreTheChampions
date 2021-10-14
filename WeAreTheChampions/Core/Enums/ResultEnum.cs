@@ -9,9 +9,9 @@ namespace Core.Enums
    public enum ResultEnum
     {
        
-        berabere = 0,
-        Team1Kazandi = 1,
-        Team2Kazandi = 2
+        draw = 0,
+        Team1Won = 1,
+        Team2Won = 2
     }
 }
     

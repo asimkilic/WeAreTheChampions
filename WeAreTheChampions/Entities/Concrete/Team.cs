@@ -13,6 +13,7 @@ namespace Entities.Concrete
         public string TeamName { get; set; }
 
         public virtual ICollection<Player> Players { get; set; }
-        public virtual ICollection<Color> Colors { get; set; }
+        public virtual ICollection<TeamColor> TeamColors { get; set; }
+
     }
 }
