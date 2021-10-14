@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,11 @@ namespace Business.Abstract
 {
    public interface IMatchService
     {
+        Match GetById(int matchId);
+        List<Match> GetAll();
+        void Add(Match match);
+        void Update(Match match);
+        void Delete(Match match);
+        void DeleteById(int matchId);
     }
 }
