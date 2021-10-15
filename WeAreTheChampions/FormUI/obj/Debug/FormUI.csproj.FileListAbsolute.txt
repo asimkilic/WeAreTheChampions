@@ -33,3 +33,5 @@ C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChamp
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.csproj.CopyComplete
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\FluentValidation.dll
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\FluentValidation.xml

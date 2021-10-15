@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.ValidationRules.FluentValidation;
+using Core.CrossCuttingConcerns.Validation;
+using Core.Enums;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using FluentValidation;
@@ -25,24 +27,21 @@ namespace Business.Concrete
 
         public void Add(Color color)
         {
-            var context = new ValidationContext<Color>(color);
-            ColorValidator colorValidator = new ColorValidator();
-            var result = colorValidator.Validate(context);
-            if (!result.IsValid)
-            {
-                throw new ValidationException(result.Errors);
-            }
+            
+            ValidationTool.Validate(new ColorValidator(ValidationStates.Add),color);
             //TODO: Check if exist.
             _colorDal.Add(color);
         }
 
         public void Delete(Color color)
         {
+            ValidationTool.Validate(new ColorValidator(ValidationStates.Delete), color);
             _colorDal.Delete(color);
         }
 
         public void DeleteById(int colorId)
         {
+            // It uses Delete method thus it doesnt need to validation
             _colorDal.Delete(_colorDal.Get(c => c.Id == colorId));
         }
 
@@ -58,6 +57,7 @@ namespace Business.Concrete
 
         public void Update(Color color)
         {
+            ValidationTool.Validate(new ColorValidator(ValidationStates.Update), color);
             _colorDal.Update(color);
         }
     }

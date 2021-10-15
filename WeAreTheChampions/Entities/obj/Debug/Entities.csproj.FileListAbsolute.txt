@@ -10,3 +10,5 @@ C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChamp
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\Entities\bin\Debug\EntityFramework.dll
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\Entities\bin\Debug\Core.dll.config
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\Entities\bin\Debug\EntityFramework.xml
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\Entities\bin\Debug\FluentValidation.dll
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\Entities\bin\Debug\FluentValidation.xml
