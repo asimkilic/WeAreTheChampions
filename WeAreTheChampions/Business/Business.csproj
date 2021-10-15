@@ -73,6 +73,8 @@
     <Compile Include="Concrete\PlayerManager.cs" />
     <Compile Include="Concrete\TeamColorManager.cs" />
     <Compile Include="Concrete\TeamManager.cs" />
+    <Compile Include="DependencyResolvers\Autofac\AutofacBusinessModule.cs" />
+    <Compile Include="DependencyResolvers\Autofac\InstanceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -93,5 +95,6 @@
       <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
