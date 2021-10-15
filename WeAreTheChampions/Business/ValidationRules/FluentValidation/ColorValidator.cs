@@ -13,6 +13,7 @@ namespace Business.ValidationRules.FluentValidation
     {
         public ColorValidator(ValidationStates state)
         {
+            // https://docs.fluentvalidation.net/en/latest/built-in-validators.html
             if (state == ValidationStates.Delete || state == ValidationStates.Update)
             {
                 RuleFor(x => x.Id).GreaterThan(0);

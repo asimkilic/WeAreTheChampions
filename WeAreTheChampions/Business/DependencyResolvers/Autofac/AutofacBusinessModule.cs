@@ -1,6 +1,9 @@
 ﻿using Autofac;
+using Autofac.Extras.DynamicProxy;
 using Business.Abstract;
 using Business.Concrete;
+using Castle.DynamicProxy;
+using Core.Utilities.Interceptors;
 using DataAccess.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using System;
@@ -32,15 +35,26 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<TeamManager>().As<ITeamService>().SingleInstance();
             builder.RegisterType<EfTeamDal>().As<ITeamDal>().SingleInstance();
 
-            //int concreteSuffixCount = "Manager".Length; // 7
-            //int abstactSuffixCount = "Service".Length; //7
+            //int concreteSuffixCount = "Manager".Length; // 7  we need to know suffix such as 'Manager' in 'ColorManager' thus we can get the exact name of class to find its service interface
+            //int abstactSuffixCount = "Service".Length; //7   we need to know suffix such as 'Service' in 'IColorService' thus we can get the exact name of interface to find its manager class
 
+
+            //REF : https://www.youtube.com/watch?v=mCUNrRtVVWY
             //builder.RegisterAssemblyTypes(Assembly.Load(nameof(Business)))
-            //  .Where(x => x.Namespace.Contains("Concrete") || x.Namespace.Contains("Abstract")) //concrete ve abstract içindeki interface ve classları aldık
+            //  .Where(x => x.Namespace.Contains("Concrete") || x.Namespace.Contains("Abstract")) //we got  interfaces from concrete and abstract folders 
             //  .As(x => x.GetInterfaces().FirstOrDefault(i => i.Name.Substring(0, (i.Name.Length - abstactSuffixCount)) == "I" + x.Name.Substring(0, (x.Name.Length - concreteSuffixCount)))); 
-            //// adının sonundaki Service kısmını atıyoruz elimizde IColor kısmı kalıyor bunu class'ların başına I koyup sonundaki Manager kısmını sildiğimizde eşleşiyorsa alıyoruz
-           
-            
+            // We discard the 'Service' part at the end of the name, we have the 'IColor' part, and if we put I at the beginning of the classes and delete the Manager part at the end, we get it if it matches
+
+
+            // REF : https://github.com/engindemirog/NetCoreBackend/blob/master/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs
+            // For all classes we run here first and check if they have Aspects 
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();  
+
+            builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()  // Get the interfaces which are implemented 
+                .EnableInterfaceInterceptors(new ProxyGenerationOptions()
+                {
+                    Selector = new AspectInterceptorSelector()  // Call AspectInterceptorSelector for them
+                }).SingleInstance();
 
         }
     }

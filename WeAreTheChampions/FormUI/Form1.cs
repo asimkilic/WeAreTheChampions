@@ -25,11 +25,11 @@ namespace FormUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            var result = _colorService.GetAll();
-            foreach (var item in result)
-            {
-                MessageBox.Show(item.ColorName);
-            }
+            //var result = _colorService.GetAll();
+            //foreach (var item in result)
+            //{
+            //    MessageBox.Show(item.ColorName);
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)

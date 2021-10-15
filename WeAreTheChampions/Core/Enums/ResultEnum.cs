@@ -9,7 +9,7 @@ namespace Core.Enums
    public enum ResultEnum
     {
        
-        draw = 0,
+        Draw = 0,
         Team1Won = 1,
         Team2Won = 2
     }
