@@ -17,7 +17,7 @@ namespace Business.Concrete
         private IColorDal _colorDal;
         public ColorManager(IColorDal colorDal)
         {
-            //Dependency Injection
+            
             _colorDal = colorDal;
         }
         
