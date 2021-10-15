@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Enums;
 using DataAccess.Abstract;
@@ -15,7 +16,7 @@ namespace Business.Concrete
 {
     public class ColorManager : IColorService
     {
-        //TODO: ValidationAspect will add.
+
         //TODO: CacheAspect will add.
 
         private IColorDal _colorDal;
@@ -25,17 +26,18 @@ namespace Business.Concrete
             _colorDal = colorDal;
         }
 
+        [ValidationAspect(typeof(ColorValidator))]
         public void Add(Color color)
         {
-            
-            ValidationTool.Validate(new ColorValidator(ValidationStates.Add),color);
+
             //TODO: Check if exist.
             _colorDal.Add(color);
         }
 
+        [ValidationAspect(typeof(ColorValidator), ValidationStates.Delete)]
         public void Delete(Color color)
         {
-            ValidationTool.Validate(new ColorValidator(ValidationStates.Delete), color);
+
             _colorDal.Delete(color);
         }
 
@@ -55,9 +57,10 @@ namespace Business.Concrete
             return _colorDal.Get(c => c.Id == colorId);
         }
 
+        [ValidationAspect(typeof(ColorValidator), ValidationStates.Update)]
         public void Update(Color color)
         {
-            ValidationTool.Validate(new ColorValidator(ValidationStates.Update), color);
+
             _colorDal.Update(color);
         }
     }
