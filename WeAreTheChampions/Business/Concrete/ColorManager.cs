@@ -13,13 +13,13 @@ namespace Business.Concrete
     {
         //TODO: ValidationAspect will add.
         //TODO: CacheAspect will add.
-        //TODO: Write return type with message
+      
         private IColorDal _colorDal;
         public ColorManager(IColorDal colorDal)
         {
             _colorDal = colorDal;
         }
-
+        
         public void Add(Color color)
         {
             //TODO: Check if exist.
