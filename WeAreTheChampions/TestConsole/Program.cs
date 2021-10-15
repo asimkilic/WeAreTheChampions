@@ -30,6 +30,7 @@ namespace TestConsole
                     Console.WriteLine($"{item.ColorName} {item.Red} {item.Green} {item.Blue}");
                 }
                 Console.WriteLine("-----------------------");
+               
                 foreach (var item in context.Teams)
                 {
                     Console.WriteLine($"item team name: {item.TeamName}");

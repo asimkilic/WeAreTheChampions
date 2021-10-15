@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abstract\IColorService.cs" />
+    <Compile Include="Abstract\IEntityServiceBase.cs" />
     <Compile Include="Abstract\IMatchService.cs" />
     <Compile Include="Abstract\IPlayerService.cs" />
+    <Compile Include="Abstract\IServiceBase.cs" />
     <Compile Include="Abstract\ITeamColorService.cs" />
     <Compile Include="Abstract\ITeamService.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
