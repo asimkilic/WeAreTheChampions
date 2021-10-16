@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Utilities.Results;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ITeamColorService:IServiceBase<TeamColor>
+    public interface ITeamColorService : IServiceBase<TeamColor>
     {
-        TeamColor GetByTeamId(int teamId);
-        TeamColor GetByColorId(int colorId);
-    
-        
+        IDataResult<TeamColor> GetByTeamId(int teamId);
+        IDataResult<TeamColor> GetByColorId(int colorId);
+
+
     }
 }

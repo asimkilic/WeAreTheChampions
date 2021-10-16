@@ -95,6 +95,10 @@
       <Project>{FD3D901E-4A6A-419A-9C4F-8BB2F82B3DE2}</Project>
       <Name>Business</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{1EFF4002-1B97-4557-91B1-788D08B6F045}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities\Entities.csproj">
       <Project>{498BD0FC-8D9A-408B-A6DA-B017C6125F83}</Project>
       <Name>Entities</Name>

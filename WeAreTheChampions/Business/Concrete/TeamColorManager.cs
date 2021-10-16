@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,34 +19,39 @@ namespace Business.Concrete
             _teamColorDal = teamColorDal;
         }
 
-        public void Add(TeamColor teamColor)
+        public IResult Add(TeamColor teamColor)
         {
             _teamColorDal.Add(teamColor);
+            return new SuccessResult();
         }
 
-        public void Delete(TeamColor teamColor)
+        public IResult Delete(TeamColor teamColor)
         {
             _teamColorDal.Delete(teamColor);
+            return new SuccessResult();
+
         }
 
-        public List<TeamColor> GetAll()
+        public IDataResult<List<TeamColor>> GetAll()
         {
-            return _teamColorDal.GetAll();
+            return new SuccessDataResult<List<TeamColor>>(_teamColorDal.GetAll());
         }
 
-        public TeamColor GetByColorId(int colorId)
+        public IDataResult<TeamColor> GetByColorId(int colorId)
         {
-            return _teamColorDal.Get(x => x.ColorId == colorId);
+            return new SuccessDataResult<TeamColor>(_teamColorDal.Get(x => x.ColorId == colorId));
         }
 
-        public TeamColor GetByTeamId(int teamId)
+        public IDataResult<TeamColor> GetByTeamId(int teamId)
         {
-            return _teamColorDal.Get(x => x.TeamId == teamId);
+            return new SuccessDataResult<TeamColor>(_teamColorDal.Get(x => x.TeamId == teamId));
         }
 
-        public void Update(TeamColor teamColor)
+        public IResult Update(TeamColor teamColor)
         {
             _teamColorDal.Update(teamColor);
+            return new SuccessResult();
+
         }
     }
 }
