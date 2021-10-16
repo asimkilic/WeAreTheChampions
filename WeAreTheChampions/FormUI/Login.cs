@@ -2,6 +2,7 @@
 using Business.DependencyResolvers.Autofac;
 using Entities.Concrete;
 using Entities.DTOs;
+using FormUI.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -50,10 +51,15 @@ namespace FormUI
             }
             //TODO: success redirect another page
 
-            DateTime date = DateTime.Now;
 
-            string a = date.ToString("HH:mm");
+        }
 
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Register register = new Register();
+            register.ShowDialog();
+            this.Show();
         }
     }
 }

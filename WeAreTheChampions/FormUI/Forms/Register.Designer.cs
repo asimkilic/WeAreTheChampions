@@ -29,7 +29,6 @@ namespace FormUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new KLCToolbox.KLCControls.KLCButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,18 +40,9 @@ namespace FormUI.Forms
             this.txtEmail = new KLCToolbox.KLCControls.KLCTextBox();
             this.txtPassword = new KLCToolbox.KLCControls.KLCTextBox();
             this.btnSignup = new KLCToolbox.KLCControls.KLCButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FormUI.Properties.Resources.KLC_background;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 318);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -236,6 +226,16 @@ namespace FormUI.Forms
             this.btnSignup.Text = "SIGN UP";
             this.btnSignup.UseVisualStyleBackColor = false;
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FormUI.Properties.Resources.KLC_background;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(372, 318);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // Register
             // 

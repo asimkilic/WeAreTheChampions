@@ -37,6 +37,7 @@ namespace FormUI
             this.label3 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblWarning = new System.Windows.Forms.Label();
+            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -128,6 +129,21 @@ namespace FormUI
             this.lblWarning.TabIndex = 6;
             this.lblWarning.Text = "HATALI PAROLA";
             // 
+            // btnSignUp
+            // 
+            this.btnSignUp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(0)))));
+            this.btnSignUp.FlatAppearance.BorderSize = 0;
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Leelawadee UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSignUp.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSignUp.Location = new System.Drawing.Point(502, 495);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(210, 54);
+            this.btnSignUp.TabIndex = 7;
+            this.btnSignUp.Text = "SIGN UP";
+            this.btnSignUp.UseVisualStyleBackColor = false;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -136,6 +152,7 @@ namespace FormUI
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.lblWarning);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label3);
@@ -164,6 +181,7 @@ namespace FormUI
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblWarning;
+        private System.Windows.Forms.Button btnSignUp;
     }
 }
 
