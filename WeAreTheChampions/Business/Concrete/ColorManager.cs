@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Enums;
@@ -19,8 +20,6 @@ namespace Business.Concrete
 {
     public class ColorManager : IColorService
     {
-
-        //TODO: CacheAspect will add.
 
         private IColorDal _colorDal;
         private ITeamColorService _teamColorService;
@@ -49,6 +48,18 @@ namespace Business.Concrete
             _colorDal.Add(color);
 
             return new SuccessResult();
+        }
+
+        [TransactionScopeAspect]
+        public IResult AddTransactionalTest(Color color)
+        {
+            Add(color);
+            if (color.ColorName.Contains("yeşil"))
+            {
+                throw new Exception();
+            }
+            Add(color);
+            return null;
         }
 
         [ValidationAspect(typeof(ColorValidator), ValidationStates.Delete)]
