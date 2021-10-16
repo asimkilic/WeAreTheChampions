@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace FormUI
 {
@@ -14,9 +15,31 @@ namespace FormUI
         [STAThread]
         static void Main()
         {
+            // REF: https://stackoverflow.com/questions/8148156/winforms-global-exception-handling
+            // REF: https://blogs.msmvps.com/deborahk/global-exception-handler-winforms/
+            Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+            AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
         }
+
+        static void MyHandler(object sender, UnhandledExceptionEventArgs args)
+        {
+            Exception e = (Exception)args.ExceptionObject;
+            Console.WriteLine("MyHandler caught : " + e.Message);
+            MessageBox.Show(e.Message);
+
+        }
+
+        static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            // Do logging
+            MessageBox.Show(e.Exception.Message);
+
+
+        }
+      
     }
 }

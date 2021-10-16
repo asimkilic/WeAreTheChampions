@@ -37,8 +37,8 @@ namespace FormUI
             Color color = new Color();
             color.Blue = 5;
             color.ColorName = textBox1.Text;
-            _colorService.AddTransactionalTest(color);
-        
+           // _colorService.AddTransactionalTest(color);
+            var a=_colorService.Add(color);
            
         }
     }
