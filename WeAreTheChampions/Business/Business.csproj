@@ -74,6 +74,7 @@
     <Compile Include="Abstract\ITeamService.cs" />
     <Compile Include="Abstract\IUserService.cs" />
     <Compile Include="BusinessAspects\Autofac\SecuredOperation.cs" />
+    <Compile Include="Concrete\AuthManager.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
     <Compile Include="Concrete\MatchManager.cs" />
     <Compile Include="Concrete\PlayerManager.cs" />
