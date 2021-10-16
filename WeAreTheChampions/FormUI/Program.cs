@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using FormUI.Forms;
 
 namespace FormUI
 {
@@ -22,7 +23,7 @@ namespace FormUI
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Register());
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)

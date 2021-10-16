@@ -15,6 +15,7 @@ namespace FormUI.Forms
         public Register()
         {
             InitializeComponent();
+           
         }
     }
 }
