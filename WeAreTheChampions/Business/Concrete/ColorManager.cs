@@ -29,7 +29,10 @@ namespace Business.Concrete
             _colorDal = colorDal;
             _teamColorService = teamColorService;
         }
-
+        // admin        : has authority over the whole project
+        // color.admin  : has authority over the Color operations
+        // color.add    : has authority only add operation
+        [SecuredOperation("admin,color.admin,color.add")]
         [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
