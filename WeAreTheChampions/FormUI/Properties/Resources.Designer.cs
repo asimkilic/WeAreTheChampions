@@ -73,6 +73,16 @@ namespace FormUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap KLC_background {
+            get {
+                object obj = ResourceManager.GetObject("KLC-background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newyork_800_500_whiteblue {
             get {
                 object obj = ResourceManager.GetObject("newyork-800-500-whiteblue", resourceCulture);
