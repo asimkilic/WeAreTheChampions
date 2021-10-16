@@ -56,12 +56,14 @@
     <Compile Include="Abstract\IPlayerDal.cs" />
     <Compile Include="Abstract\ITeamColorDal.cs" />
     <Compile Include="Abstract\ITeamDal.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
     <Compile Include="Concrete\EntityFramework\EfColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMatchDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPlayerDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTeamColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTeamDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\ColorConfiguration.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\MatchConfiguration.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\TeamColorConfiguration.cs" />

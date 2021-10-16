@@ -22,42 +22,44 @@ namespace Business.Concrete
         public IResult Add(User user)
         {
             _userDal.Add(user);
-            return new SuccessResult(); 
+            return new SuccessResult();
         }
 
         public IResult Delete(User user)
         {
-            throw new NotImplementedException();
+            _userDal.Delete(user);
+            return new SuccessResult();
         }
 
         public IResult DeleteById(int userId)
         {
-            throw new NotImplementedException();
+            return Delete(_userDal.Get(x => x.Id == userId));
         }
 
         public IDataResult<List<User>> GetAll()
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<User>>(_userDal.GetAll());
         }
 
         public IDataResult<User> GetById(int userId)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<User>(_userDal.Get(x => x.Id == userId));
         }
 
         public IDataResult<User> GetByMail(string email)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<User>(_userDal.Get(x => x.Email == email));
         }
 
         public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            throw new NotImplementedException();
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
 
         public IResult Update(User user)
         {
-            throw new NotImplementedException();
+            _userDal.Update(user);
+            return new SuccessResult();
         }
     }
 }

@@ -84,6 +84,7 @@
     <Compile Include="Entities\Concrete\OperationClaim.cs" />
     <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Entities\Concrete\UserOperationClaim.cs" />
+    <Compile Include="Entities\IDto.cs" />
     <Compile Include="Entities\IEntity.cs" />
     <Compile Include="Enums\ResultEnum.cs" />
     <Compile Include="Enums\ValidationStates.cs" />
