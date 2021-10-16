@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Business.Concrete
@@ -34,6 +35,8 @@ namespace Business.Concrete
 
         public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
         {
+            Thread.Sleep(5000);
+            return new SuccessDataResult<User>(new User());
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
             var user = new User

@@ -20,7 +20,7 @@ namespace FormUI
             // REF: https://blogs.msmvps.com/deborahk/global-exception-handler-winforms/
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Login());
@@ -29,8 +29,14 @@ namespace FormUI
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)
         {
             Exception e = (Exception)args.ExceptionObject;
-            Console.WriteLine("MyHandler caught : " + e.Message);
-            MessageBox.Show(e.Message);
+            if(e.GetType()== typeof(System.Threading.ThreadAbortException))
+            {
+               // MessageBox.Show("type çalıştı");
+                return;
+            }
+        
+            Console.WriteLine("MyHandler caught : " + e.Message + " " + e.InnerException);
+            MessageBox.Show(e.Message + e.InnerException);
 
         }
 
@@ -41,6 +47,6 @@ namespace FormUI
 
 
         }
-      
+
     }
 }

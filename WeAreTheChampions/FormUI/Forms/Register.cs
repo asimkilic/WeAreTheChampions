@@ -20,26 +20,20 @@ namespace FormUI.Forms
     public partial class Register : Form
     {
         private IAuthService _authService;
-       
+
         public Register()
         {
             InitializeComponent();
             _authService = InstanceFactory.GetInstance<IAuthService>();
 
         }
-         void Splash()
+        void Splash()
         {
             frmSplashScreen frm = new frmSplashScreen();
-            try
-            {
-                Application.Run(frm);
-            }
-            catch (Exception)
-            {
 
-               
-            }
-           
+            Application.Run(frm);
+
+
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
@@ -53,16 +47,10 @@ namespace FormUI.Forms
                 Password = txtPassword.KLCText
             };
             var result = _authService.Register(registerUser, registerUser.Password);
-            try
-            {
-                t.Abort();
-                
-            }
-            catch (Exception)
-            {
 
-                
-            }
+            t.Abort();
+
+
             if (result.Success)
             {
                 // return login form
@@ -84,6 +72,6 @@ namespace FormUI.Forms
             Close();
         }
 
-    
+
     }
 }
