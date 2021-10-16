@@ -64,6 +64,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IAuthService.cs" />
     <Compile Include="Abstract\IColorService.cs" />
     <Compile Include="Abstract\IEntityServiceBase.cs" />
     <Compile Include="Abstract\IMatchService.cs" />
@@ -71,11 +72,15 @@
     <Compile Include="Abstract\IServiceBase.cs" />
     <Compile Include="Abstract\ITeamColorService.cs" />
     <Compile Include="Abstract\ITeamService.cs" />
+    <Compile Include="Abstract\IUserService.cs" />
+    <Compile Include="BusinessAspects\Autofac\SecuredOperation.cs" />
+    <Compile Include="Concrete\AuthManager.cs" />
     <Compile Include="Concrete\ColorManager.cs" />
     <Compile Include="Concrete\MatchManager.cs" />
     <Compile Include="Concrete\PlayerManager.cs" />
     <Compile Include="Concrete\TeamColorManager.cs" />
     <Compile Include="Concrete\TeamManager.cs" />
+    <Compile Include="Concrete\UserManager.cs" />
     <Compile Include="DependencyResolvers\Autofac\AutofacBusinessModule.cs" />
     <Compile Include="DependencyResolvers\Autofac\InstanceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

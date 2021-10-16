@@ -35,6 +35,11 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<TeamManager>().As<ITeamService>().SingleInstance();
             builder.RegisterType<EfTeamDal>().As<ITeamDal>().SingleInstance();
 
+            builder.RegisterType<UserManager>().As<IUserService>().SingleInstance();
+            builder.RegisterType<EfUserDal>().As<IUserDal>().SingleInstance();
+
+            builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
+
             //int concreteSuffixCount = "Manager".Length; // 7  we need to know suffix such as 'Manager' in 'ColorManager' thus we can get the exact name of class to find its service interface
             //int abstactSuffixCount = "Service".Length; //7   we need to know suffix such as 'Service' in 'IColorService' thus we can get the exact name of interface to find its manager class
 
@@ -48,7 +53,7 @@ namespace Business.DependencyResolvers.Autofac
 
             // REF : https://github.com/engindemirog/NetCoreBackend/blob/master/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs
             // For all classes we run here first and check if they have Aspects 
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();  
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()  // Get the interfaces which are implemented 
                 .EnableInterfaceInterceptors(new ProxyGenerationOptions()

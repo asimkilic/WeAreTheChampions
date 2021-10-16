@@ -56,18 +56,24 @@
     <Compile Include="Abstract\IPlayerDal.cs" />
     <Compile Include="Abstract\ITeamColorDal.cs" />
     <Compile Include="Abstract\ITeamDal.cs" />
+    <Compile Include="Abstract\IUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\ChampionsContext.cs" />
     <Compile Include="Concrete\EntityFramework\EfColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfMatchDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfPlayerDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTeamColorDal.cs" />
     <Compile Include="Concrete\EntityFramework\EfTeamDal.cs" />
+    <Compile Include="Concrete\EntityFramework\EfUserDal.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\ColorConfiguration.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\MatchConfiguration.cs" />
     <Compile Include="Concrete\EntityFramework\EntityConfigurations\TeamColorConfiguration.cs" />
     <Compile Include="Migrations\202110141700020_InitialCatalog.cs" />
     <Compile Include="Migrations\202110141700020_InitialCatalog.designer.cs">
       <DependentUpon>202110141700020_InitialCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110160155548_UserOperationClaimEntites.cs" />
+    <Compile Include="Migrations\202110160155548_UserOperationClaimEntites.designer.cs">
+      <DependentUpon>202110160155548_UserOperationClaimEntites.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,6 +95,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110141700020_InitialCatalog.resx">
       <DependentUpon>202110141700020_InitialCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110160155548_UserOperationClaimEntites.resx">
+      <DependentUpon>202110160155548_UserOperationClaimEntites.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

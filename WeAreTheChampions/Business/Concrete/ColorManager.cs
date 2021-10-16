@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
@@ -38,12 +39,12 @@ namespace Business.Concrete
         {
 
             //TODO: Check if exist.
-      
-          var result=  BusinessRules.Run(CheckIfColorExist(color),CheckIfColorNameExist(color.ColorName));
-            if (result!=null)
+
+            var result = BusinessRules.Run(CheckIfColorExist(color), CheckIfColorNameExist(color.ColorName));
+            if (result != null)
             {
                 return result;
-                
+
             }
             _colorDal.Add(color);
 
