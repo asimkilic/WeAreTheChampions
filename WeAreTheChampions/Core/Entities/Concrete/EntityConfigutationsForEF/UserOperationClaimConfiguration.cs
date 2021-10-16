@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Core.Entities.Concrete.EntityConfigutationsForEF
 {
-    public class UserOpetaionClaimConfiguration : EntityTypeConfiguration<UserOperationClaim>
+    public class UserOperationClaimConfiguration : EntityTypeConfiguration<UserOperationClaim>
     {
-        public UserOpetaionClaimConfiguration()
+        public UserOperationClaimConfiguration()
         {
             // Primary Keys
             //  HasKey(x => new { x.UserId, x.OperationClaimId });
