@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
@@ -32,18 +33,18 @@ namespace Business.Concrete
         // admin        : has authority over the whole project
         // color.admin  : has authority over the Color operations
         // color.add    : has authority only add operation
-       // [SecuredOperation("admin,color.admin,color.add")]
+        [SecuredOperation("admin,color.admin,color.add")]
         [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
 
             //TODO: Check if exist.
-      
-          var result=  BusinessRules.Run(CheckIfColorExist(color),CheckIfColorNameExist(color.ColorName));
-            if (result!=null)
+
+            var result = BusinessRules.Run(CheckIfColorExist(color), CheckIfColorNameExist(color.ColorName));
+            if (result != null)
             {
                 return result;
-                
+
             }
             _colorDal.Add(color);
 
