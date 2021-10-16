@@ -31,7 +31,11 @@ namespace Business.Concrete
         {
 
             //TODO: Check if exist.
-            _colorDal.Add(color);
+            //TODO: return type can change with boolean
+            if (!CheckIfColorExist(color))
+            {
+                _colorDal.Add(color);
+            }
         }
 
         [ValidationAspect(typeof(ColorValidator), ValidationStates.Delete)]
@@ -62,6 +66,18 @@ namespace Business.Concrete
         {
 
             _colorDal.Update(color);
+        }
+
+
+        // Business Rules
+        private bool CheckIfColorExist(Color color)
+        {
+            var result = false;  //TODO: Create a method which checck RGB and ColorName exist in DB 
+            if (result)
+            {
+                throw new Exception("Color already exist in database");
+            }
+            return result;
         }
     }
 }
