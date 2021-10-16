@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,34 +19,38 @@ namespace Business.Concrete
             _matchDal = matchDal;
         }
 
-        public void Add(Match match)
+        public IResult Add(Match match)
         {
             _matchDal.Add(match);
+            return new SuccessResult();
         }
 
-        public void Delete(Match match)
+        public IResult Delete(Match match)
         {
             _matchDal.Delete(match);
+            return new SuccessResult();
         }
 
-        public void DeleteById(int matchId)
+        public IResult DeleteById(int matchId)
         {
             _matchDal.Delete(_matchDal.Get(m => m.Id == matchId));
+            return new SuccessResult();
         }
 
-        public List<Match> GetAll()
+        public IDataResult<List<Match>> GetAll()
         {
-            return _matchDal.GetAll();
+            return new SuccessDataResult<List<Match>>(_matchDal.GetAll());
         }
 
-        public Match GetById(int matchId)
+        public IDataResult<Match> GetById(int matchId)
         {
-            return _matchDal.Get(m => m.Id == matchId);
+            return new SuccessDataResult<Match>(_matchDal.Get(m => m.Id == matchId));
         }
 
-        public void Update(Match match)
+        public IResult Update(Match match)
         {
             _matchDal.Update(match);
+            return new SuccessResult();
         }
     }
 }

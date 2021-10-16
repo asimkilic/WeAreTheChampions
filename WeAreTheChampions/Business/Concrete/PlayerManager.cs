@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,34 +19,40 @@ namespace Business.Concrete
             _playerDal = playerDal;
         }
 
-        public void Add(Player player)
+        public IResult Add(Player player)
         {
             _playerDal.Add(player);
+            return new SuccessResult();
         }
 
-        public void Delete(Player player)
+        public IResult Delete(Player player)
         {
             _playerDal.Delete(player);
+            return new SuccessResult();
+
         }
 
-        public void DeleteById(int playerId)
+        public IResult DeleteById(int playerId)
         {
-            _playerDal.Delete(_playerDal.Get(p => p.Id == playerId));
+            return Delete(_playerDal.Get(p => p.Id == playerId));
+
         }
 
-        public List<Player> GetAll()
+        public IDataResult<List<Player>> GetAll()
         {
-            return _playerDal.GetAll();
+            return new SuccessDataResult<List<Player>>(_playerDal.GetAll());
         }
 
-        public Player GetById(int playerId)
+        public IDataResult<Player> GetById(int playerId)
         {
-            return _playerDal.Get(p => p.Id == playerId);
+            return new SuccessDataResult<Player>(_playerDal.Get(p => p.Id == playerId));
         }
 
-        public void Update(Player player)
+        public IResult Update(Player player)
         {
             _playerDal.Update(player);
+            return new SuccessResult();
+
         }
     }
 }

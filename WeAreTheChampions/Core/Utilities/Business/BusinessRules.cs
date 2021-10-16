@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Utilities.Results;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,17 @@ namespace Core.Utilities.Business
 {
     public class BusinessRules
     {
-        public static bool Run(params bool[] logics)
+        public static IResult Run(params IResult[] logics)
         {
-            foreach (var logic in logics)
+            foreach (var result in logics)
             {
-                if (logic == true)
+                if (!result.Success)
                 {
-                    return !logic;
+                    // We inform the business about the unsuccessful business rules that come with the parameter.
+                    return result;
                 }
             }
-            return true;
+            return null;
         }
     }
 }

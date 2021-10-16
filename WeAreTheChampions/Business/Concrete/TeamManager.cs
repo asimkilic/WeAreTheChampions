@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -18,34 +19,39 @@ namespace Business.Concrete
             _teamDal = teamDal;
         }
 
-        public void Add(Team team)
+        public IResult Add(Team team)
         {
             _teamDal.Add(team);
+            return new SuccessResult();
         }
 
-        public void Delete(Team team)
+        public IResult Delete(Team team)
         {
             _teamDal.Delete(team);
+            return new SuccessResult();
+
         }
 
-        public void DeleteById(int teamId)
+        public IResult DeleteById(int teamId)
         {
-            _teamDal.Delete(_teamDal.Get(t => t.Id == teamId));
+            return Delete(_teamDal.Get(t => t.Id == teamId));
         }
 
-        public List<Team> GetAll()
+        public IDataResult<List<Team>> GetAll()
         {
-            return _teamDal.GetAll();
+            return new SuccessDataResult<List<Team>>(_teamDal.GetAll());
         }
 
-        public Team GetById(int teamId)
+        public IDataResult<Team> GetById(int teamId)
         {
-            return _teamDal.Get(t => t.Id == teamId);
+            return new SuccessDataResult<Team>(_teamDal.Get(t => t.Id == teamId));
         }
 
-        public void Update(Team team)
+        public IResult Update(Team team)
         {
             _teamDal.Update(team);
+            return new SuccessResult();
+
         }
     }
 }

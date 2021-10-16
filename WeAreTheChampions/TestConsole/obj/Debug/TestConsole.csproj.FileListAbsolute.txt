@@ -18,3 +18,8 @@ C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChamp
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\obj\Debug\TestConsole.csproj.CopyComplete
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\obj\Debug\TestConsole.exe
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\obj\Debug\TestConsole.pdb
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\bin\Debug\Castle.Core.dll
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\bin\Debug\FluentValidation.dll
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\bin\Debug\Entities.dll.config
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\bin\Debug\Castle.Core.xml
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\TestConsole\bin\Debug\FluentValidation.xml

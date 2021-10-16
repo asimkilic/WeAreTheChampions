@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Utilities.Results;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ namespace Business.Abstract
 {
     public interface IEntityServiceBase<T>
     {
-        void DeleteById(int entityId);
-        T GetById(int entityId);
-    
+        IResult DeleteById(int entityId);
+        IDataResult<T> GetById(int entityId);
+
     }
 }
