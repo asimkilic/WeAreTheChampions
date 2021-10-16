@@ -80,7 +80,7 @@
     <Compile Include="DataAccess\IEntityRepository.cs" />
     <Compile Include="Entities\Concrete\EntityConfigutationsForEF\OperationClaimConfiguration.cs" />
     <Compile Include="Entities\Concrete\EntityConfigutationsForEF\UserConfiguration.cs" />
-    <Compile Include="Entities\Concrete\EntityConfigutationsForEF\UserOpetaionClaimConfiguration.cs" />
+    <Compile Include="Entities\Concrete\EntityConfigutationsForEF\UserOperationClaimConfiguration.cs" />
     <Compile Include="Entities\Concrete\OperationClaim.cs" />
     <Compile Include="Entities\Concrete\User.cs" />
     <Compile Include="Entities\Concrete\UserOperationClaim.cs" />

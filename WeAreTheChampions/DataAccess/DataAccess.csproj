@@ -69,6 +69,10 @@
     <Compile Include="Migrations\202110141700020_InitialCatalog.designer.cs">
       <DependentUpon>202110141700020_InitialCatalog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202110160155548_UserOperationClaimEntites.cs" />
+    <Compile Include="Migrations\202110160155548_UserOperationClaimEntites.designer.cs">
+      <DependentUpon>202110160155548_UserOperationClaimEntites.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -89,6 +93,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202110141700020_InitialCatalog.resx">
       <DependentUpon>202110141700020_InitialCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110160155548_UserOperationClaimEntites.resx">
+      <DependentUpon>202110160155548_UserOperationClaimEntites.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
