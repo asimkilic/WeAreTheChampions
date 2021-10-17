@@ -59,10 +59,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\FrmMatches.cs">
+    <Compile Include="Forms\MatchForms\FrmMatchEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmMatches.Designer.cs">
+    <Compile Include="Forms\MatchForms\FrmMatchEdit.Designer.cs">
+      <DependentUpon>FrmMatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmMatches.Designer.cs">
       <DependentUpon>FrmMatches.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmHome.cs">
@@ -94,7 +100,10 @@
     <EmbeddedResource Include="Forms\FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMatches.resx">
+    <EmbeddedResource Include="Forms\MatchForms\FrmMatchEdit.resx">
+      <DependentUpon>FrmMatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchForms\FrmMatches.resx">
       <DependentUpon>FrmMatches.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegister.resx">
