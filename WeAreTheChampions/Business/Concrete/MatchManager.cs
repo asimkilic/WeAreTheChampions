@@ -2,6 +2,7 @@
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.Enums;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -17,10 +18,12 @@ namespace Business.Concrete
     public class MatchManager : IMatchService
     {
         private IMatchDal _matchDal;
+        private ITeamService _teamService;  // inject service not manager
 
-        public MatchManager(IMatchDal matchDal)
+        public MatchManager(IMatchDal matchDal, ITeamService teamService)
         {
             _matchDal = matchDal;
+            _teamService = teamService;
         }
 
 
@@ -73,9 +76,41 @@ namespace Business.Concrete
         [ValidationAspect(typeof(MatchValidator), ValidationStates.Update)]
         public IResult Update(Match match)
         {
+            var result = BusinessRules.Run(CheckScores(ref match), CheckDate(match));
+            if (result != null)
+                return result;
+
             _matchDal.Update(match);
             return new SuccessResult();
         }
 
+        //  ###    Business Rules ###
+
+        private IResult CheckScores(ref Match match)
+        {
+            if ((match.Score1 != null && match.Score2 == null) || (match.Score2 != null && match.Score1 == null))
+            {
+                return new ErrorResult("Maç skorları hatalı.");
+            }
+            if (match.Score1 != null && match.Score2 != null)
+            {
+                match.ResultId = match.Score1 > match.Score2 ? ResultEnum.Team1Won : (match.Score1 == match.Score2 ? ResultEnum.Draw : ResultEnum.Team2Won);
+            }
+            return new SuccessResult();
+
+        }
+
+        private IResult CheckDate(Match match)
+        {
+            bool result1 = _matchDal.GetAll(x => x.HomeTeamId == match.HomeTeamId || x.AwayTeamId == match.HomeTeamId && x.MatchTime == match.MatchTime).Count == 0;
+            bool result2 = _matchDal.GetAll(x => x.AwayTeamId == match.AwayTeamId || x.HomeTeamId == match.AwayTeamId && x.MatchTime == match.MatchTime).Count == 0;
+
+            if (result1 && result2)
+            {
+                return new SuccessResult();
+            }
+
+            return new ErrorResult("Seçilen tarihte zaten bir maç tanımlı."); ;
+        }
     }
 }
