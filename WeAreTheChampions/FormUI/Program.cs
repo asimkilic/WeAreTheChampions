@@ -29,7 +29,8 @@ namespace FormUI
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)
         {
             Exception e = (Exception)args.ExceptionObject;
-            if(e.GetType()== typeof(System.Threading.ThreadAbortException))
+            // REF: https://stackoverflow.com/questions/9270023/how-to-determine-if-an-exception-is-of-a-particular-type
+            if (e.GetType()== typeof(System.Threading.ThreadAbortException))
             {
                // MessageBox.Show("type çalıştı");
                 return;

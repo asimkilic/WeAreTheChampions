@@ -1,5 +1,8 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Entities.Concrete;
+using Core.Utilities.Business;
 using Core.Utilities.Results;
 using Core.Utilities.Security.Hashing;
 using Entities.DTOs;
@@ -33,10 +36,14 @@ namespace Business.Concrete
             return new SuccessDataResult<User>(userToCheck.Data, "Successful login");
         }
 
+        [ValidationAspect(typeof(RegisterUserValidation))]
         public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
         {
-            Thread.Sleep(5000);
-            return new SuccessDataResult<User>(new User());
+            var result = BusinessRules.Run(UserExists(userForRegisterDto.Email));
+            if (result != null)
+            {
+                return new ErrorDataResult<User>(null,result.Message);
+            }
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
             var user = new User
