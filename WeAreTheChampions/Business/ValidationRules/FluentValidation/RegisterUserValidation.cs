@@ -1,4 +1,5 @@
 ﻿using Core.Entities.Concrete;
+using Core.Enums;
 using Entities.DTOs;
 using FluentValidation;
 using System;
@@ -11,7 +12,7 @@ namespace Business.ValidationRules.FluentValidation
 {
     public class RegisterUserValidation:AbstractValidator<UserForRegisterDto>
     {
-        public RegisterUserValidation()
+        public RegisterUserValidation(ValidationStates state = ValidationStates.Add)
         {
             RuleFor(x => x.Email).EmailAddress().NotEmpty();
             RuleFor(x => x.LastName).NotEmpty().MinimumLength(3);

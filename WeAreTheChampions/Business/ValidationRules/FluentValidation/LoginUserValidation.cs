@@ -1,4 +1,5 @@
-﻿using Entities.DTOs;
+﻿using Core.Enums;
+using Entities.DTOs;
 using FluentValidation;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ namespace Business.ValidationRules.FluentValidation
 {
    public class LoginUserValidation:AbstractValidator<UserForLoginDto>
     {
-        public LoginUserValidation()
+        public LoginUserValidation(ValidationStates state = ValidationStates.Add)
         {
             RuleFor(x => x.Email).EmailAddress().NotEmpty();
             RuleFor(x => x.Password).NotEmpty().Must(HaveWhiteSpace);
