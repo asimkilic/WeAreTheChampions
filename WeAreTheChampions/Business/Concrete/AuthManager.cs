@@ -22,6 +22,7 @@ namespace Business.Concrete
         {
             _userService = userService;
         }
+        [ValidationAspect(typeof(LoginUserValidation))]
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
             var userToCheck = _userService.GetByMail(userForLoginDto.Email);
@@ -42,7 +43,7 @@ namespace Business.Concrete
             var result = BusinessRules.Run(UserExists(userForRegisterDto.Email));
             if (result != null)
             {
-                return new ErrorDataResult<User>(null,result.Message);
+                return new ErrorDataResult<User>(null, result.Message);
             }
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
