@@ -26,5 +26,8 @@ namespace Entities.Concrete
         public virtual ICollection<Match> AwayMatches { get; set; }
 
 
+        public override string ToString() => TeamName;
+
+
     }
 }

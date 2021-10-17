@@ -1,7 +1,7 @@
 ﻿
 namespace FormUI
 {
-    partial class Login
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.

@@ -39,7 +39,13 @@ namespace Business.Concrete
 
         public IDataResult<List<Match>> GetAll()
         {
+          
             return new SuccessDataResult<List<Match>>(_matchDal.GetAll());
+        }
+
+        public IDataResult<List<Match>> GetAllWithAssociatedProperties()
+        {
+            return new SuccessDataResult<List<Match>>(_matchDal.GetAllWithAssociatedProperties());
         }
 
         public IDataResult<Match> GetById(int matchId)

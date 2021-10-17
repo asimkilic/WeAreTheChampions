@@ -17,11 +17,11 @@ using System.Windows.Forms;
 
 namespace FormUI.Forms
 {
-    public partial class Register : Form
+    public partial class FrmRegister : Form
     {
         private IAuthService _authService;
 
-        public Register()
+        public FrmRegister()
         {
             InitializeComponent();
             _authService = InstanceFactory.GetInstance<IAuthService>();

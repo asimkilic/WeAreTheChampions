@@ -15,10 +15,10 @@ using System.Windows.Forms;
 
 namespace FormUI
 {
-    public partial class Login : Form
+    public partial class FrmLogin : Form
     {
         private IAuthService _authService;
-        public Login()
+        public FrmLogin()
         {
             InitializeComponent();
             _authService = InstanceFactory.GetInstance<IAuthService>();
@@ -57,7 +57,7 @@ namespace FormUI
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register register = new Register();
+            FrmRegister register = new FrmRegister();
             register.ShowDialog();
             this.Show();
         }

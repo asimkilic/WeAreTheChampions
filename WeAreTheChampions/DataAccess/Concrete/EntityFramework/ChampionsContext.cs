@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.EntityFramework
     {
         public ChampionsContext() : base("name=ChampionsContext")
         {
-
+            Configuration.LazyLoadingEnabled = false;
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

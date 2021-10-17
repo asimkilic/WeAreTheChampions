@@ -10,6 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IMatchDal:IEntityRepository<Match>
     {
-
+        List<Match> GetAllWithAssociatedProperties();
     }
 }

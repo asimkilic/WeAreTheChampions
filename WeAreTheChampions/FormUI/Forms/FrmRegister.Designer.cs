@@ -1,7 +1,7 @@
 ﻿
 namespace FormUI.Forms
 {
-    partial class Register
+    partial class FrmRegister
     {
         /// <summary>
         /// Required designer variable.
