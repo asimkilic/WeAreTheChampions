@@ -1,4 +1,7 @@
 ﻿using Business.Abstract;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
+using Core.Enums;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -20,6 +23,8 @@ namespace Business.Concrete
             _matchDal = matchDal;
         }
 
+
+        [ValidationAspect(typeof(MatchValidator), ValidationStates.Add)]
         public IResult Add(Match match)
         {
             _matchDal.Add(match);
@@ -65,6 +70,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Match>(_matchDal.GetWithHomeAwayDetailsByFilter(x => x.Id == matchId));
         }
 
+        [ValidationAspect(typeof(MatchValidator), ValidationStates.Update)]
         public IResult Update(Match match)
         {
             _matchDal.Update(match);
