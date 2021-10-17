@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
 using Core.Enums;
@@ -26,20 +27,20 @@ namespace Business.Concrete
             _teamService = teamService;
         }
 
-
+        [SecuredOperation("admin,match.admin,match.add", Priority = 1)]
         [ValidationAspect(typeof(MatchValidator), ValidationStates.Add)]
         public IResult Add(Match match)
         {
             _matchDal.Add(match);
             return new SuccessResult();
         }
-
+        [SecuredOperation("admin,match.admin,match.delete", Priority = 1)]
         public IResult Delete(Match match)
         {
             _matchDal.Delete(match);
             return new SuccessResult();
         }
-
+        [SecuredOperation("admin,match.admin,match.delete", Priority = 1)]
         public IResult DeleteById(int matchId)
         {
             _matchDal.Delete(_matchDal.Get(m => m.Id == matchId));
@@ -73,7 +74,8 @@ namespace Business.Concrete
             return new SuccessDataResult<Match>(_matchDal.GetWithHomeAwayDetailsByFilter(x => x.Id == matchId));
         }
 
-        [ValidationAspect(typeof(MatchValidator), ValidationStates.Update)]
+        [SecuredOperation("admin,match.admin,match.update", Priority = 1)]
+        [ValidationAspect(typeof(MatchValidator), ValidationStates.Update, Priority = 2)]
         public IResult Update(Match match)
         {
             var result = BusinessRules.Run(CheckScores(ref match), CheckDate(match));
