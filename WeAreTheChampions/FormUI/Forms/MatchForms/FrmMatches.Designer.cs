@@ -40,9 +40,6 @@ namespace FormUI.Forms
             this.btnDeleteMatch = new System.Windows.Forms.Button();
             this.cbxHidePlayedMatches = new System.Windows.Forms.CheckBox();
             this.btnNewMatch = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.klcDatePicker1 = new KLCToolbox.KLCControls.KLCDatePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,47 +159,11 @@ namespace FormUI.Forms
             this.btnNewMatch.UseVisualStyleBackColor = false;
             this.btnNewMatch.Click += new System.EventHandler(this.btnNewMatch_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.CustomFormat = "HH:mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(36, 12);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.ShowUpDown = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 4;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(256, 12);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 4;
-            // 
-            // klcDatePicker1
-            // 
-            this.klcDatePicker1.CustomFormat = "HH:mm";
-            this.klcDatePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F);
-            this.klcDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.klcDatePicker1.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
-            this.klcDatePicker1.KLCBorderSize = 0;
-            this.klcDatePicker1.KLCSkinColor = System.Drawing.Color.MediumSlateBlue;
-            this.klcDatePicker1.KLCTextColor = System.Drawing.Color.White;
-            this.klcDatePicker1.Location = new System.Drawing.Point(237, 47);
-            this.klcDatePicker1.MinimumSize = new System.Drawing.Size(0, 35);
-            this.klcDatePicker1.Name = "klcDatePicker1";
-            this.klcDatePicker1.ShowUpDown = true;
-            this.klcDatePicker1.Size = new System.Drawing.Size(88, 35);
-            this.klcDatePicker1.TabIndex = 5;
-            // 
             // FrmMatches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.klcDatePicker1);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.cbxHidePlayedMatches);
             this.Controls.Add(this.btnNewMatch);
             this.Controls.Add(this.btnDeleteMatch);
@@ -232,8 +193,5 @@ namespace FormUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.CheckBox cbxHidePlayedMatches;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private KLCToolbox.KLCControls.KLCDatePicker klcDatePicker1;
     }
 }
