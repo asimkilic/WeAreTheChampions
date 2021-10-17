@@ -62,6 +62,7 @@ namespace FormUI.Forms.MatchForms
             var result = _matchService.Update(editedMatch);
             if (result.Success)
             {
+                BindDataToForm();
                 MessageBox.Show("Değişiklikler kaydedildi");
                 return;
             }
