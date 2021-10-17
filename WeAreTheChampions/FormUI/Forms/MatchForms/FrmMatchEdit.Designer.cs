@@ -59,7 +59,7 @@ namespace FormUI.Forms.MatchForms
             this.dtpDate.Location = new System.Drawing.Point(127, 63);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(119, 23);
-            this.dtpDate.TabIndex = 2;
+            this.dtpDate.TabIndex = 3;
             // 
             // dtpHour
             // 
@@ -70,7 +70,7 @@ namespace FormUI.Forms.MatchForms
             this.dtpHour.Name = "dtpHour";
             this.dtpHour.ShowUpDown = true;
             this.dtpHour.Size = new System.Drawing.Size(92, 23);
-            this.dtpHour.TabIndex = 3;
+            this.dtpHour.TabIndex = 4;
             // 
             // label2
             // 
@@ -84,23 +84,25 @@ namespace FormUI.Forms.MatchForms
             // 
             // txtScoreHome
             // 
-            this.txtScoreHome.Location = new System.Drawing.Point(127, 20);
+            this.txtScoreHome.Location = new System.Drawing.Point(273, 20);
             this.txtScoreHome.Name = "txtScoreHome";
             this.txtScoreHome.Size = new System.Drawing.Size(50, 20);
-            this.txtScoreHome.TabIndex = 5;
+            this.txtScoreHome.TabIndex = 1;
+            this.txtScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScoreHome_KeyPress);
             // 
             // txtScoreAway
             // 
-            this.txtScoreAway.Location = new System.Drawing.Point(230, 20);
+            this.txtScoreAway.Location = new System.Drawing.Point(376, 20);
             this.txtScoreAway.Name = "txtScoreAway";
             this.txtScoreAway.Size = new System.Drawing.Size(50, 20);
-            this.txtScoreAway.TabIndex = 5;
+            this.txtScoreAway.TabIndex = 2;
+            this.txtScoreAway.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScoreAway_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(197, 20);
+            this.label5.Location = new System.Drawing.Point(343, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(22, 17);
             this.label5.TabIndex = 1;
@@ -108,19 +110,19 @@ namespace FormUI.Forms.MatchForms
             // 
             // lblHome
             // 
-            this.lblHome.AutoSize = true;
             this.lblHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblHome.Location = new System.Drawing.Point(15, 20);
             this.lblHome.Name = "lblHome";
-            this.lblHome.Size = new System.Drawing.Size(85, 17);
+            this.lblHome.Size = new System.Drawing.Size(250, 17);
             this.lblHome.TabIndex = 6;
-            this.lblHome.Text = "Galatasaray";
+            this.lblHome.Text = "ÖZNUR KABLO YENİ MALATYASPOR";
+            this.lblHome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblAway
             // 
             this.lblAway.AutoSize = true;
             this.lblAway.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAway.Location = new System.Drawing.Point(295, 20);
+            this.lblAway.Location = new System.Drawing.Point(441, 20);
             this.lblAway.Name = "lblAway";
             this.lblAway.Size = new System.Drawing.Size(132, 17);
             this.lblAway.TabIndex = 6;
@@ -131,7 +133,7 @@ namespace FormUI.Forms.MatchForms
             this.btnCancel.Location = new System.Drawing.Point(127, 166);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 43);
-            this.btnCancel.TabIndex = 7;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "İPTAL";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -141,15 +143,16 @@ namespace FormUI.Forms.MatchForms
             this.btnSave.Location = new System.Drawing.Point(230, 166);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 43);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "KAYDET";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // FrmMatchEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 245);
+            this.ClientSize = new System.Drawing.Size(734, 245);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);

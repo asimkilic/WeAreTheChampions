@@ -60,10 +60,16 @@ namespace Business.Concrete
             return new SuccessDataResult<Match>(_matchDal.Get(m => m.Id == matchId));
         }
 
+        public IDataResult<Match> GetWithHomeAwayDetailsById(int matchId)
+        {
+            return new SuccessDataResult<Match>(_matchDal.GetWithHomeAwayDetailsByFilter(x => x.Id == matchId));
+        }
+
         public IResult Update(Match match)
         {
             _matchDal.Update(match);
             return new SuccessResult();
         }
+
     }
 }

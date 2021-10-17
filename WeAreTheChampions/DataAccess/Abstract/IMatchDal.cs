@@ -13,5 +13,6 @@ namespace DataAccess.Abstract
     public interface IMatchDal:IEntityRepository<Match>
     {
         List<MatchesListDto> GetAllWithAssociatedProperties(Expression<Func<Match, bool>> filter = null);
+        Match GetWithHomeAwayDetailsByFilter(Expression<Func<Match, bool>> filter);
     }
 }

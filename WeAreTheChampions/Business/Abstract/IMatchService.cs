@@ -14,5 +14,11 @@ namespace Business.Abstract
         IDataResult<List<MatchesListDto>> GetAllWithAssociatedProperties();
         IDataResult<List<MatchesListDto>> GetAllWithAssociatedPropertiesWithoutPlayed();
 
+        IDataResult<Match> GetWithHomeAwayDetailsById(int matchId);
+
+          
+
+
+
     }
 }

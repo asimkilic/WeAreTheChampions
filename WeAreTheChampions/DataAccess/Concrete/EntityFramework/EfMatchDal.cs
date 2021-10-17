@@ -14,6 +14,11 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfMatchDal : EfEntityRepositoryBase<Match, ChampionsContext>, IMatchDal
     {
+        /// <summary>
+        /// Returns All Matches with associated properties using MathesListDto. (Filter can use on query)
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
         public List<MatchesListDto> GetAllWithAssociatedProperties(Expression<Func<Match, bool>> filter = null)
         {
             using (ChampionsContext context = new ChampionsContext())
@@ -37,6 +42,18 @@ namespace DataAccess.Concrete.EntityFramework
                          ScoreHome = x.Score1,
                          ScoreAway = x.Score2
                      }).ToList();
+            }
+        }
+        /// <summary>
+        /// Returns only one match with all associated navigation properties
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <returns></returns>
+        public Match GetWithHomeAwayDetailsByFilter(Expression<Func<Match, bool>> filter)
+        {
+            using (ChampionsContext context = new ChampionsContext())
+            {
+                return context.Matches.Include(x => x.AwayTeam).Include(x => x.HomeTeam).Where(filter).FirstOrDefault();
             }
         }
 
