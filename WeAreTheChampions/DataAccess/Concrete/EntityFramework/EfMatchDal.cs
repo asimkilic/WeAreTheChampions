@@ -7,17 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using Entities.DTOs;
+using System.Linq.Expressions;
 
 namespace DataAccess.Concrete.EntityFramework
 {
     public class EfMatchDal : EfEntityRepositoryBase<Match, ChampionsContext>, IMatchDal
     {
-        public List<Match> GetAllWithAssociatedProperties()
+        public List<MatchesListDto> GetAllWithAssociatedProperties(Expression<Func<Match, bool>> filter = null)
         {
-            using (ChampionsContext context= new ChampionsContext())
+            using (ChampionsContext context = new ChampionsContext())
             {
-                return context.Matches.Include(x => x.AwayTeam).Include(x=>x.HomeTeam).ToList();
+                return filter == null ? context.Matches.Include(x => x.AwayTeam).Include(x => x.HomeTeam)
+                     .Select(x => new MatchesListDto
+                     {
+                         MatchId = x.Id,
+                         AwayTeam = x.AwayTeam.TeamName,
+                         HomeTeam = x.HomeTeam.TeamName,
+                         MatchTime = x.MatchTime,
+                         ScoreHome = x.Score1,
+                         ScoreAway = x.Score2
+                     }).ToList() : context.Matches.Include(x => x.AwayTeam).Include(x => x.HomeTeam).Where(filter)
+                     .Select(x => new MatchesListDto
+                     {
+                         MatchId = x.Id,
+                         AwayTeam = x.AwayTeam.TeamName,
+                         HomeTeam = x.HomeTeam.TeamName,
+                         MatchTime = x.MatchTime,
+                         ScoreHome = x.Score1,
+                         ScoreAway = x.Score2
+                     }).ToList();
             }
         }
+
+
     }
 }

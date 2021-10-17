@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,13 +40,19 @@ namespace Business.Concrete
 
         public IDataResult<List<Match>> GetAll()
         {
-          
+
             return new SuccessDataResult<List<Match>>(_matchDal.GetAll());
         }
 
-        public IDataResult<List<Match>> GetAllWithAssociatedProperties()
+        public IDataResult<List<MatchesListDto>> GetAllWithAssociatedProperties()
         {
-            return new SuccessDataResult<List<Match>>(_matchDal.GetAllWithAssociatedProperties());
+            return new SuccessDataResult<List<MatchesListDto>>(_matchDal.GetAllWithAssociatedProperties());
+        }
+
+        public IDataResult<List<MatchesListDto>> GetAllWithAssociatedPropertiesWithoutPlayed()
+        {
+            return new SuccessDataResult<List<MatchesListDto>>(_matchDal.GetAllWithAssociatedProperties(x => x.ResultId == null));
+
         }
 
         public IDataResult<Match> GetById(int matchId)
