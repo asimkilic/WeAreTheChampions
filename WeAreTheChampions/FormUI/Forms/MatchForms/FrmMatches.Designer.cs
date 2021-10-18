@@ -120,6 +120,7 @@ namespace FormUI.Forms
             this.btnEditMatch.TabIndex = 2;
             this.btnEditMatch.Text = "SEÇİLİYİ DÜZENLE";
             this.btnEditMatch.UseVisualStyleBackColor = true;
+            this.btnEditMatch.Click += new System.EventHandler(this.btnEditMatch_Click);
             // 
             // btnDeleteMatch
             // 

@@ -49,8 +49,8 @@ namespace FormUI.Forms
 
         private void ListAllMatchesWithoutPlayed()
         {
-            var a= _matchService.GetAllWithAssociatedPropertiesWithoutPlayed().Data;
-            dgvMatches.DataSource = a;
+            dgvMatches.DataSource = _matchService.GetAllWithAssociatedPropertiesWithoutPlayed().Data;
+            
         }
         private void ListAllMatches()
         {
@@ -101,6 +101,11 @@ namespace FormUI.Forms
             {
                 ListAllMatches();
             }
+        }
+
+        private void btnEditMatch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
