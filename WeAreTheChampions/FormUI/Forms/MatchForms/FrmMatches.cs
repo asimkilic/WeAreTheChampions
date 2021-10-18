@@ -2,6 +2,7 @@
 using Business.DependencyResolvers.Autofac;
 using Entities.Concrete;
 using Entities.DTOs;
+using FormUI.Forms.MatchForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -49,11 +50,13 @@ namespace FormUI.Forms
 
         private void ListAllMatchesWithoutPlayed()
         {
+
             dgvMatches.DataSource = _matchService.GetAllWithAssociatedPropertiesWithoutPlayed().Data;
-            
+
         }
         private void ListAllMatches()
         {
+            cbxHidePlayedMatches.Checked = false;
             dgvMatches.DataSource = _matchService.GetAllWithAssociatedProperties().Data;
         }
 
@@ -88,6 +91,11 @@ namespace FormUI.Forms
 
         private void dgvMatches_DoubleClick(object sender, EventArgs e)
         {
+            if (dgvMatches.SelectedRows.Count != 1)
+            {
+                return;
+            }
+            EditMatch(((MatchesListDto)dgvMatches.SelectedRows[0].DataBoundItem).MatchId);
 
         }
 
@@ -105,7 +113,23 @@ namespace FormUI.Forms
 
         private void btnEditMatch_Click(object sender, EventArgs e)
         {
+            if (dgvMatches.SelectedRows.Count != 1)
+            {
+                return;
+            }
+            EditMatch(((MatchesListDto)dgvMatches.SelectedRows[0].DataBoundItem).MatchId);
 
         }
+
+        private void EditMatch(int matchId)
+        {
+            FrmMatchEdit frmMatchEdit = new FrmMatchEdit(matchId);
+            this.Hide();
+            frmMatchEdit.ShowDialog();
+            ListAllMatches();
+            this.Show();
+
+        }
+      
     }
 }
