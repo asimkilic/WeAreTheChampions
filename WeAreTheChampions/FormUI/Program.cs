@@ -24,7 +24,7 @@ namespace FormUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogin());
+            Application.Run(new FrmMatchEdit(1));
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)

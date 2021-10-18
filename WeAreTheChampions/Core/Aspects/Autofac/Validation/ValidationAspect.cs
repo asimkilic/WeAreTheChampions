@@ -34,7 +34,10 @@ namespace Core.Aspects.Autofac.Validation
             // REF https://stackoverflow.com/questions/2451336/how-to-pass-parameters-to-activator-createinstancet
             var validator = (IValidator)Activator.CreateInstance(_validatorType, _validationStates);
             var entityType = _validatorType.BaseType.GetGenericArguments()[0];
-            var entities = invocation.Arguments.Where(t => t.GetType() == entityType);
+            //var argumantype = invocation.Arguments[0].GetType().BaseType;
+            //var entities = invocation.Arguments.Where(t => t.GetType() == entityType);
+            var entities = invocation.Arguments.Where(t => t.GetType().BaseType == entityType);
+
             foreach (var entity in entities)
             {
                 ValidationTool.Validate(validator, entity);

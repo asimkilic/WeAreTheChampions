@@ -74,8 +74,8 @@ namespace Business.Concrete
             return new SuccessDataResult<Match>(_matchDal.GetWithHomeAwayDetailsByFilter(x => x.Id == matchId));
         }
 
-        [SecuredOperation("admin,match.admin,match.update", Priority = 1)]
-        [ValidationAspect(typeof(MatchValidator), ValidationStates.Update, Priority = 2)]
+        [SecuredOperation("admin,match.admin,match.update")]
+        [ValidationAspect(typeof(MatchValidator), ValidationStates.Update)]
         public IResult Update(Match match)
         {
             var result = BusinessRules.Run(CheckScores(ref match), CheckDate(match));
@@ -104,8 +104,10 @@ namespace Business.Concrete
 
         private IResult CheckDate(Match match)
         {
-            bool result1 = _matchDal.GetAll(x => x.HomeTeamId == match.HomeTeamId || x.AwayTeamId == match.HomeTeamId && x.MatchTime == match.MatchTime).Count == 0;
-            bool result2 = _matchDal.GetAll(x => x.AwayTeamId == match.AwayTeamId || x.HomeTeamId == match.AwayTeamId && x.MatchTime == match.MatchTime).Count == 0;
+
+            var result1 = _matchDal.GetAll(x => x.Id != match.Id && (x.HomeTeamId == match.HomeTeamId || x.AwayTeamId == match.HomeTeamId) && x.MatchTime == match.MatchTime).Count == 0;
+            var result2 = _matchDal.GetAll(x => x.Id != match.Id && (x.AwayTeamId == match.AwayTeamId || x.HomeTeamId == match.AwayTeamId) && x.MatchTime == match.MatchTime).Count == 0;
+
 
             if (result1 && result2)
             {

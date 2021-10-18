@@ -77,8 +77,14 @@ namespace FormUI.Forms.MatchForms
 
             if (byte.TryParse(txtScoreAway.Text, out byte resultAway))
                 editedMatch.Score2 = resultAway;
+            else
+                editedMatch.Score2 = null;
+
             if (byte.TryParse(txtScoreHome.Text, out byte resultHome))
                 editedMatch.Score1 = resultHome;
+            else
+                editedMatch.Score1 = null;
+
             editedMatch.MatchTime = new DateTime(dtpDate.Value.Year, dtpDate.Value.Month, dtpDate.Value.Day, dtpHour.Value.Hour, dtpHour.Value.Minute, dtpHour.Value.Second);
 
         }
