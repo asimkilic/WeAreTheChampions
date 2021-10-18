@@ -20,6 +20,7 @@ namespace FormUI.Forms
     public partial class FrmRegister : Form
     {
         private IAuthService _authService;
+        public event EventHandler WorksDone;
 
         public FrmRegister()
         {
@@ -30,16 +31,16 @@ namespace FormUI.Forms
         void Splash()
         {
             frmSplashScreen frm = new frmSplashScreen();
-
+            WorksDone += frm.WorksDone;
             Application.Run(frm);
 
 
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            Thread t = new Thread(new ThreadStart(Splash));
-            t.Start();
-            this.Hide();
+            // Thread t = new Thread(new ThreadStart(Splash));
+            //  t.Start();
+
             var registerUser = new UserForRegisterDto
             {
                 Email = txtEmail.KLCText,
@@ -47,13 +48,23 @@ namespace FormUI.Forms
                 LastName = txtLastName.KLCText,
                 Password = txtPassword.KLCText
             };
+            // IDataResult<User> result = null;
+            // try
+            // {
             var result = _authService.Register(registerUser, registerUser.Password);
+            // }
+            //  catch (Exception)
+            //  {
+            //     t.Abort();
 
-            t.Abort();
-            this.Show();
+            //  }
+            //  WorksDone?.Invoke(null, EventArgs.Empty);
 
 
 
+
+
+            // if (result is null) return;
             if (result.Success)
             {
                 // return login form
