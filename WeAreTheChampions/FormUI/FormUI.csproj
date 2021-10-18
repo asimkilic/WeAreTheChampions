@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="KLCToolbox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\KLCToolbox.1.0.0\lib\net472\KLCToolbox.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,16 +59,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Login.cs">
+    <Compile Include="Forms\MatchForms\FrmMatchEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Forms\MatchForms\FrmMatchEdit.Designer.cs">
+      <DependentUpon>FrmMatchEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmMatches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmMatches.Designer.cs">
+      <DependentUpon>FrmMatches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmHome.Designer.cs">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmRegister.Designer.cs">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen\frmSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen\frmSplashScreen.Designer.cs">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmHome.resx">
+      <DependentUpon>FrmHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchForms\FrmMatchEdit.resx">
+      <DependentUpon>FrmMatchEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchForms\FrmMatches.resx">
+      <DependentUpon>FrmMatches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmRegister.resx">
+      <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,6 +161,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newyork-800-500-whiteblue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newyork-800x500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KLC-background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-loading.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-loading-1500x100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

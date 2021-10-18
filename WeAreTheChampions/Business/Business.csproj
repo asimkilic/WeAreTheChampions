@@ -85,6 +85,9 @@
     <Compile Include="DependencyResolvers\Autofac\InstanceFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\FluentValidation\ColorValidator.cs" />
+    <Compile Include="ValidationRules\FluentValidation\LoginUserValidation.cs" />
+    <Compile Include="ValidationRules\FluentValidation\MatchValidator.cs" />
+    <Compile Include="ValidationRules\FluentValidation\RegisterUserValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

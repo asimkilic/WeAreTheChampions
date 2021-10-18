@@ -11,7 +11,7 @@ namespace Business.ValidationRules.FluentValidation
 {
     public class ColorValidator : AbstractValidator<Color>
     {
-        public ColorValidator(ValidationStates state)
+        public ColorValidator(ValidationStates state=ValidationStates.Add)
         {
             // https://docs.fluentvalidation.net/en/latest/built-in-validators.html
             if (state == ValidationStates.Delete || state == ValidationStates.Update)

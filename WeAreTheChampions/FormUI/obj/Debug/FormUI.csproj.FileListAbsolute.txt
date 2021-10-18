@@ -40,4 +40,10 @@ C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChamp
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.csproj.CopyComplete
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.exe
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.pdb
-C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Login.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\bin\Debug\KLCToolbox.dll
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.SplashScreen.frmSplashScreen.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.FrmHome.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.FrmMatches.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.FrmRegister.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.FrmLogin.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.MatchForms.FrmMatchEdit.resources

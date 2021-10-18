@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using FormUI.Forms;
+using FormUI.Forms.MatchForms;
 
 namespace FormUI
 {
@@ -19,17 +21,24 @@ namespace FormUI
             // REF: https://blogs.msmvps.com/deborahk/global-exception-handler-winforms/
             Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
             AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(MyHandler);
-            
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new FrmMatchEdit(1));
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)
         {
             Exception e = (Exception)args.ExceptionObject;
-            Console.WriteLine("MyHandler caught : " + e.Message);
-            MessageBox.Show(e.Message);
+            // REF: https://stackoverflow.com/questions/9270023/how-to-determine-if-an-exception-is-of-a-particular-type
+            if (e.GetType()== typeof(System.Threading.ThreadAbortException))
+            {
+               // MessageBox.Show("type çalıştı");
+                return;
+            }
+        
+            Console.WriteLine("MyHandler caught : " + e.Message + " " + e.InnerException);
+            MessageBox.Show(e.Message + e.InnerException);
 
         }
 
@@ -40,6 +49,6 @@ namespace FormUI
 
 
         }
-      
+
     }
 }

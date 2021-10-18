@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FormUI.Forms
+namespace FormUI.Forms.SplashScreen
 {
-    public partial class Register : Form
+    public partial class frmSplashScreen : Form
     {
-        public Register()
+
+
+        public frmSplashScreen()
         {
+
             InitializeComponent();
+        }
+
+
+        public void WorksDone(object sender, EventArgs e)
+        {
+            //Application.Exit();
+           // this.Close();
         }
     }
 }
