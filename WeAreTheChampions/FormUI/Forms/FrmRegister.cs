@@ -39,6 +39,7 @@ namespace FormUI.Forms
         {
             Thread t = new Thread(new ThreadStart(Splash));
             t.Start();
+            this.Hide();
             var registerUser = new UserForRegisterDto
             {
                 Email = txtEmail.KLCText,
@@ -49,6 +50,8 @@ namespace FormUI.Forms
             var result = _authService.Register(registerUser, registerUser.Password);
 
             t.Abort();
+            this.Show();
+
 
 
             if (result.Success)
