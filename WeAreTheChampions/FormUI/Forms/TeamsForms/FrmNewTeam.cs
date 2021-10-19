@@ -1,6 +1,7 @@
 ﻿using Business.Abstract;
 using Business.DependencyResolvers.Autofac;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace FormUI.Forms.TeamsForms
 
         // Lists
         private List<Entities.Concrete.Color> AllColors;
-        private List<TeamColor> TeamColors;
+        private List<TeamColorDto> TeamColors;
         private List<Player> AllPlayers;
         private List<Team> AllTeams;
 
@@ -94,7 +95,7 @@ namespace FormUI.Forms.TeamsForms
         private void btnNextToColors_Click(object sender, EventArgs e)
         {
             Team team = new Team() { TeamName = txtTeamName.Text };
-             var result = _teamService.Add(team);
+            var result = _teamService.Add(team);
 
             if (result.Success)
             {
@@ -118,7 +119,7 @@ namespace FormUI.Forms.TeamsForms
         }
         private void GetTeamColorList()
         {
-            TeamColors = _teamColorService.GetByTeamId(newTeam.Id).Data;
+            TeamColors = _teamColorService.GetAllDetailsWithAssociatedPropertiesByTeamId(newTeam.Id).Data;
             dgvTeamColors.DataSource = TeamColors;
         }
         private void GetColorSectionActive()
@@ -144,7 +145,7 @@ namespace FormUI.Forms.TeamsForms
 
                 }
                 else
-                    MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz.");
+                    MessageBox.Show(result.Message == null ? "Bir hata oluştu. Lütfen tekrar deneyiniz." : result.Message);
             }
 
         }
@@ -195,6 +196,15 @@ namespace FormUI.Forms.TeamsForms
             var result = _teamColorService.Add(new TeamColor { ColorId = colorId, TeamId = newTeam.Id });
             GetTeamColorList();
         }
+        private void dgvTeamColors_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (dgvTeamColors.SelectedRows.Count != 1 || e.KeyCode == Keys.Delete) return;
+            var deletedEntity = ((TeamColorDto)dgvTeamColors.SelectedRows[0].DataBoundItem);
+            var result = _teamColorService.DeleteByColorIdTeamId(deletedEntity.ColorId, deletedEntity.TeamId);
+            if (!result.Success)
+                MessageBox.Show("Bir hata oluştu. Tekrar deneyin");
+            GetTeamColorList();
+        }
         #endregion
 
         #region Select Player
@@ -204,6 +214,7 @@ namespace FormUI.Forms.TeamsForms
             AllPlayers = _playerService.GetAll().Data;
 
         }
+
 
         #endregion
 

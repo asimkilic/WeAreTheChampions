@@ -9,7 +9,7 @@ namespace Entities.DTOs
 {
     public class TeamColorDto : IDto
     {
-        public int TeamColorId { get; set; }
+     
         public int ColorId { get; set; }
         public string ColorName { get; set; }
         public int TeamId { get; set; }

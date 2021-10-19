@@ -15,6 +15,6 @@ namespace Entities.Concrete
         public virtual Color Color { get; set; }
         public virtual Team Team { get; set; }
 
-        public string ColorName => Color.ColorName;
+       
     }
 }

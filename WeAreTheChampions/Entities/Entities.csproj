@@ -48,6 +48,7 @@
     <Compile Include="Concrete\TeamColor.cs" />
     <Compile Include="DTOs\MatchEditDto.cs" />
     <Compile Include="DTOs\MatchesListDto.cs" />
+    <Compile Include="DTOs\TeamColorDto.cs" />
     <Compile Include="DTOs\UserForRegisterDto.cs" />
     <Compile Include="DTOs\UserForLoginDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
