@@ -23,7 +23,7 @@ namespace FormUI.Forms.TeamsForms
 
         // Lists
         private List<Entities.Concrete.Color> AllColors;
-        private List<Entities.Concrete.Color> TeamColors;
+        private List<TeamColor> TeamColors;
         private List<Player> AllPlayers;
         private List<Team> AllTeams;
 
@@ -94,9 +94,9 @@ namespace FormUI.Forms.TeamsForms
         private void btnNextToColors_Click(object sender, EventArgs e)
         {
             Team team = new Team() { TeamName = txtTeamName.Text };
-            // var result = _teamService.Add(team);
+             var result = _teamService.Add(team);
 
-            if (true) //result.Success
+            if (result.Success)
             {
                 newTeam = _teamService.GetTeamByName(txtTeamName.Text).Data;
                 GetColorSectionActive();
@@ -118,7 +118,8 @@ namespace FormUI.Forms.TeamsForms
         }
         private void GetTeamColorList()
         {
-            TeamColors = _teamColorService.GetByTeamId(newTeam.Id);
+            TeamColors = _teamColorService.GetByTeamId(newTeam.Id).Data;
+            dgvTeamColors.DataSource = TeamColors;
         }
         private void GetColorSectionActive()
         {
@@ -192,7 +193,7 @@ namespace FormUI.Forms.TeamsForms
         {
             var colorId = ((Entities.Concrete.Color)dgvColors.SelectedRows[0].DataBoundItem).Id;
             var result = _teamColorService.Add(new TeamColor { ColorId = colorId, TeamId = newTeam.Id });
-
+            GetTeamColorList();
         }
         #endregion
 

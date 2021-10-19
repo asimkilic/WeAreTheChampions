@@ -62,11 +62,12 @@ namespace FormUI.Forms.TeamsForms
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblValidateColors = new System.Windows.Forms.Label();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblValidateColors = new System.Windows.Forms.Label();
             this.panelNewTeam.SuspendLayout();
             this.panelColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
@@ -359,6 +360,7 @@ namespace FormUI.Forms.TeamsForms
             this.dgvTeamColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTeamColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeamColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column9,
             this.Column5,
             this.Column6,
             this.Column7,
@@ -446,6 +448,24 @@ namespace FormUI.Forms.TeamsForms
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // lblValidateColors
+            // 
+            this.lblValidateColors.AutoSize = true;
+            this.lblValidateColors.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateColors.Location = new System.Drawing.Point(27, 7);
+            this.lblValidateColors.Name = "lblValidateColors";
+            this.lblValidateColors.Size = new System.Drawing.Size(207, 40);
+            this.lblValidateColors.TabIndex = 15;
+            this.lblValidateColors.Text = "RGB (0-255) Değeri Giriniz. \r\nRenk Adını Boş Bırakmayın.";
+            this.lblValidateColors.Visible = false;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Color";
+            this.Column9.HeaderText = "Renk Adı";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
             // Column5
             // 
             this.Column5.DataPropertyName = "ColorName";
@@ -473,17 +493,6 @@ namespace FormUI.Forms.TeamsForms
             this.Column8.HeaderText = "Mavi";
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            // 
-            // lblValidateColors
-            // 
-            this.lblValidateColors.AutoSize = true;
-            this.lblValidateColors.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateColors.Location = new System.Drawing.Point(27, 7);
-            this.lblValidateColors.Name = "lblValidateColors";
-            this.lblValidateColors.Size = new System.Drawing.Size(207, 40);
-            this.lblValidateColors.TabIndex = 15;
-            this.lblValidateColors.Text = "RGB (0-255) Değeri Giriniz. \r\nRenk Adını Boş Bırakmayın.";
-            this.lblValidateColors.Visible = false;
             // 
             // FrmNewTeam
             // 
@@ -548,10 +557,11 @@ namespace FormUI.Forms.TeamsForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label lblValidateColors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.Label lblValidateColors;
     }
 }
