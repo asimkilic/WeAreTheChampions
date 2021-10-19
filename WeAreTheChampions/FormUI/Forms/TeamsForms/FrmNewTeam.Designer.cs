@@ -41,16 +41,16 @@ namespace FormUI.Forms.TeamsForms
             this.labelRed = new System.Windows.Forms.Label();
             this.lblGreen = new System.Windows.Forms.Label();
             this.lblBlue = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtRed = new System.Windows.Forms.TextBox();
             this.panelUnderlineRed = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtGreen = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.btnNewColor = new System.Windows.Forms.Button();
+            this.txtBlue = new System.Windows.Forms.TextBox();
+            this.btnAddNewColor = new System.Windows.Forms.Button();
             this.dgvColors = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtColorName = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvTeamColors = new System.Windows.Forms.DataGridView();
@@ -58,6 +58,15 @@ namespace FormUI.Forms.TeamsForms
             this.lblToolTipColors = new System.Windows.Forms.Label();
             this.lblValidateTeamName = new System.Windows.Forms.Label();
             this.btnNextToPlayers = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblValidateColors = new System.Windows.Forms.Label();
             this.panelNewTeam.SuspendLayout();
             this.panelColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
@@ -157,21 +166,21 @@ namespace FormUI.Forms.TeamsForms
             // 
             // panelColors
             // 
+            this.panelColors.Controls.Add(this.lblValidateColors);
             this.panelColors.Controls.Add(this.btnNextToPlayers);
-            this.panelColors.Controls.Add(this.lblToolTipColors);
             this.panelColors.Controls.Add(this.dgvTeamColors);
             this.panelColors.Controls.Add(this.label3);
             this.panelColors.Controls.Add(this.label2);
             this.panelColors.Controls.Add(this.dgvColors);
-            this.panelColors.Controls.Add(this.btnNewColor);
+            this.panelColors.Controls.Add(this.btnAddNewColor);
             this.panelColors.Controls.Add(this.panel3);
             this.panelColors.Controls.Add(this.panel2);
-            this.panelColors.Controls.Add(this.textBox5);
-            this.panelColors.Controls.Add(this.textBox4);
+            this.panelColors.Controls.Add(this.txtColorName);
+            this.panelColors.Controls.Add(this.txtBlue);
             this.panelColors.Controls.Add(this.panel1);
-            this.panelColors.Controls.Add(this.textBox3);
+            this.panelColors.Controls.Add(this.txtGreen);
             this.panelColors.Controls.Add(this.panelUnderlineRed);
-            this.panelColors.Controls.Add(this.textBox2);
+            this.panelColors.Controls.Add(this.txtRed);
             this.panelColors.Controls.Add(this.label1);
             this.panelColors.Controls.Add(this.lblBlue);
             this.panelColors.Controls.Add(this.lblGreen);
@@ -185,7 +194,7 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.labelRed.AutoSize = true;
             this.labelRed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRed.Location = new System.Drawing.Point(23, 33);
+            this.labelRed.Location = new System.Drawing.Point(23, 57);
             this.labelRed.Name = "labelRed";
             this.labelRed.Size = new System.Drawing.Size(43, 20);
             this.labelRed.TabIndex = 0;
@@ -195,7 +204,7 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.lblGreen.AutoSize = true;
             this.lblGreen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblGreen.Location = new System.Drawing.Point(23, 69);
+            this.lblGreen.Location = new System.Drawing.Point(23, 93);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(58, 20);
             this.lblGreen.TabIndex = 0;
@@ -205,26 +214,27 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.lblBlue.AutoSize = true;
             this.lblBlue.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblBlue.Location = new System.Drawing.Point(23, 108);
+            this.lblBlue.Location = new System.Drawing.Point(23, 132);
             this.lblBlue.Name = "lblBlue";
             this.lblBlue.Size = new System.Drawing.Size(45, 20);
             this.lblBlue.TabIndex = 0;
             this.lblBlue.Text = "Blue:";
             // 
-            // textBox2
+            // txtRed
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox2.Location = new System.Drawing.Point(90, 29);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(45, 19);
-            this.textBox2.TabIndex = 1;
+            this.txtRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txtRed.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtRed.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtRed.Location = new System.Drawing.Point(90, 29);
+            this.txtRed.Name = "txtRed";
+            this.txtRed.Size = new System.Drawing.Size(45, 19);
+            this.txtRed.TabIndex = 1;
+            this.txtRed.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckKeyPress);
             // 
             // panelUnderlineRed
             // 
             this.panelUnderlineRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.panelUnderlineRed.Location = new System.Drawing.Point(90, 50);
+            this.panelUnderlineRed.Location = new System.Drawing.Point(90, 74);
             this.panelUnderlineRed.Name = "panelUnderlineRed";
             this.panelUnderlineRed.Size = new System.Drawing.Size(45, 2);
             this.panelUnderlineRed.TabIndex = 2;
@@ -232,84 +242,101 @@ namespace FormUI.Forms.TeamsForms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.panel1.Location = new System.Drawing.Point(90, 87);
+            this.panel1.Location = new System.Drawing.Point(90, 111);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 2);
             this.panel1.TabIndex = 4;
             // 
-            // textBox3
+            // txtGreen
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox3.Location = new System.Drawing.Point(90, 66);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(45, 19);
-            this.textBox3.TabIndex = 3;
+            this.txtGreen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txtGreen.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtGreen.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtGreen.Location = new System.Drawing.Point(90, 90);
+            this.txtGreen.Name = "txtGreen";
+            this.txtGreen.Size = new System.Drawing.Size(45, 19);
+            this.txtGreen.TabIndex = 3;
+            this.txtGreen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckKeyPress);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.panel2.Location = new System.Drawing.Point(90, 123);
+            this.panel2.Location = new System.Drawing.Point(90, 147);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(45, 2);
             this.panel2.TabIndex = 6;
             // 
-            // textBox4
+            // txtBlue
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox4.Location = new System.Drawing.Point(90, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(45, 19);
-            this.textBox4.TabIndex = 5;
+            this.txtBlue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txtBlue.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBlue.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtBlue.Location = new System.Drawing.Point(90, 126);
+            this.txtBlue.Name = "txtBlue";
+            this.txtBlue.Size = new System.Drawing.Size(45, 19);
+            this.txtBlue.TabIndex = 5;
+            this.txtBlue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CheckKeyPress);
             // 
-            // btnNewColor
+            // btnAddNewColor
             // 
-            this.btnNewColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnNewColor.Location = new System.Drawing.Point(27, 189);
-            this.btnNewColor.Name = "btnNewColor";
-            this.btnNewColor.Size = new System.Drawing.Size(144, 29);
-            this.btnNewColor.TabIndex = 8;
-            this.btnNewColor.Text = "YENİ RENK EKLE";
-            this.btnNewColor.UseVisualStyleBackColor = true;
+            this.btnAddNewColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnAddNewColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddNewColor.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddNewColor.Location = new System.Drawing.Point(27, 213);
+            this.btnAddNewColor.Name = "btnAddNewColor";
+            this.btnAddNewColor.Size = new System.Drawing.Size(168, 38);
+            this.btnAddNewColor.TabIndex = 8;
+            this.btnAddNewColor.Text = "YENİ RENK EKLE";
+            this.btnAddNewColor.UseVisualStyleBackColor = false;
+            this.btnAddNewColor.Click += new System.EventHandler(this.btnAddNewColor_Click);
             // 
             // dgvColors
             // 
             this.dgvColors.AllowUserToAddRows = false;
             this.dgvColors.AllowUserToDeleteRows = false;
+            this.dgvColors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
             this.dgvColors.Location = new System.Drawing.Point(305, 44);
+            this.dgvColors.MultiSelect = false;
             this.dgvColors.Name = "dgvColors";
             this.dgvColors.ReadOnly = true;
-            this.dgvColors.Size = new System.Drawing.Size(199, 167);
+            this.dgvColors.RowHeadersVisible = false;
+            this.dgvColors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvColors.Size = new System.Drawing.Size(511, 151);
             this.dgvColors.TabIndex = 9;
+            this.dgvColors.DoubleClick += new System.EventHandler(this.dgvColors_DoubleClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(23, 144);
+            this.label1.Location = new System.Drawing.Point(23, 168);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Renk Adı:";
             // 
-            // textBox5
+            // txtColorName
             // 
-            this.textBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.textBox5.Location = new System.Drawing.Point(107, 141);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(124, 19);
-            this.textBox5.TabIndex = 5;
+            this.txtColorName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txtColorName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtColorName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtColorName.Location = new System.Drawing.Point(107, 165);
+            this.txtColorName.Name = "txtColorName";
+            this.txtColorName.Size = new System.Drawing.Size(124, 19);
+            this.txtColorName.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.panel3.Location = new System.Drawing.Point(107, 162);
+            this.panel3.Location = new System.Drawing.Point(107, 186);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(124, 2);
             this.panel3.TabIndex = 6;
@@ -328,18 +355,28 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.dgvTeamColors.AllowUserToAddRows = false;
             this.dgvTeamColors.AllowUserToDeleteRows = false;
+            this.dgvTeamColors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTeamColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvTeamColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTeamColors.Location = new System.Drawing.Point(615, 44);
+            this.dgvTeamColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8});
+            this.dgvTeamColors.Location = new System.Drawing.Point(305, 252);
+            this.dgvTeamColors.MultiSelect = false;
             this.dgvTeamColors.Name = "dgvTeamColors";
             this.dgvTeamColors.ReadOnly = true;
-            this.dgvTeamColors.Size = new System.Drawing.Size(213, 167);
+            this.dgvTeamColors.RowHeadersVisible = false;
+            this.dgvTeamColors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTeamColors.Size = new System.Drawing.Size(511, 122);
             this.dgvTeamColors.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(611, 12);
+            this.label3.Location = new System.Drawing.Point(314, 224);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 20);
             this.label3.TabIndex = 10;
@@ -350,12 +387,13 @@ namespace FormUI.Forms.TeamsForms
             this.lblToolTipColors.AutoSize = true;
             this.lblToolTipColors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblToolTipColors.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblToolTipColors.Location = new System.Drawing.Point(15, 321);
+            this.lblToolTipColors.Location = new System.Drawing.Point(49, 572);
             this.lblToolTipColors.Name = "lblToolTipColors";
             this.lblToolTipColors.Size = new System.Drawing.Size(801, 17);
             this.lblToolTipColors.TabIndex = 12;
             this.lblToolTipColors.Text = "ToolTip: Mevcut renkler bölümündeki renklere çift tıklayıp takımınıza atama yapab" +
     "ilir, DELETE tuşu ile atamayı geri alabilirsiniz.";
+            this.lblToolTipColors.Visible = false;
             // 
             // lblValidateTeamName
             // 
@@ -380,6 +418,73 @@ namespace FormUI.Forms.TeamsForms
             this.btnNextToPlayers.Text = "İLERİ >>";
             this.btnNextToPlayers.UseVisualStyleBackColor = false;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ColorName";
+            this.Column1.HeaderText = "Renk Adı";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Red";
+            this.Column2.HeaderText = "Kırmızı";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Green";
+            this.Column3.HeaderText = "Yeşil";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Blue";
+            this.Column4.HeaderText = "Mavi";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ColorName";
+            this.Column5.HeaderText = "Renk Adı";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Red";
+            this.Column6.HeaderText = "Kırmızı";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Green";
+            this.Column7.HeaderText = "Yeşil";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Blue";
+            this.Column8.HeaderText = "Mavi";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // lblValidateColors
+            // 
+            this.lblValidateColors.AutoSize = true;
+            this.lblValidateColors.ForeColor = System.Drawing.Color.Red;
+            this.lblValidateColors.Location = new System.Drawing.Point(27, 7);
+            this.lblValidateColors.Name = "lblValidateColors";
+            this.lblValidateColors.Size = new System.Drawing.Size(207, 40);
+            this.lblValidateColors.TabIndex = 15;
+            this.lblValidateColors.Text = "RGB (0-255) Değeri Giriniz. \r\nRenk Adını Boş Bırakmayın.";
+            this.lblValidateColors.Visible = false;
+            // 
             // FrmNewTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -387,6 +492,7 @@ namespace FormUI.Forms.TeamsForms
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(976, 608);
             this.Controls.Add(this.panelColors);
+            this.Controls.Add(this.lblToolTipColors);
             this.Controls.Add(this.panelNewTeam);
             this.Controls.Add(this.lblPlayers);
             this.Controls.Add(this.lblColors);
@@ -404,6 +510,7 @@ namespace FormUI.Forms.TeamsForms
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamColors)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -421,21 +528,30 @@ namespace FormUI.Forms.TeamsForms
         private System.Windows.Forms.Label lblGreen;
         private System.Windows.Forms.Label labelRed;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtBlue;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtGreen;
         private System.Windows.Forms.Panel panelUnderlineRed;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtRed;
         private System.Windows.Forms.Label lblToolTipColors;
         private System.Windows.Forms.DataGridView dgvTeamColors;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvColors;
-        private System.Windows.Forms.Button btnNewColor;
+        private System.Windows.Forms.Button btnAddNewColor;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtColorName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblValidateTeamName;
         private System.Windows.Forms.Button btnNextToPlayers;
+        private System.Windows.Forms.DataGridView dgvColors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Label lblValidateColors;
     }
 }
