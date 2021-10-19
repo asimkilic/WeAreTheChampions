@@ -92,5 +92,10 @@ namespace FormUI.Forms.MatchForms
         {
             MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

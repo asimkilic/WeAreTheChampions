@@ -173,6 +173,7 @@ namespace FormUI.Forms
             this.Controls.Add(this.dgvMatches);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMatches";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmMatches";
             this.Load += new System.EventHandler(this.FrmMatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();

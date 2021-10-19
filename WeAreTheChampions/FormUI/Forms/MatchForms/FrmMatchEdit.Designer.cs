@@ -166,6 +166,7 @@ namespace FormUI.Forms.MatchForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmMatchEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Galatasaray vs Aytemiz Alanyaspor";
             this.Load += new System.EventHandler(this.FrmMatchEdit_Load);
             this.ResumeLayout(false);

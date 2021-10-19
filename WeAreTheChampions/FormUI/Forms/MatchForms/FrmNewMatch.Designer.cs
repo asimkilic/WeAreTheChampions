@@ -37,10 +37,11 @@ namespace FormUI.Forms.MatchForms
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvHomeTeam = new System.Windows.Forms.DataGridView();
+            this.TeamName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvAwayTeam = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TeamName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSaveMatch = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHomeTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +134,13 @@ namespace FormUI.Forms.MatchForms
             this.dgvHomeTeam.TabIndex = 9;
             this.dgvHomeTeam.SelectionChanged += new System.EventHandler(this.dgvHomeTeam_SelectionChanged);
             // 
+            // TeamName
+            // 
+            this.TeamName.DataPropertyName = "TeamName";
+            this.TeamName.HeaderText = "Ev Sahibi";
+            this.TeamName.Name = "TeamName";
+            this.TeamName.ReadOnly = true;
+            // 
             // dgvAwayTeam
             // 
             this.dgvAwayTeam.AllowUserToAddRows = false;
@@ -158,13 +166,6 @@ namespace FormUI.Forms.MatchForms
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
-            // TeamName
-            // 
-            this.TeamName.DataPropertyName = "TeamName";
-            this.TeamName.HeaderText = "Ev Sahibi";
-            this.TeamName.Name = "TeamName";
-            this.TeamName.ReadOnly = true;
-            // 
             // btnSaveMatch
             // 
             this.btnSaveMatch.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
@@ -179,11 +180,26 @@ namespace FormUI.Forms.MatchForms
             this.btnSaveMatch.UseVisualStyleBackColor = false;
             this.btnSaveMatch.Click += new System.EventHandler(this.btnSaveMatch_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnExit.Location = new System.Drawing.Point(483, 490);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(210, 52);
+            this.btnExit.TabIndex = 10;
+            this.btnExit.Text = "İPTAL";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // FrmNewMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 554);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaveMatch);
             this.Controls.Add(this.dgvAwayTeam);
             this.Controls.Add(this.dgvHomeTeam);
@@ -220,5 +236,6 @@ namespace FormUI.Forms.MatchForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeamName;
         private System.Windows.Forms.Button btnSaveMatch;
+        private System.Windows.Forms.Button btnExit;
     }
 }

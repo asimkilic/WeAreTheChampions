@@ -36,6 +36,7 @@ namespace FormUI.Forms
             FrmNewMatch frmNewMatch = new FrmNewMatch();
             this.Hide();
             frmNewMatch.ShowDialog();
+            ListAllMatches();
             this.Show();
         }
 
