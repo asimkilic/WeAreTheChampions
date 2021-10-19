@@ -95,6 +95,18 @@
     <Compile Include="Forms\SplashScreen\frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TeamsForms\FrmNewTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmNewTeam.Designer.cs">
+      <DependentUpon>FrmNewTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeamColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeamColors.Designer.cs">
+      <DependentUpon>FrmTeamColors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\TeamsForms\FrmTeams.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamsForms\FrmNewTeam.resx">
+      <DependentUpon>FrmNewTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamsForms\FrmTeamColors.resx">
+      <DependentUpon>FrmTeamColors.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\TeamsForms\FrmTeams.resx">
       <DependentUpon>FrmTeams.cs</DependentUpon>
