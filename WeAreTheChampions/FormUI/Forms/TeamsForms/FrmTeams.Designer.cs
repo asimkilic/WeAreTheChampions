@@ -33,6 +33,9 @@ namespace FormUI.Forms.TeamsForms
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPlayers = new System.Windows.Forms.DataGridView();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnNewTeam = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +57,7 @@ namespace FormUI.Forms.TeamsForms
             this.dgvTeams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTeams.Size = new System.Drawing.Size(301, 521);
             this.dgvTeams.TabIndex = 0;
+            this.dgvTeams.SelectionChanged += new System.EventHandler(this.dgvTeams_SelectionChanged);
             // 
             // Column1
             // 
@@ -74,18 +78,57 @@ namespace FormUI.Forms.TeamsForms
             // 
             // dgvPlayers
             // 
+            this.dgvPlayers.AllowUserToAddRows = false;
+            this.dgvPlayers.AllowUserToDeleteRows = false;
+            this.dgvPlayers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlayers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column2});
             this.dgvPlayers.Location = new System.Drawing.Point(396, 53);
+            this.dgvPlayers.MultiSelect = false;
             this.dgvPlayers.Name = "dgvPlayers";
+            this.dgvPlayers.ReadOnly = true;
+            this.dgvPlayers.RowHeadersVisible = false;
+            this.dgvPlayers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPlayers.Size = new System.Drawing.Size(307, 521);
             this.dgvPlayers.TabIndex = 2;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "PlayerName";
+            this.Column2.HeaderText = "Oyuncu Adı";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(408, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(126, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "OYUNCULAR";
+            // 
+            // btnNewTeam
+            // 
+            this.btnNewTeam.Location = new System.Drawing.Point(765, 53);
+            this.btnNewTeam.Name = "btnNewTeam";
+            this.btnNewTeam.Size = new System.Drawing.Size(182, 52);
+            this.btnNewTeam.TabIndex = 3;
+            this.btnNewTeam.Text = "YENİ TAKIM EKLE";
+            this.btnNewTeam.UseVisualStyleBackColor = true;
+            this.btnNewTeam.Click += new System.EventHandler(this.btnNewTeam_Click);
             // 
             // FrmTeams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(996, 700);
+            this.ClientSize = new System.Drawing.Size(1005, 742);
+            this.Controls.Add(this.btnNewTeam);
             this.Controls.Add(this.dgvPlayers);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTeams);
             this.Name = "FrmTeams";
@@ -104,5 +147,8 @@ namespace FormUI.Forms.TeamsForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvPlayers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNewTeam;
     }
 }

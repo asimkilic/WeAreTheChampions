@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.DependencyResolvers.Autofac;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,15 +34,28 @@ namespace FormUI.Forms.TeamsForms
         private void PropertyChanges()
         {
             dgvTeams.AutoGenerateColumns = false;
+            dgvPlayers.AutoGenerateColumns = false;
         }
         private void ListAllTeams()
         {
             var teams = _teamService.GetAll().Data;
             dgvTeams.DataSource = teams;
         }
-        private void GetAllPlayers()
+
+        private void dgvTeams_SelectionChanged(object sender, EventArgs e)
         {
-            
+            if (dgvTeams.SelectedRows.Count != 1) return;
+            ListTeamPlayers(((Team)dgvTeams.SelectedRows[0].DataBoundItem).Id);
+        }
+
+        private void ListTeamPlayers(int teamId)
+        {
+            dgvPlayers.DataSource = _playerService.GetPlayersByTeamId(teamId).Data;
+        }
+
+        private void btnNewTeam_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
