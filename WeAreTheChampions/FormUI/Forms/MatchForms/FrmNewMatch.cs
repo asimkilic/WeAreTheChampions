@@ -31,6 +31,7 @@ namespace FormUI.Forms.MatchForms
         {
             dgvAwayTeam.AutoGenerateColumns = false;
             dgvHomeTeam.AutoGenerateColumns = false;
+            lblTodaysDate.Text = DateTime.Now.ToShortDateString();
         }
 
         private void FrmNewMatch_Load(object sender, EventArgs e)
@@ -45,7 +46,6 @@ namespace FormUI.Forms.MatchForms
         }
         private void BindHomeTeam()
         {
-
             dgvHomeTeam.DataSource = AllTeams;
         }
         private void BindAwayTeam()
@@ -59,6 +59,38 @@ namespace FormUI.Forms.MatchForms
         private void dgvHomeTeam_SelectionChanged(object sender, EventArgs e)
         {
             BindAwayTeam();
+        }
+
+        private void btnSaveMatch_Click(object sender, EventArgs e)
+        {
+            if (dgvHomeTeam.SelectedRows.Count != 1 && dgvAwayTeam.SelectedRows.Count != 1) return;
+            FillNewMatch(out Match newMatch);
+            var result = _matchService.Add(newMatch);
+            if (result.Success)
+                SuccessMessage();
+            else
+                ErrorMessage();
+        }
+
+        private void FillNewMatch(out Match newMatch)
+        {
+            newMatch = new Match
+            {
+                HomeTeam = ((Team)dgvHomeTeam.SelectedRows[0].DataBoundItem),
+                AwayTeamId = ((Team)dgvAwayTeam.SelectedRows[0].DataBoundItem).Id,
+                HomeTeamId = ((Team)dgvHomeTeam.SelectedRows[0].DataBoundItem).Id,
+                MatchTime = new DateTime(dtpMatchDate.Value.Year, dtpMatchDate.Value.Month, dtpMatchDate.Value.Day, dtpMatchHour.Value.Hour, dtpMatchHour.Value.Minute, dtpMatchHour.Value.Second),
+            };
+        }
+
+        private void SuccessMessage()
+        {
+            MessageBox.Show("Maç başarıyla oluşturuldu");
+            Close();
+        }
+        private void ErrorMessage()
+        {
+            MessageBox.Show("Bir hata oluştu. Tekrar deneyiniz.");
         }
     }
 }

@@ -29,7 +29,7 @@ namespace FormUI.Forms.MatchForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblTodaysDate = new System.Windows.Forms.Label();
             this.dtpMatchDate = new System.Windows.Forms.DateTimePicker();
             this.dtpMatchHour = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,20 +40,21 @@ namespace FormUI.Forms.MatchForms
             this.dgvAwayTeam = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TeamName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSaveMatch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHomeTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // lblTodaysDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(796, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "19.10.2021";
+            this.lblTodaysDate.AutoSize = true;
+            this.lblTodaysDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblTodaysDate.Location = new System.Drawing.Point(796, 9);
+            this.lblTodaysDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTodaysDate.Name = "lblTodaysDate";
+            this.lblTodaysDate.Size = new System.Drawing.Size(89, 20);
+            this.lblTodaysDate.TabIndex = 1;
+            this.lblTodaysDate.Text = "19.10.2021";
             // 
             // dtpMatchDate
             // 
@@ -164,11 +165,26 @@ namespace FormUI.Forms.MatchForms
             this.TeamName.Name = "TeamName";
             this.TeamName.ReadOnly = true;
             // 
+            // btnSaveMatch
+            // 
+            this.btnSaveMatch.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.btnSaveMatch.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnSaveMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveMatch.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnSaveMatch.Location = new System.Drawing.Point(711, 490);
+            this.btnSaveMatch.Name = "btnSaveMatch";
+            this.btnSaveMatch.Size = new System.Drawing.Size(210, 52);
+            this.btnSaveMatch.TabIndex = 10;
+            this.btnSaveMatch.Text = "YENİ MAÇ OLUŞTUR";
+            this.btnSaveMatch.UseVisualStyleBackColor = false;
+            this.btnSaveMatch.Click += new System.EventHandler(this.btnSaveMatch_Click);
+            // 
             // FrmNewMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 554);
+            this.Controls.Add(this.btnSaveMatch);
             this.Controls.Add(this.dgvAwayTeam);
             this.Controls.Add(this.dgvHomeTeam);
             this.Controls.Add(this.label5);
@@ -177,7 +193,7 @@ namespace FormUI.Forms.MatchForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpMatchHour);
             this.Controls.Add(this.dtpMatchDate);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTodaysDate);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmNewMatch";
@@ -192,7 +208,7 @@ namespace FormUI.Forms.MatchForms
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblTodaysDate;
         private System.Windows.Forms.DateTimePicker dtpMatchDate;
         private System.Windows.Forms.DateTimePicker dtpMatchHour;
         private System.Windows.Forms.Label label1;
@@ -203,5 +219,6 @@ namespace FormUI.Forms.MatchForms
         private System.Windows.Forms.DataGridView dgvAwayTeam;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn TeamName;
+        private System.Windows.Forms.Button btnSaveMatch;
     }
 }
