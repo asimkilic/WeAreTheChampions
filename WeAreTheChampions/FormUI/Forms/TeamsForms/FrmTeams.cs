@@ -15,10 +15,13 @@ namespace FormUI.Forms.TeamsForms
     public partial class FrmTeams : Form
     {
         private readonly ITeamService _teamService;
+        private readonly IPlayerService _playerService;
         public FrmTeams()
         {
             InitializeComponent();
             _teamService = InstanceFactory.GetInstance<ITeamService>();
+            _playerService = InstanceFactory.GetInstance<IPlayerService>();
+
             PropertyChanges();
             ListAllTeams();
         }
@@ -35,6 +38,10 @@ namespace FormUI.Forms.TeamsForms
         {
             var teams = _teamService.GetAll().Data;
             dgvTeams.DataSource = teams;
+        }
+        private void GetAllPlayers()
+        {
+            
         }
     }
 }

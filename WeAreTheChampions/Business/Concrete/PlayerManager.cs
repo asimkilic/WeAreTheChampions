@@ -48,6 +48,11 @@ namespace Business.Concrete
             return new SuccessDataResult<Player>(_playerDal.Get(p => p.Id == playerId));
         }
 
+        public IDataResult<List<Player>> GetPlayersByTeamId(int teamId)
+        {
+            return new SuccessDataResult<List<Player>>(_playerDal.GetAll(x=>x.TeamId==teamId));
+        }
+
         public IResult Update(Player player)
         {
             _playerDal.Update(player);
