@@ -19,13 +19,15 @@ namespace FormUI.Forms.TeamsForms
         private readonly IColorService _colorService;
         private readonly IPlayerService _playerService;
         private readonly ITeamService _teamService;
+        private readonly ITeamColorService _teamColorService;
 
         // Lists
         private List<Entities.Concrete.Color> AllColors;
+        private List<Entities.Concrete.Color> TeamColors;
         private List<Player> AllPlayers;
         private List<Team> AllTeams;
 
-        private readonly Team newTeam;
+        private Team newTeam;
 
         private bool isValidTeamName = true;
         public FrmNewTeam()
@@ -36,6 +38,7 @@ namespace FormUI.Forms.TeamsForms
             _teamService = InstanceFactory.GetInstance<ITeamService>();
             _playerService = InstanceFactory.GetInstance<IPlayerService>();
             _colorService = InstanceFactory.GetInstance<IColorService>();
+            _teamColorService = InstanceFactory.GetInstance<ITeamColorService>();
 
 
             GetTeamList();
@@ -95,7 +98,7 @@ namespace FormUI.Forms.TeamsForms
 
             if (true) //result.Success
             {
-                //newTeam=_teamService.
+                newTeam = _teamService.GetTeamByName(txtTeamName.Text).Data;
                 GetColorSectionActive();
             }
             else
@@ -112,6 +115,10 @@ namespace FormUI.Forms.TeamsForms
             AllColors = _colorService.GetAll().Data;
             dgvColors.DataSource = AllColors;
 
+        }
+        private void GetTeamColorList()
+        {
+            TeamColors = _teamColorService.GetByTeamId(newTeam.Id);
         }
         private void GetColorSectionActive()
         {
@@ -133,6 +140,7 @@ namespace FormUI.Forms.TeamsForms
                 if (result.Success)
                 {
                     GetColorList();
+
                 }
                 else
                     MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz.");
@@ -175,7 +183,15 @@ namespace FormUI.Forms.TeamsForms
         private void dgvColors_DoubleClick(object sender, EventArgs e)
         {
             if (dgvColors.SelectedRows.Count != 1) return;
-            var colorId =((Entities.Concrete.Color)dgvColors.SelectedRows[0].DataBoundItem).Id;
+            AddColorToTeam();
+
+
+
+        }
+        private void AddColorToTeam()
+        {
+            var colorId = ((Entities.Concrete.Color)dgvColors.SelectedRows[0].DataBoundItem).Id;
+            var result = _teamColorService.Add(new TeamColor { ColorId = colorId, TeamId = newTeam.Id });
 
         }
         #endregion

@@ -87,6 +87,8 @@ namespace Business.Concrete
             return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == colorId));
         }
 
+      
+
         [ValidationAspect(typeof(ColorValidator), ValidationStates.Update)]
         public IResult Update(Color color)
         {

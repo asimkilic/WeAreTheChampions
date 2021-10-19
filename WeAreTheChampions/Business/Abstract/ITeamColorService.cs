@@ -10,8 +10,8 @@ namespace Business.Abstract
 {
     public interface ITeamColorService : IServiceBase<TeamColor>
     {
-        IDataResult<TeamColor> GetByTeamId(int teamId);
-        IDataResult<TeamColor> GetByColorId(int colorId);
+        IDataResult<List<TeamColor>> GetByTeamId(int teamId);
+        IDataResult<List<TeamColor>> GetByColorId(int colorId);
 
 
     }

@@ -37,14 +37,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<TeamColor>>(_teamColorDal.GetAll());
         }
 
-        public IDataResult<TeamColor> GetByColorId(int colorId)
+        public IDataResult<List<TeamColor>> GetByColorId(int colorId)
         {
-            return new SuccessDataResult<TeamColor>(_teamColorDal.Get(x => x.ColorId == colorId));
+            return new SuccessDataResult<List<TeamColor>>(_teamColorDal.GetAll(x => x.ColorId == colorId));
         }
 
-        public IDataResult<TeamColor> GetByTeamId(int teamId)
+        public IDataResult<List<TeamColor>> GetByTeamId(int teamId)
         {
-            return new SuccessDataResult<TeamColor>(_teamColorDal.Get(x => x.TeamId == teamId));
+            return new SuccessDataResult<List<TeamColor>>(_teamColorDal.GetAll(x => x.TeamId == teamId));
         }
 
         public IResult Update(TeamColor teamColor)
