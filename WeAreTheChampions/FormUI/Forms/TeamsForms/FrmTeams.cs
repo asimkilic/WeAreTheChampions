@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Business.Abstract;
+using Business.DependencyResolvers.Autofac;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,27 @@ namespace FormUI.Forms.TeamsForms
 {
     public partial class FrmTeams : Form
     {
+        private readonly ITeamService _teamService;
         public FrmTeams()
         {
             InitializeComponent();
+            _teamService = InstanceFactory.GetInstance<ITeamService>();
+            PropertyChanges();
+            ListAllTeams();
+        }
+
+        private void FrmTeams_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void PropertyChanges()
+        {
+            dgvTeams.AutoGenerateColumns = false;
+        }
+        private void ListAllTeams()
+        {
+            var teams = _teamService.GetAll().Data;
+            dgvTeams.DataSource = teams;
         }
     }
 }

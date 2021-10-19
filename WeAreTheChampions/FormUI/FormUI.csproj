@@ -95,6 +95,12 @@
     <Compile Include="Forms\SplashScreen\frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeams.Designer.cs">
+      <DependentUpon>FrmTeams.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamsForms\FrmTeams.resx">
+      <DependentUpon>FrmTeams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>

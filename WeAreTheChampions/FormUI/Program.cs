@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using System.Threading;
 using FormUI.Forms;
 using FormUI.Forms.MatchForms;
+using FormUI.Forms.TeamsForms;
 
 namespace FormUI
 {
@@ -24,7 +25,7 @@ namespace FormUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmMatches());
+            Application.Run(new FrmTeams());
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)

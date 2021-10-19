@@ -76,7 +76,6 @@ namespace FormUI.Forms.MatchForms
         {
             newMatch = new Match
             {
-                HomeTeam = ((Team)dgvHomeTeam.SelectedRows[0].DataBoundItem),
                 AwayTeamId = ((Team)dgvAwayTeam.SelectedRows[0].DataBoundItem).Id,
                 HomeTeamId = ((Team)dgvHomeTeam.SelectedRows[0].DataBoundItem).Id,
                 MatchTime = new DateTime(dtpMatchDate.Value.Year, dtpMatchDate.Value.Month, dtpMatchDate.Value.Day, dtpMatchHour.Value.Hour, dtpMatchHour.Value.Minute, dtpMatchHour.Value.Second),
