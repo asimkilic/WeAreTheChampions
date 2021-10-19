@@ -1,0 +1,207 @@
+﻿
+namespace FormUI.Forms.MatchForms
+{
+    partial class FrmNewMatch
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpMatchDate = new System.Windows.Forms.DateTimePicker();
+            this.dtpMatchHour = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvHomeTeam = new System.Windows.Forms.DataGridView();
+            this.dgvAwayTeam = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeamName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHomeTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(796, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "19.10.2021";
+            // 
+            // dtpMatchDate
+            // 
+            this.dtpMatchDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpMatchDate.Location = new System.Drawing.Point(285, 13);
+            this.dtpMatchDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpMatchDate.Name = "dtpMatchDate";
+            this.dtpMatchDate.Size = new System.Drawing.Size(108, 23);
+            this.dtpMatchDate.TabIndex = 2;
+            // 
+            // dtpMatchHour
+            // 
+            this.dtpMatchHour.CustomFormat = "HH:mm";
+            this.dtpMatchHour.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpMatchHour.Location = new System.Drawing.Point(545, 13);
+            this.dtpMatchHour.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpMatchHour.Name = "dtpMatchHour";
+            this.dtpMatchHour.ShowUpDown = true;
+            this.dtpMatchHour.Size = new System.Drawing.Size(108, 23);
+            this.dtpMatchHour.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(226, 16);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Tarih :";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(490, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(45, 17);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Saat :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(178, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Ev Sahibi";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(650, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 17);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Deplasman";
+            // 
+            // dgvHomeTeam
+            // 
+            this.dgvHomeTeam.AllowUserToAddRows = false;
+            this.dgvHomeTeam.AllowUserToDeleteRows = false;
+            this.dgvHomeTeam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvHomeTeam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvHomeTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHomeTeam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TeamName});
+            this.dgvHomeTeam.Location = new System.Drawing.Point(32, 93);
+            this.dgvHomeTeam.MultiSelect = false;
+            this.dgvHomeTeam.Name = "dgvHomeTeam";
+            this.dgvHomeTeam.ReadOnly = true;
+            this.dgvHomeTeam.RowHeadersVisible = false;
+            this.dgvHomeTeam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvHomeTeam.Size = new System.Drawing.Size(391, 366);
+            this.dgvHomeTeam.TabIndex = 9;
+            this.dgvHomeTeam.SelectionChanged += new System.EventHandler(this.dgvHomeTeam_SelectionChanged);
+            // 
+            // dgvAwayTeam
+            // 
+            this.dgvAwayTeam.AllowUserToAddRows = false;
+            this.dgvAwayTeam.AllowUserToDeleteRows = false;
+            this.dgvAwayTeam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAwayTeam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAwayTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAwayTeam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
+            this.dgvAwayTeam.Location = new System.Drawing.Point(523, 93);
+            this.dgvAwayTeam.MultiSelect = false;
+            this.dgvAwayTeam.Name = "dgvAwayTeam";
+            this.dgvAwayTeam.ReadOnly = true;
+            this.dgvAwayTeam.RowHeadersVisible = false;
+            this.dgvAwayTeam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAwayTeam.Size = new System.Drawing.Size(398, 366);
+            this.dgvAwayTeam.TabIndex = 9;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "TeamName";
+            this.Column1.HeaderText = "Deplasman";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // TeamName
+            // 
+            this.TeamName.DataPropertyName = "TeamName";
+            this.TeamName.HeaderText = "Ev Sahibi";
+            this.TeamName.Name = "TeamName";
+            this.TeamName.ReadOnly = true;
+            // 
+            // FrmNewMatch
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1028, 554);
+            this.Controls.Add(this.dgvAwayTeam);
+            this.Controls.Add(this.dgvHomeTeam);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dtpMatchHour);
+            this.Controls.Add(this.dtpMatchDate);
+            this.Controls.Add(this.label2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "FrmNewMatch";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Yeni Maç Ekle";
+            this.Load += new System.EventHandler(this.FrmNewMatch_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHomeTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpMatchDate;
+        private System.Windows.Forms.DateTimePicker dtpMatchHour;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvHomeTeam;
+        private System.Windows.Forms.DataGridView dgvAwayTeam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TeamName;
+    }
+}

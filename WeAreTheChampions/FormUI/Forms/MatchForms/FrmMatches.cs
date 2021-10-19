@@ -32,20 +32,11 @@ namespace FormUI.Forms
 
         private void btnNewMatch_Click(object sender, EventArgs e)
         {
-            //var newMatch = new Match
-            //{
-            //    MatchTime = DateTime.Now,
-            //    AwayTeamId = 4,
-            //    HomeTeamId = 6
-            //};
-            //var newMatch2 = new Match
-            //{
-            //    MatchTime = DateTime.Now.AddDays(10),
-            //    AwayTeamId = 12,
-            //    HomeTeamId = 3
-            //};
 
-
+            FrmNewMatch frmNewMatch = new FrmNewMatch();
+            this.Hide();
+            frmNewMatch.ShowDialog();
+            this.Show();
         }
 
         private void ListAllMatchesWithoutPlayed()
@@ -130,6 +121,6 @@ namespace FormUI.Forms
             this.Show();
 
         }
-      
+
     }
 }

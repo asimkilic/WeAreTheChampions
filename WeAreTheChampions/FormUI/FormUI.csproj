@@ -83,6 +83,12 @@
     <Compile Include="Forms\FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MatchForms\FrmNewMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmNewMatch.Designer.cs">
+      <DependentUpon>FrmNewMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SplashScreen\frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchForms\FrmNewMatch.resx">
+      <DependentUpon>FrmNewMatch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
