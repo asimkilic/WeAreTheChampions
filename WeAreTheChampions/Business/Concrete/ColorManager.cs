@@ -32,13 +32,12 @@ namespace Business.Concrete
         // admin        : has authority over the whole project
         // color.admin  : has authority over the Color operations
         // color.add    : has authority only add operation
-        [SecuredOperation("admin,color.admin,color.add")]
+        [SecuredOperation("admin,color.admin,color.add")] // OOP  Object oriented programming   AOP Aspect oriented programmin
         [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
 
             //TODO: Check if exist.
-
             var result = BusinessRules.Run(CheckIfColorExist(color), CheckIfColorNameExist(color.ColorName));
             if (result != null)
             {
@@ -87,6 +86,8 @@ namespace Business.Concrete
             return new SuccessDataResult<Color>(_colorDal.Get(c => c.Id == colorId));
         }
 
+
+
         [ValidationAspect(typeof(ColorValidator), ValidationStates.Update)]
         public IResult Update(Color color)
         {
@@ -99,20 +100,20 @@ namespace Business.Concrete
         // Business Rules
         private IResult CheckIfColorExist(Color color)
         {
-            var result = false;  //TODO: Create a method which checc RGB  exist in DB 
-            if (result)
+            var result = _colorDal.GetAll(x => x.Red == color.Red && x.Green == color.Green && x.Blue == color.Blue).Count == 0;  //TODO: Create a method which checc RGB  exist in DB 
+            if (!result)
             {
-                return new ErrorResult();
+                return new ErrorResult("Bu renk zaten mevcut.");
             }
             return new SuccessResult();
         }
 
         private IResult CheckIfColorNameExist(string colorName)
         {
-            var result = false; //TODO: create a method which checks name exist in DB
-            if (result)
+            var result = _colorDal.GetAll(x => x.ColorName.ToLower() == colorName.ToLower()).Count == 0; //TODO: create a method which checks name exist in DB
+            if (!result)
             {
-                return new ErrorResult();
+                return new ErrorResult("Aynı isimden en fazla 1 adet Renk eklenebilir");
             }
             return new SuccessResult();
         }

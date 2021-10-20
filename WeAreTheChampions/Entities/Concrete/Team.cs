@@ -25,8 +25,12 @@ namespace Entities.Concrete
         public virtual ICollection<Match> HomeMatches { get; set; }
         public virtual ICollection<Match> AwayMatches { get; set; }
 
+       
 
+        // Overrides
         public override string ToString() => TeamName;
+
+
 
 
     }

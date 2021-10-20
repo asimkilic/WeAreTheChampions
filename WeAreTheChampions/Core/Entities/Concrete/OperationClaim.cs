@@ -14,3 +14,6 @@ namespace Core.Entities.Concrete
         public virtual ICollection<UserOperationClaim> UserOperationClaims { get; set; }
     }
 }
+
+
+// Result= ResultEnum.Team1Won;

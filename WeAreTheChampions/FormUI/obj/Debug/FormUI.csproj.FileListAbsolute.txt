@@ -47,3 +47,6 @@ C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChamp
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.FrmRegister.resources
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.FrmLogin.resources
 C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.MatchForms.FrmMatchEdit.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.MatchForms.FrmNewMatch.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.TeamsForms.FrmTeams.resources
+C:\Users\ofn2nvu\Desktop\BilgeAdamBoost\Projects\WeAreTheChampions\WeAreTheChampions\FormUI\obj\Debug\FormUI.Forms.TeamsForms.FrmNewTeam.resources

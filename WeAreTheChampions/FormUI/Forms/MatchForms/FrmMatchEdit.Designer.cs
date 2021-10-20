@@ -40,6 +40,8 @@ namespace FormUI.Forms.MatchForms
             this.lblAway = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // label1
@@ -84,17 +86,21 @@ namespace FormUI.Forms.MatchForms
             // 
             // txtScoreHome
             // 
-            this.txtScoreHome.Location = new System.Drawing.Point(273, 20);
+            this.txtScoreHome.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtScoreHome.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtScoreHome.Location = new System.Drawing.Point(274, 19);
             this.txtScoreHome.Name = "txtScoreHome";
-            this.txtScoreHome.Size = new System.Drawing.Size(50, 20);
+            this.txtScoreHome.Size = new System.Drawing.Size(50, 13);
             this.txtScoreHome.TabIndex = 1;
             this.txtScoreHome.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScoreHome_KeyPress);
             // 
             // txtScoreAway
             // 
-            this.txtScoreAway.Location = new System.Drawing.Point(376, 20);
+            this.txtScoreAway.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtScoreAway.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtScoreAway.Location = new System.Drawing.Point(377, 19);
             this.txtScoreAway.Name = "txtScoreAway";
-            this.txtScoreAway.Size = new System.Drawing.Size(50, 20);
+            this.txtScoreAway.Size = new System.Drawing.Size(50, 13);
             this.txtScoreAway.TabIndex = 2;
             this.txtScoreAway.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtScoreAway_KeyPress);
             // 
@@ -130,30 +136,55 @@ namespace FormUI.Forms.MatchForms
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(127, 166);
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(537, 123);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(91, 43);
             this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "İPTAL";
-            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(230, 166);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(640, 123);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(97, 43);
             this.btnSave.TabIndex = 5;
             this.btnSave.Text = "KAYDET";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.panel1.Location = new System.Drawing.Point(274, 34);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(50, 2);
+            this.panel1.TabIndex = 7;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.panel2.Location = new System.Drawing.Point(377, 34);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(50, 2);
+            this.panel2.TabIndex = 7;
             // 
             // FrmMatchEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 245);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(762, 181);
             this.ControlBox = false;
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblAway);
@@ -166,6 +197,7 @@ namespace FormUI.Forms.MatchForms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "FrmMatchEdit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Galatasaray vs Aytemiz Alanyaspor";
             this.Load += new System.EventHandler(this.FrmMatchEdit_Load);
             this.ResumeLayout(false);
@@ -185,5 +217,7 @@ namespace FormUI.Forms.MatchForms
         private System.Windows.Forms.Label lblAway;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }

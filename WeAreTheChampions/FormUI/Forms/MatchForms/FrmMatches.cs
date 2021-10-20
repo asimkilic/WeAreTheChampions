@@ -2,6 +2,7 @@
 using Business.DependencyResolvers.Autofac;
 using Entities.Concrete;
 using Entities.DTOs;
+using FormUI.Forms.MatchForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,34 +27,29 @@ namespace FormUI.Forms
 
         private void FrmMatches_Load(object sender, EventArgs e)
         {
+            dgvMatches.EnableHeadersVisualStyles = false;
             ListAllMatches();
         }
 
         private void btnNewMatch_Click(object sender, EventArgs e)
         {
-            //var newMatch = new Match
-            //{
-            //    MatchTime = DateTime.Now,
-            //    AwayTeamId = 4,
-            //    HomeTeamId = 6
-            //};
-            //var newMatch2 = new Match
-            //{
-            //    MatchTime = DateTime.Now.AddDays(10),
-            //    AwayTeamId = 12,
-            //    HomeTeamId = 3
-            //};
 
-
+            FrmNewMatch frmNewMatch = new FrmNewMatch();
+            this.Hide();
+            frmNewMatch.ShowDialog();
+            ListAllMatches();
+            this.Show();
         }
 
         private void ListAllMatchesWithoutPlayed()
         {
-            var a= _matchService.GetAllWithAssociatedPropertiesWithoutPlayed().Data;
-            dgvMatches.DataSource = a;
+
+            dgvMatches.DataSource = _matchService.GetAllWithAssociatedPropertiesWithoutPlayed().Data;
+
         }
         private void ListAllMatches()
         {
+            cbxHidePlayedMatches.Checked = false;
             dgvMatches.DataSource = _matchService.GetAllWithAssociatedProperties().Data;
         }
 
@@ -88,6 +84,11 @@ namespace FormUI.Forms
 
         private void dgvMatches_DoubleClick(object sender, EventArgs e)
         {
+            if (dgvMatches.SelectedRows.Count != 1)
+            {
+                return;
+            }
+            EditMatch(((MatchesListDto)dgvMatches.SelectedRows[0].DataBoundItem).MatchId);
 
         }
 
@@ -102,5 +103,26 @@ namespace FormUI.Forms
                 ListAllMatches();
             }
         }
+
+        private void btnEditMatch_Click(object sender, EventArgs e)
+        {
+            if (dgvMatches.SelectedRows.Count != 1)
+            {
+                return;
+            }
+            EditMatch(((MatchesListDto)dgvMatches.SelectedRows[0].DataBoundItem).MatchId);
+
+        }
+
+        private void EditMatch(int matchId)
+        {
+            FrmMatchEdit frmMatchEdit = new FrmMatchEdit(matchId);
+            this.Hide();
+            frmMatchEdit.ShowDialog();
+            ListAllMatches();
+            this.Show();
+
+        }
+
     }
 }

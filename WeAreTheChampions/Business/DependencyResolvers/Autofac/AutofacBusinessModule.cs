@@ -40,14 +40,14 @@ namespace Business.DependencyResolvers.Autofac
 
             builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
 
-            //int concreteSuffixCount = "Manager".Length; // 7  we need to know suffix such as 'Manager' in 'ColorManager' thus we can get the exact name of class to find its service interface
-            //int abstactSuffixCount = "Service".Length; //7   we need to know suffix such as 'Service' in 'IColorService' thus we can get the exact name of interface to find its manager class
+            // int concreteSuffixCount = "Manager".Length; // 7  we need to know suffix such as 'Manager' in 'ColorManager' thus we can get the exact name of class to find its service interface
+            // int abstactSuffixCount = "Service".Length; //7   we need to know suffix such as 'Service' in 'IColorService' thus we can get the exact name of interface to find its manager class
 
 
-            //REF : https://www.youtube.com/watch?v=mCUNrRtVVWY
+            //REF: https://www.youtube.com/watch?v=mCUNrRtVVWY
             //builder.RegisterAssemblyTypes(Assembly.Load(nameof(Business)))
             //  .Where(x => x.Namespace.Contains("Concrete") || x.Namespace.Contains("Abstract")) //we got  interfaces from concrete and abstract folders 
-            //  .As(x => x.GetInterfaces().FirstOrDefault(i => i.Name.Substring(0, (i.Name.Length - abstactSuffixCount)) == "I" + x.Name.Substring(0, (x.Name.Length - concreteSuffixCount)))); 
+            //  .As(x => x.GetInterfaces().FirstOrDefault(i => i.Name.Substring(0, (i.Name.Length - abstactSuffixCount)) == "I" + x.Name.Substring(0, (x.Name.Length - concreteSuffixCount))));
             // We discard the 'Service' part at the end of the name, we have the 'IColor' part, and if we put I at the beginning of the classes and delete the Manager part at the end, we get it if it matches
 
 

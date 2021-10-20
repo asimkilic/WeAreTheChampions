@@ -47,6 +47,11 @@ namespace Business.Concrete
             return new SuccessDataResult<Team>(_teamDal.Get(t => t.Id == teamId));
         }
 
+        public IDataResult<Team> GetTeamByName(string teamName)
+        {
+            return new SuccessDataResult<Team>(_teamDal.Get(t => t.TeamName.ToLower() == teamName.ToLower()));
+        }
+
         public IResult Update(Team team)
         {
             _teamDal.Update(team);

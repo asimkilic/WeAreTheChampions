@@ -64,6 +64,7 @@ namespace FormUI.Forms.MatchForms
             {
                 BindDataToForm();
                 MessageBox.Show("Değişiklikler kaydedildi");
+                Close();
                 return;
             }
             MessageBox.Show(result.Message != null ? result.Message : "Bir hata oluştu. Bilgileri kontrol ederek tekrar giriniz.");

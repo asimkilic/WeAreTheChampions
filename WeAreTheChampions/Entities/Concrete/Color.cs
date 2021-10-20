@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entities.Concrete
 {
-   public class Color:IEntity
+    public class Color : IEntity
     {
         public Color()
         {
@@ -21,5 +21,7 @@ namespace Entities.Concrete
 
 
         public virtual ICollection<TeamColor> TeamColors { get; set; }
+        public override string ToString() => ColorName;
+
     }
 }

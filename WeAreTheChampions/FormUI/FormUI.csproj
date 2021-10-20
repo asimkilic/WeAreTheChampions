@@ -83,11 +83,29 @@
     <Compile Include="Forms\FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\MatchForms\FrmNewMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MatchForms\FrmNewMatch.Designer.cs">
+      <DependentUpon>FrmNewMatch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SplashScreen\frmSplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\SplashScreen\frmSplashScreen.Designer.cs">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmNewTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmNewTeam.Designer.cs">
+      <DependentUpon>FrmNewTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeams.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TeamsForms\FrmTeams.Designer.cs">
+      <DependentUpon>FrmTeams.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -109,8 +127,17 @@
     <EmbeddedResource Include="Forms\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MatchForms\FrmNewMatch.resx">
+      <DependentUpon>FrmNewMatch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamsForms\FrmNewTeam.resx">
+      <DependentUpon>FrmNewTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TeamsForms\FrmTeams.resx">
+      <DependentUpon>FrmTeams.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
