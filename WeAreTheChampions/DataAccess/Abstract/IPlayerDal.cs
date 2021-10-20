@@ -10,5 +10,6 @@ namespace DataAccess.Abstract
 {
     public interface IPlayerDal : IEntityRepository<Player>
     {
+        List<Player> GetAllPlayersWithAssociatedProperties();
     }
 }

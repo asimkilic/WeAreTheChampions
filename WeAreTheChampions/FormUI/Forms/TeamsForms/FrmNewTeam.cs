@@ -27,6 +27,7 @@ namespace FormUI.Forms.TeamsForms
         private List<TeamColorDto> TeamColors;
         private List<Player> AllPlayers;
         private List<Team> AllTeams;
+        private List<Player> NewTeamPlayers;
 
         private Team newTeam;
 
@@ -48,6 +49,8 @@ namespace FormUI.Forms.TeamsForms
         {
             dgvColors.AutoGenerateColumns = false;
             dgvTeamColors.AutoGenerateColumns = false;
+            dgvAllPlayers.AutoGenerateColumns = false;
+            dgvPlayersOnTeam.AutoGenerateColumns = false;
         }
         private void FrmNewTeam_Load(object sender, EventArgs e)
         {
@@ -198,26 +201,101 @@ namespace FormUI.Forms.TeamsForms
         }
         private void dgvTeamColors_KeyDown(object sender, KeyEventArgs e)
         {
-            if (dgvTeamColors.SelectedRows.Count != 1 || e.KeyCode == Keys.Delete) return;
-            var deletedEntity = ((TeamColorDto)dgvTeamColors.SelectedRows[0].DataBoundItem);
-            var result = _teamColorService.DeleteByColorIdTeamId(deletedEntity.ColorId, deletedEntity.TeamId);
-            if (!result.Success)
-                MessageBox.Show("Bir hata oluştu. Tekrar deneyin");
-            GetTeamColorList();
+            if (dgvTeamColors.SelectedRows.Count == 1 && e.KeyCode == Keys.Delete)
+            {
+                var deletedEntity = ((TeamColorDto)dgvTeamColors.SelectedRows[0].DataBoundItem);
+                var result = _teamColorService.DeleteByColorIdTeamId(deletedEntity.ColorId, deletedEntity.TeamId);
+                if (!result.Success)
+                    MessageBox.Show("Bir hata oluştu. Tekrar deneyin");
+                GetTeamColorList();
+            }
+            else
+                return;
+
+        }
+        private void btnNextToPlayers_Click(object sender, EventArgs e)
+        {
+            lblToolTipColors.Visible = false;
+            GetPlayerSectionActive();
+
         }
         #endregion
 
         #region Select Player
         private void GetPlayerList()
         {
+            AllPlayers = _playerService.GetAllPlayersWithAssociatedProperties().Data;
+            NewTeamPlayers = _playerService.GetPlayersByTeamId(newTeam.Id).Data;
+            dgvAllPlayers.DataSource = AllPlayers;
+            dgvPlayersOnTeam.DataSource = NewTeamPlayers;
+        }
+        private void GetPlayerSectionActive()
+        {
+            GetPlayerList();
+            lblColors.BackColor = System.Drawing.Color.FromArgb(31, 31, 31);
+            lblColors.ForeColor = System.Drawing.SystemColors.ActiveCaption;
 
-            AllPlayers = _playerService.GetAll().Data;
+            lblPlayers.BackColor = System.Drawing.Color.FromArgb(243, 124, 105);
+            lblPlayers.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            panelPlayers.BringToFront();
 
         }
+
+        private void dgvAllPlayers_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvAllPlayers.SelectedRows.Count != 1) return;
+            DialogResult dr = MessageBox.Show("Seçilen oyuncuyu takımınıza eklemek istiyor musunuz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dr == DialogResult.Yes)
+            {
+                var updatedPlayer = ((Player)dgvAllPlayers.SelectedRows[0].DataBoundItem);
+                updatedPlayer.TeamId = newTeam.Id;
+                updatedPlayer.Team = newTeam;
+                var result = _playerService.Update(updatedPlayer);
+                if (!result.Success)
+                    MessageBox.Show("Bir hata oluştu. Lütfen tekrar deneyiniz");
+                GetPlayerList();
+            }
+        }
+
+        private void dgvPlayersOnTeam_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (dgvPlayersOnTeam.SelectedRows.Count == 1 && e.KeyCode == Keys.Delete)
+            {
+                var player = (Player)dgvPlayersOnTeam.SelectedRows[0].DataBoundItem;
+                player.TeamId = null;
+                var result = _playerService.Update(player);
+                if (!result.Success)
+                    MessageBox.Show("Oyuncu takımdan silinirken bir hata oluştu. Lütfen tekrar deneyin");
+                GetPlayerList();
+            }
+        }
+        private void btnAddNewPlayer_Click(object sender, EventArgs e)
+        {
+            if (txtNewPlayerName.Text == string.Empty) return;
+            if (AllPlayers.Any(x => x.PlayerName.ToLower() == txtNewPlayerName.Text.ToLower()))
+            {
+                MessageBox.Show("Oyuncu zaten mevcut");
+                return;
+            }
+            var result = _playerService.Add(new Player { PlayerName = txtNewPlayerName.Text.Trim(), TeamId = newTeam.Id });
+            if (!result.Success)
+            {
+                MessageBox.Show("Oyuncu oluşturulurken bir hata oluştu. Tekrar deneyiniz");
+            }
+            else
+            {
+                GetPlayerList();
+                txtNewPlayerName.Clear();
+            }
+        }
+
 
 
         #endregion
 
-
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

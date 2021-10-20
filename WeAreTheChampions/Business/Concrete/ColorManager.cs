@@ -32,13 +32,12 @@ namespace Business.Concrete
         // admin        : has authority over the whole project
         // color.admin  : has authority over the Color operations
         // color.add    : has authority only add operation
-        [SecuredOperation("admin,color.admin,color.add")]
+        [SecuredOperation("admin,color.admin,color.add")] // OOP  Object oriented programming   AOP Aspect oriented programmin
         [ValidationAspect(typeof(ColorValidator))]
         public IResult Add(Color color)
         {
 
             //TODO: Check if exist.
-
             var result = BusinessRules.Run(CheckIfColorExist(color), CheckIfColorNameExist(color.ColorName));
             if (result != null)
             {

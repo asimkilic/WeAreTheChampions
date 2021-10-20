@@ -67,10 +67,27 @@ namespace FormUI.Forms.TeamsForms
             this.lblGreen = new System.Windows.Forms.Label();
             this.labelRed = new System.Windows.Forms.Label();
             this.lblToolTipColors = new System.Windows.Forms.Label();
+            this.panelPlayers = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dgvAllPlayers = new System.Windows.Forms.DataGridView();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPlayersOnTeam = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddNewPlayer = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtNewPlayerName = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnFinish = new System.Windows.Forms.Button();
             this.panelNewTeam.SuspendLayout();
             this.panelColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamColors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
+            this.panelPlayers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTeamName
@@ -214,7 +231,6 @@ namespace FormUI.Forms.TeamsForms
             // btnNextToPlayers
             // 
             this.btnNextToPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.btnNextToPlayers.Enabled = false;
             this.btnNextToPlayers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNextToPlayers.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNextToPlayers.Location = new System.Drawing.Point(660, 412);
@@ -223,6 +239,7 @@ namespace FormUI.Forms.TeamsForms
             this.btnNextToPlayers.TabIndex = 14;
             this.btnNextToPlayers.Text = "İLERİ >>";
             this.btnNextToPlayers.UseVisualStyleBackColor = false;
+            this.btnNextToPlayers.Click += new System.EventHandler(this.btnNextToPlayers_Click);
             // 
             // dgvTeamColors
             // 
@@ -486,12 +503,176 @@ namespace FormUI.Forms.TeamsForms
     "ilir, DELETE tuşu ile atamayı geri alabilirsiniz.";
             this.lblToolTipColors.Visible = false;
             // 
+            // panelPlayers
+            // 
+            this.panelPlayers.Controls.Add(this.btnFinish);
+            this.panelPlayers.Controls.Add(this.btnAddNewPlayer);
+            this.panelPlayers.Controls.Add(this.panel4);
+            this.panelPlayers.Controls.Add(this.txtNewPlayerName);
+            this.panelPlayers.Controls.Add(this.label7);
+            this.panelPlayers.Controls.Add(this.label6);
+            this.panelPlayers.Controls.Add(this.label5);
+            this.panelPlayers.Controls.Add(this.dgvPlayersOnTeam);
+            this.panelPlayers.Controls.Add(this.label4);
+            this.panelPlayers.Controls.Add(this.dgvAllPlayers);
+            this.panelPlayers.Location = new System.Drawing.Point(35, 79);
+            this.panelPlayers.Name = "panelPlayers";
+            this.panelPlayers.Size = new System.Drawing.Size(853, 490);
+            this.panelPlayers.TabIndex = 13;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(241, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Mevcut Oyuncular";
+            // 
+            // dgvAllPlayers
+            // 
+            this.dgvAllPlayers.AllowUserToAddRows = false;
+            this.dgvAllPlayers.AllowUserToDeleteRows = false;
+            this.dgvAllPlayers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllPlayers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAllPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column5});
+            this.dgvAllPlayers.Location = new System.Drawing.Point(30, 34);
+            this.dgvAllPlayers.MultiSelect = false;
+            this.dgvAllPlayers.Name = "dgvAllPlayers";
+            this.dgvAllPlayers.ReadOnly = true;
+            this.dgvAllPlayers.RowHeadersVisible = false;
+            this.dgvAllPlayers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllPlayers.Size = new System.Drawing.Size(561, 328);
+            this.dgvAllPlayers.TabIndex = 0;
+            this.dgvAllPlayers.DoubleClick += new System.EventHandler(this.dgvAllPlayers_DoubleClick);
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "PlayerName";
+            this.Column10.HeaderText = "Oyuncu Adı";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Team";
+            this.Column5.HeaderText = "Oynadığı Takım";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // dgvPlayersOnTeam
+            // 
+            this.dgvPlayersOnTeam.AllowUserToAddRows = false;
+            this.dgvPlayersOnTeam.AllowUserToDeleteRows = false;
+            this.dgvPlayersOnTeam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlayersOnTeam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPlayersOnTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlayersOnTeam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11});
+            this.dgvPlayersOnTeam.Location = new System.Drawing.Point(616, 34);
+            this.dgvPlayersOnTeam.MultiSelect = false;
+            this.dgvPlayersOnTeam.Name = "dgvPlayersOnTeam";
+            this.dgvPlayersOnTeam.ReadOnly = true;
+            this.dgvPlayersOnTeam.RowHeadersVisible = false;
+            this.dgvPlayersOnTeam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPlayersOnTeam.Size = new System.Drawing.Size(216, 328);
+            this.dgvPlayersOnTeam.TabIndex = 2;
+            this.dgvPlayersOnTeam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPlayersOnTeam_KeyDown);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(621, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Takımda Bulunan Oyuncular";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "PlayerName";
+            this.Column11.HeaderText = "Oyuncu Adı";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // btnAddNewPlayer
+            // 
+            this.btnAddNewPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnAddNewPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnAddNewPlayer.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnAddNewPlayer.Location = new System.Drawing.Point(298, 413);
+            this.btnAddNewPlayer.Name = "btnAddNewPlayer";
+            this.btnAddNewPlayer.Size = new System.Drawing.Size(93, 38);
+            this.btnAddNewPlayer.TabIndex = 12;
+            this.btnAddNewPlayer.Text = "EKLE";
+            this.btnAddNewPlayer.UseVisualStyleBackColor = false;
+            this.btnAddNewPlayer.Click += new System.EventHandler(this.btnAddNewPlayer_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.panel4.Location = new System.Drawing.Point(142, 443);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(124, 2);
+            this.panel4.TabIndex = 11;
+            // 
+            // txtNewPlayerName
+            // 
+            this.txtNewPlayerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.txtNewPlayerName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNewPlayerName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNewPlayerName.Location = new System.Drawing.Point(142, 422);
+            this.txtNewPlayerName.Name = "txtNewPlayerName";
+            this.txtNewPlayerName.Size = new System.Drawing.Size(124, 19);
+            this.txtNewPlayerName.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(34, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Oyuncu Adı:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Location = new System.Drawing.Point(85, 385);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(154, 20);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Yeni Oyuncu Oluştur";
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFinish.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFinish.Location = new System.Drawing.Point(722, 407);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(93, 38);
+            this.btnFinish.TabIndex = 13;
+            this.btnFinish.Text = "BİTİR";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
             // FrmNewTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(976, 608);
+            this.Controls.Add(this.panelPlayers);
             this.Controls.Add(this.panelColors);
             this.Controls.Add(this.lblToolTipColors);
             this.Controls.Add(this.panelNewTeam);
@@ -510,6 +691,10 @@ namespace FormUI.Forms.TeamsForms
             this.panelColors.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamColors)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).EndInit();
+            this.panelPlayers.ResumeLayout(false);
+            this.panelPlayers.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -554,5 +739,19 @@ namespace FormUI.Forms.TeamsForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.Panel panelPlayers;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dgvAllPlayers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridView dgvPlayersOnTeam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.Button btnAddNewPlayer;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox txtNewPlayerName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnFinish;
     }
 }

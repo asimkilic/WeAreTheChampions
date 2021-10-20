@@ -43,6 +43,11 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Player>>(_playerDal.GetAll());
         }
 
+        public IDataResult<List<Player>> GetAllPlayersWithAssociatedProperties()
+        {
+            return new SuccessDataResult<List<Player>>(_playerDal.GetAllPlayersWithAssociatedProperties());
+        }
+
         public IDataResult<Player> GetById(int playerId)
         {
             return new SuccessDataResult<Player>(_playerDal.Get(p => p.Id == playerId));
@@ -50,7 +55,7 @@ namespace Business.Concrete
 
         public IDataResult<List<Player>> GetPlayersByTeamId(int teamId)
         {
-            return new SuccessDataResult<List<Player>>(_playerDal.GetAll(x=>x.TeamId==teamId));
+            return new SuccessDataResult<List<Player>>(_playerDal.GetAll(x => x.TeamId == teamId));
         }
 
         public IResult Update(Player player)

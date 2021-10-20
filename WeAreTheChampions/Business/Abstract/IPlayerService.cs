@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface IPlayerService:IServiceBase<Player>,IEntityServiceBase<Player>
+    public interface IPlayerService : IServiceBase<Player>, IEntityServiceBase<Player>
     {
         IDataResult<List<Player>> GetPlayersByTeamId(int teamId);
+        IDataResult<List<Player>> GetAllPlayersWithAssociatedProperties();
     }
 }

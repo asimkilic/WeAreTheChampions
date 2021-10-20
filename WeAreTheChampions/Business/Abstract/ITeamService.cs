@@ -11,5 +11,6 @@ namespace Business.Abstract
     public interface ITeamService:IServiceBase<Team>,IEntityServiceBase<Team>
     {
         IDataResult<Team> GetTeamByName(string teamName);
+       
     }
 }
