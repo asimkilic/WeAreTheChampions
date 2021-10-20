@@ -104,6 +104,7 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.txtTeamName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.txtTeamName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTeamName.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.txtTeamName.Location = new System.Drawing.Point(127, 44);
             this.txtTeamName.Name = "txtTeamName";
             this.txtTeamName.Size = new System.Drawing.Size(265, 19);

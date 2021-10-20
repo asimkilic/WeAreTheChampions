@@ -244,6 +244,10 @@ namespace FormUI.Forms.TeamsForms
         private void dgvAllPlayers_DoubleClick(object sender, EventArgs e)
         {
             if (dgvAllPlayers.SelectedRows.Count != 1) return;
+            if (NewTeamPlayers.Any(x => x.Id == ((Player)dgvAllPlayers.SelectedRows[0].DataBoundItem).Id))
+            {
+                MessageBox.Show("Oyuncu zaten takımda");
+            }
             DialogResult dr = MessageBox.Show("Seçilen oyuncuyu takımınıza eklemek istiyor musunuz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
             {
@@ -288,9 +292,6 @@ namespace FormUI.Forms.TeamsForms
                 txtNewPlayerName.Clear();
             }
         }
-
-
-
         #endregion
 
         private void btnFinish_Click(object sender, EventArgs e)

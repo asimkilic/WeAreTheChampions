@@ -25,7 +25,7 @@ namespace FormUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNewTeam());
+            Application.Run(new FrmTeams());
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)
