@@ -70,6 +70,7 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label1.Location = new System.Drawing.Point(97, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(103, 24);
@@ -105,6 +106,7 @@ namespace FormUI.Forms.TeamsForms
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label2.Location = new System.Drawing.Point(408, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(126, 24);
@@ -113,18 +115,24 @@ namespace FormUI.Forms.TeamsForms
             // 
             // btnNewTeam
             // 
+            this.btnNewTeam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.btnNewTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNewTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnNewTeam.Image = global::FormUI.Properties.Resources.add_16x16;
+            this.btnNewTeam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNewTeam.Location = new System.Drawing.Point(765, 53);
             this.btnNewTeam.Name = "btnNewTeam";
             this.btnNewTeam.Size = new System.Drawing.Size(182, 52);
             this.btnNewTeam.TabIndex = 3;
             this.btnNewTeam.Text = "YENİ TAKIM EKLE";
-            this.btnNewTeam.UseVisualStyleBackColor = true;
+            this.btnNewTeam.UseVisualStyleBackColor = false;
             this.btnNewTeam.Click += new System.EventHandler(this.btnNewTeam_Click);
             // 
             // FrmTeams
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(1005, 742);
             this.Controls.Add(this.btnNewTeam);
             this.Controls.Add(this.dgvPlayers);
@@ -132,7 +140,8 @@ namespace FormUI.Forms.TeamsForms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvTeams);
             this.Name = "FrmTeams";
-            this.Text = "FrmTeams";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "TAKIMLAR";
             this.Load += new System.EventHandler(this.FrmTeams_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayers)).EndInit();

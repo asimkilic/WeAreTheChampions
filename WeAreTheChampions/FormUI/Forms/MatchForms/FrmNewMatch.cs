@@ -25,6 +25,7 @@ namespace FormUI.Forms.MatchForms
             _teamService = InstanceFactory.GetInstance<ITeamService>();
             PropertyChanges();
             GetAllTeams();
+           
         }
 
         private void PropertyChanges()

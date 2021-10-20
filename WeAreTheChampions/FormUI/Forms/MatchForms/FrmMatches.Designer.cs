@@ -56,13 +56,13 @@ namespace FormUI.Forms
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dgvMatches.Location = new System.Drawing.Point(12, 106);
+            this.dgvMatches.Location = new System.Drawing.Point(12, 76);
             this.dgvMatches.MultiSelect = false;
             this.dgvMatches.Name = "dgvMatches";
             this.dgvMatches.ReadOnly = true;
             this.dgvMatches.RowHeadersVisible = false;
             this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMatches.Size = new System.Drawing.Size(766, 277);
+            this.dgvMatches.Size = new System.Drawing.Size(766, 307);
             this.dgvMatches.TabIndex = 0;
             this.dgvMatches.DoubleClick += new System.EventHandler(this.dgvMatches_DoubleClick);
             this.dgvMatches.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvMatches_KeyDown);
@@ -105,37 +105,45 @@ namespace FormUI.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(12, 65);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(306, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Karşılaşmalar";
             // 
             // btnEditMatch
             // 
+            this.btnEditMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnEditMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditMatch.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnEditMatch.Location = new System.Drawing.Point(15, 400);
             this.btnEditMatch.Name = "btnEditMatch";
             this.btnEditMatch.Size = new System.Drawing.Size(169, 38);
             this.btnEditMatch.TabIndex = 2;
             this.btnEditMatch.Text = "SEÇİLİYİ DÜZENLE";
-            this.btnEditMatch.UseVisualStyleBackColor = true;
+            this.btnEditMatch.UseVisualStyleBackColor = false;
             this.btnEditMatch.Click += new System.EventHandler(this.btnEditMatch_Click);
             // 
             // btnDeleteMatch
             // 
+            this.btnDeleteMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnDeleteMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteMatch.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDeleteMatch.Location = new System.Drawing.Point(237, 400);
             this.btnDeleteMatch.Name = "btnDeleteMatch";
             this.btnDeleteMatch.Size = new System.Drawing.Size(147, 38);
             this.btnDeleteMatch.TabIndex = 2;
             this.btnDeleteMatch.Text = "SEÇİLİYİ SİL";
-            this.btnDeleteMatch.UseVisualStyleBackColor = true;
+            this.btnDeleteMatch.UseVisualStyleBackColor = false;
             this.btnDeleteMatch.Click += new System.EventHandler(this.btnDeleteMatch_Click);
             // 
             // cbxHidePlayedMatches
             // 
             this.cbxHidePlayedMatches.AutoSize = true;
             this.cbxHidePlayedMatches.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbxHidePlayedMatches.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cbxHidePlayedMatches.Location = new System.Drawing.Point(603, 400);
             this.cbxHidePlayedMatches.Name = "cbxHidePlayedMatches";
             this.cbxHidePlayedMatches.Size = new System.Drawing.Size(175, 21);
@@ -146,13 +154,13 @@ namespace FormUI.Forms
             // 
             // btnNewMatch
             // 
-            this.btnNewMatch.BackColor = System.Drawing.Color.Black;
+            this.btnNewMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.btnNewMatch.FlatAppearance.BorderColor = System.Drawing.Color.GhostWhite;
             this.btnNewMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewMatch.ForeColor = System.Drawing.Color.White;
             this.btnNewMatch.Image = global::FormUI.Properties.Resources.add_16x16;
             this.btnNewMatch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewMatch.Location = new System.Drawing.Point(598, 51);
+            this.btnNewMatch.Location = new System.Drawing.Point(598, 12);
             this.btnNewMatch.Name = "btnNewMatch";
             this.btnNewMatch.Size = new System.Drawing.Size(180, 41);
             this.btnNewMatch.TabIndex = 2;
@@ -164,6 +172,7 @@ namespace FormUI.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cbxHidePlayedMatches);
             this.Controls.Add(this.btnNewMatch);
@@ -174,7 +183,7 @@ namespace FormUI.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMatches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmMatches";
+            this.Text = "KARŞILAŞMALAR";
             this.Load += new System.EventHandler(this.FrmMatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();
             this.ResumeLayout(false);

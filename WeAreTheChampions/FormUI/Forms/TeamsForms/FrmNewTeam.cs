@@ -247,6 +247,7 @@ namespace FormUI.Forms.TeamsForms
             if (NewTeamPlayers.Any(x => x.Id == ((Player)dgvAllPlayers.SelectedRows[0].DataBoundItem).Id))
             {
                 MessageBox.Show("Oyuncu zaten takımda");
+                return;
             }
             DialogResult dr = MessageBox.Show("Seçilen oyuncuyu takımınıza eklemek istiyor musunuz?", "UYARI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dr == DialogResult.Yes)
