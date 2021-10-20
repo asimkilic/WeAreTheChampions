@@ -31,6 +31,7 @@ namespace FormUI.Forms.ColorForms
 
         private void FrmNewColor_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = KLCCache.KLCCacheManager.NameSurname;
             PropertyChanges();
             GetColorList();
         }
@@ -43,6 +44,7 @@ namespace FormUI.Forms.ColorForms
         private void PropertyChanges()
         {
             dgvColors.EnableHeadersVisualStyles = false;
+            dgvColors.AutoGenerateColumns = false;
 
         }
         private Entities.Concrete.Color FillColor()
@@ -127,6 +129,11 @@ namespace FormUI.Forms.ColorForms
             txtColorName.Clear();
             txtGreen.Clear();
             txtRed.Clear();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

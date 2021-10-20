@@ -29,9 +29,9 @@ namespace FormUI.Forms.ColorForms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblValidateColors = new System.Windows.Forms.Label();
             this.btnAddNewColor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -52,7 +52,11 @@ namespace FormUI.Forms.ColorForms
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnClose = new KLCToolbox.KLCControls.KLCButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblValidateColors
@@ -60,7 +64,7 @@ namespace FormUI.Forms.ColorForms
             this.lblValidateColors.AutoSize = true;
             this.lblValidateColors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblValidateColors.ForeColor = System.Drawing.Color.Red;
-            this.lblValidateColors.Location = new System.Drawing.Point(28, 21);
+            this.lblValidateColors.Location = new System.Drawing.Point(28, 61);
             this.lblValidateColors.Name = "lblValidateColors";
             this.lblValidateColors.Size = new System.Drawing.Size(187, 34);
             this.lblValidateColors.TabIndex = 29;
@@ -73,7 +77,7 @@ namespace FormUI.Forms.ColorForms
             this.btnAddNewColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddNewColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnAddNewColor.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddNewColor.Location = new System.Drawing.Point(28, 227);
+            this.btnAddNewColor.Location = new System.Drawing.Point(28, 267);
             this.btnAddNewColor.Name = "btnAddNewColor";
             this.btnAddNewColor.Size = new System.Drawing.Size(168, 38);
             this.btnAddNewColor.TabIndex = 5;
@@ -85,7 +89,7 @@ namespace FormUI.Forms.ColorForms
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel3.Location = new System.Drawing.Point(96, 195);
+            this.panel3.Location = new System.Drawing.Point(96, 235);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(124, 2);
             this.panel3.TabIndex = 26;
@@ -94,7 +98,7 @@ namespace FormUI.Forms.ColorForms
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel2.Location = new System.Drawing.Point(91, 161);
+            this.panel2.Location = new System.Drawing.Point(91, 201);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(45, 2);
             this.panel2.TabIndex = 27;
@@ -105,7 +109,7 @@ namespace FormUI.Forms.ColorForms
             this.txtColorName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtColorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtColorName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtColorName.Location = new System.Drawing.Point(96, 174);
+            this.txtColorName.Location = new System.Drawing.Point(96, 214);
             this.txtColorName.Name = "txtColorName";
             this.txtColorName.Size = new System.Drawing.Size(124, 16);
             this.txtColorName.TabIndex = 4;
@@ -116,7 +120,7 @@ namespace FormUI.Forms.ColorForms
             this.txtBlue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtBlue.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtBlue.Location = new System.Drawing.Point(91, 140);
+            this.txtBlue.Location = new System.Drawing.Point(91, 180);
             this.txtBlue.Name = "txtBlue";
             this.txtBlue.Size = new System.Drawing.Size(45, 16);
             this.txtBlue.TabIndex = 3;
@@ -125,7 +129,7 @@ namespace FormUI.Forms.ColorForms
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panel1.Location = new System.Drawing.Point(91, 125);
+            this.panel1.Location = new System.Drawing.Point(91, 165);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 2);
             this.panel1.TabIndex = 23;
@@ -136,7 +140,7 @@ namespace FormUI.Forms.ColorForms
             this.txtGreen.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtGreen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtGreen.Location = new System.Drawing.Point(91, 104);
+            this.txtGreen.Location = new System.Drawing.Point(91, 144);
             this.txtGreen.Name = "txtGreen";
             this.txtGreen.Size = new System.Drawing.Size(45, 16);
             this.txtGreen.TabIndex = 2;
@@ -145,7 +149,7 @@ namespace FormUI.Forms.ColorForms
             // 
             this.panelUnderlineRed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.panelUnderlineRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.panelUnderlineRed.Location = new System.Drawing.Point(91, 88);
+            this.panelUnderlineRed.Location = new System.Drawing.Point(91, 128);
             this.panelUnderlineRed.Name = "panelUnderlineRed";
             this.panelUnderlineRed.Size = new System.Drawing.Size(45, 2);
             this.panelUnderlineRed.TabIndex = 21;
@@ -156,7 +160,7 @@ namespace FormUI.Forms.ColorForms
             this.txtRed.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtRed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtRed.Location = new System.Drawing.Point(91, 67);
+            this.txtRed.Location = new System.Drawing.Point(91, 107);
             this.txtRed.Name = "txtRed";
             this.txtRed.Size = new System.Drawing.Size(45, 16);
             this.txtRed.TabIndex = 1;
@@ -166,7 +170,7 @@ namespace FormUI.Forms.ColorForms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(24, 182);
+            this.label1.Location = new System.Drawing.Point(24, 222);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 16;
@@ -177,7 +181,7 @@ namespace FormUI.Forms.ColorForms
             this.lblBlue.AutoSize = true;
             this.lblBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblBlue.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblBlue.Location = new System.Drawing.Point(24, 146);
+            this.lblBlue.Location = new System.Drawing.Point(24, 186);
             this.lblBlue.Name = "lblBlue";
             this.lblBlue.Size = new System.Drawing.Size(40, 17);
             this.lblBlue.TabIndex = 17;
@@ -188,7 +192,7 @@ namespace FormUI.Forms.ColorForms
             this.lblGreen.AutoSize = true;
             this.lblGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblGreen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblGreen.Location = new System.Drawing.Point(24, 107);
+            this.lblGreen.Location = new System.Drawing.Point(24, 147);
             this.lblGreen.Name = "lblGreen";
             this.lblGreen.Size = new System.Drawing.Size(52, 17);
             this.lblGreen.TabIndex = 18;
@@ -199,7 +203,7 @@ namespace FormUI.Forms.ColorForms
             this.labelRed.AutoSize = true;
             this.labelRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelRed.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelRed.Location = new System.Drawing.Point(24, 71);
+            this.labelRed.Location = new System.Drawing.Point(24, 111);
             this.labelRed.Name = "labelRed";
             this.labelRed.Size = new System.Drawing.Size(38, 17);
             this.labelRed.TabIndex = 19;
@@ -210,7 +214,7 @@ namespace FormUI.Forms.ColorForms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(279, 22);
+            this.label2.Location = new System.Drawing.Point(279, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 31;
@@ -223,40 +227,40 @@ namespace FormUI.Forms.ColorForms
             this.dgvColors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColors.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvColors.Location = new System.Drawing.Point(270, 54);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColors.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvColors.Location = new System.Drawing.Point(270, 94);
             this.dgvColors.MultiSelect = false;
             this.dgvColors.Name = "dgvColors";
             this.dgvColors.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColors.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColors.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvColors.RowHeadersVisible = false;
             this.dgvColors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvColors.Size = new System.Drawing.Size(511, 300);
@@ -291,12 +295,55 @@ namespace FormUI.Forms.ColorForms
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel5.Controls.Add(this.lblWelcome);
+            this.panel5.Controls.Add(this.btnClose);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(794, 47);
+            this.panel5.TabIndex = 32;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblWelcome.Location = new System.Drawing.Point(13, 13);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(0, 17);
+            this.lblWelcome.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::FormUI.Properties.Resources.close;
+            this.btnClose.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.KLCBorderRadius = 40;
+            this.btnClose.KLCBorderSize = 0;
+            this.btnClose.KLCTextColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(741, 3);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = " ";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmNewColor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(800, 391);
+            this.ClientSize = new System.Drawing.Size(794, 413);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvColors);
             this.Controls.Add(this.lblValidateColors);
@@ -313,10 +360,14 @@ namespace FormUI.Forms.ColorForms
             this.Controls.Add(this.lblBlue);
             this.Controls.Add(this.lblGreen);
             this.Controls.Add(this.labelRed);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmNewColor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yeni Renk Ekle";
             this.Load += new System.EventHandler(this.FrmNewColor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,5 +395,8 @@ namespace FormUI.Forms.ColorForms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblWelcome;
+        private KLCToolbox.KLCControls.KLCButton btnClose;
     }
 }

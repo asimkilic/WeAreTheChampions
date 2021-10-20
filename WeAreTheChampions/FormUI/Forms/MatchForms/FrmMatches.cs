@@ -4,6 +4,7 @@ using Entities.Concrete;
 using Entities.DTOs;
 using FormUI.Forms.ColorForms;
 using FormUI.Forms.MatchForms;
+using FormUI.Forms.PlayerForms;
 using FormUI.Forms.TeamsForms;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,7 @@ namespace FormUI.Forms
         {
             dgvMatches.EnableHeadersVisualStyles = false;
             ListAllMatches();
+            lblWelcome.Text =KLCCache.KLCCacheManager.NameSurname;
         }
 
         private void btnNewMatch_Click(object sender, EventArgs e)
@@ -137,6 +139,17 @@ namespace FormUI.Forms
         {
             FrmNewColor frmNewColor = new FrmNewColor();
             frmNewColor.ShowDialog();
+        }
+
+        private void btnOpenPlayers_Click(object sender, EventArgs e)
+        {
+            FrmNewPlayer frmNewPlayer = new FrmNewPlayer();
+            frmNewPlayer.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

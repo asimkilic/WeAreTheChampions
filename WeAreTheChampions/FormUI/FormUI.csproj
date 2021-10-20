@@ -77,12 +77,6 @@
     <Compile Include="Forms\MatchForms\FrmMatches.Designer.cs">
       <DependentUpon>FrmMatches.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmHome.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\FrmHome.Designer.cs">
-      <DependentUpon>FrmHome.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +88,12 @@
     </Compile>
     <Compile Include="Forms\MatchForms\FrmNewMatch.Designer.cs">
       <DependentUpon>FrmNewMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlayerForms\FrmNewPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlayerForms\FrmNewPlayer.Designer.cs">
+      <DependentUpon>FrmNewPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SplashScreen\frmSplashScreen.cs">
       <SubType>Form</SubType>
@@ -119,13 +119,11 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="KLCCache\KLCCacheManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\ColorForms\FrmNewColor.resx">
       <DependentUpon>FrmNewColor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmHome.resx">
-      <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MatchForms\FrmMatchEdit.resx">
       <DependentUpon>FrmMatchEdit.cs</DependentUpon>
@@ -138,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MatchForms\FrmNewMatch.resx">
       <DependentUpon>FrmNewMatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlayerForms\FrmNewPlayer.resx">
+      <DependentUpon>FrmNewPlayer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashScreen\frmSplashScreen.resx">
       <DependentUpon>frmSplashScreen.cs</DependentUpon>
@@ -222,9 +223,7 @@
   <ItemGroup>
     <None Include="Resources\add-16x16.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

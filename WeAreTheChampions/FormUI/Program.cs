@@ -8,6 +8,7 @@ using FormUI.Forms;
 using FormUI.Forms.MatchForms;
 using FormUI.Forms.TeamsForms;
 using FormUI.Forms.ColorForms;
+using FormUI.Forms.PlayerForms;
 
 namespace FormUI
 {
@@ -26,7 +27,7 @@ namespace FormUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNewColor());
+            Application.Run(new FrmLogin());
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)

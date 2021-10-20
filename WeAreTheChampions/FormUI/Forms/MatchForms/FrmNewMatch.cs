@@ -37,6 +37,7 @@ namespace FormUI.Forms.MatchForms
 
         private void FrmNewMatch_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = KLCCache.KLCCacheManager.NameSurname;
             BindHomeTeam();
             BindAwayTeam();
         }
@@ -94,6 +95,11 @@ namespace FormUI.Forms.MatchForms
         }
 
         private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }

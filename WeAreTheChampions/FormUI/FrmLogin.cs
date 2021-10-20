@@ -49,8 +49,13 @@ namespace FormUI
             {
                 lblWarning.Visible = true;
                 lblWarning.Text = result.Message == null || result.Message != "" ? result.Message : "Hatalı giriş";
+                return;
             }
-            //TODO: success redirect another page
+            KLCCache.KLCCacheManager.SetNameSurname(result.Data);
+            FrmMatches frmMatches = new FrmMatches();
+            this.Hide();
+            frmMatches.ShowDialog();
+            Application.Exit();
 
 
         }

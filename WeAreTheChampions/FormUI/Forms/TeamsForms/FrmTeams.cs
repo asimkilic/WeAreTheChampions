@@ -29,7 +29,7 @@ namespace FormUI.Forms.TeamsForms
 
         private void FrmTeams_Load(object sender, EventArgs e)
         {
-
+            lblWelcome.Text = KLCCache.KLCCacheManager.NameSurname;
         }
         private void PropertyChanges()
         {
@@ -59,7 +59,69 @@ namespace FormUI.Forms.TeamsForms
 
             frmNewTeam.ShowDialog();
             ListAllTeams();
-         
+
+        }
+
+        private void btnDeleteSelectedTeam_Click(object sender, EventArgs e)
+        {
+            if (dgvTeams.SelectedRows.Count == 1)
+            {
+                DeleteTeam();
+            }
+        }
+        private void dgvTeams_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (dgvTeams.SelectedRows.Count == 1 && e.KeyCode == Keys.Delete)
+            {
+                DeleteTeam();
+            }
+        }
+        private void DeleteTeam()
+        {
+            var deletedTeam = (Team)dgvTeams.SelectedRows[0].DataBoundItem;
+            var result = _teamService.DeleteTeamAndSetPlayerTeamsNull(deletedTeam.Id);
+            if (result.Success)
+            {
+                MessageBox.Show("Takım silindi, takıma ait oyuncular artık herhangi bir takıma ait değiller.");
+            }
+            else
+                MessageBox.Show("Bir sorun oluştu. Lütfen tekrar deneyin.");
+            ListAllTeams();
+        }
+
+        private void btnDeleteSelectedPlayer_Click(object sender, EventArgs e)
+        {
+            if (dgvPlayers.SelectedRows.Count == 1)
+            {
+                DeletePlayer();
+            }
+        }
+        private void DeletePlayer()
+        {
+
+            var deletedPlayer = (Player)dgvPlayers.SelectedRows[0].DataBoundItem;
+            var result = _playerService.Delete(deletedPlayer);
+            if (!result.Success)
+                MessageBox.Show(result.Message == null ? "Bir hata oluştu. Lütfen tekrar deneyiniz" : result.Message);
+            else
+                MessageBox.Show("Oyuncu başarıyla silindi");
+            ListAllTeams();
+
+
+
+        }
+
+        private void dgvPlayers_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (dgvPlayers.SelectedRows.Count == 1 && e.KeyCode == Keys.Delete)
+            {
+                DeletePlayer();
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
