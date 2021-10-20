@@ -56,10 +56,10 @@ namespace FormUI.Forms.TeamsForms
         private void btnNewTeam_Click(object sender, EventArgs e)
         {
             FrmNewTeam frmNewTeam = new FrmNewTeam();
-            this.Hide();
+
             frmNewTeam.ShowDialog();
             ListAllTeams();
-            this.Show();
+         
         }
     }
 }

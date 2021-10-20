@@ -7,6 +7,7 @@ using System.Threading;
 using FormUI.Forms;
 using FormUI.Forms.MatchForms;
 using FormUI.Forms.TeamsForms;
+using FormUI.Forms.ColorForms;
 
 namespace FormUI
 {
@@ -25,19 +26,19 @@ namespace FormUI
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmNewTeam());
+            Application.Run(new FrmNewColor());
         }
 
         static void MyHandler(object sender, UnhandledExceptionEventArgs args)
         {
             Exception e = (Exception)args.ExceptionObject;
             // REF: https://stackoverflow.com/questions/9270023/how-to-determine-if-an-exception-is-of-a-particular-type
-            if (e.GetType()== typeof(System.Threading.ThreadAbortException))
+            if (e.GetType() == typeof(System.Threading.ThreadAbortException))
             {
-               // MessageBox.Show("type çalıştı");
+                // MessageBox.Show("type çalıştı");
                 return;
             }
-        
+
             Console.WriteLine("MyHandler caught : " + e.Message + " " + e.InnerException);
             MessageBox.Show(e.Message + e.InnerException);
 

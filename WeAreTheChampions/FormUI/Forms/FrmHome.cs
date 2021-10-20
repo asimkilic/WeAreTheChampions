@@ -16,5 +16,14 @@ namespace FormUI.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmHome_Load(object sender, EventArgs e)
+        {
+            FrmMatches frmMatches = new FrmMatches();
+            frmMatches.MdiParent = this;
+            frmMatches.FormBorderStyle = FormBorderStyle.None;
+            panelMdi.Controls.Add(frmMatches);
+            frmMatches.Show();
+        }
     }
 }

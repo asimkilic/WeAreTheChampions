@@ -128,6 +128,7 @@ namespace FormUI
             this.lblWarning.Size = new System.Drawing.Size(169, 25);
             this.lblWarning.TabIndex = 6;
             this.lblWarning.Text = "HATALI PAROLA";
+            this.lblWarning.Visible = false;
             // 
             // btnSignUp
             // 

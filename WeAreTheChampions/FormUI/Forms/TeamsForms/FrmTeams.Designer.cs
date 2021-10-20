@@ -73,7 +73,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTeams.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTeams.EnableHeadersVisualStyles = false;
-            this.dgvTeams.Location = new System.Drawing.Point(12, 53);
+            this.dgvTeams.Location = new System.Drawing.Point(39, 53);
             this.dgvTeams.MultiSelect = false;
             this.dgvTeams.Name = "dgvTeams";
             this.dgvTeams.ReadOnly = true;
@@ -136,7 +136,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPlayers.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPlayers.EnableHeadersVisualStyles = false;
-            this.dgvPlayers.Location = new System.Drawing.Point(396, 53);
+            this.dgvPlayers.Location = new System.Drawing.Point(423, 53);
             this.dgvPlayers.MultiSelect = false;
             this.dgvPlayers.Name = "dgvPlayers";
             this.dgvPlayers.ReadOnly = true;

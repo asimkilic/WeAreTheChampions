@@ -29,9 +29,9 @@ namespace FormUI.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvMatches = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,7 +43,14 @@ namespace FormUI.Forms
             this.btnDeleteMatch = new System.Windows.Forms.Button();
             this.cbxHidePlayedMatches = new System.Windows.Forms.CheckBox();
             this.btnNewMatch = new System.Windows.Forms.Button();
+            this.panelMainBackground = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOpenTeams = new KLCToolbox.KLCControls.KLCButton();
+            this.btnOpenColors = new KLCToolbox.KLCControls.KLCButton();
+            this.btnOpenPlayers = new KLCToolbox.KLCControls.KLCButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
+            this.panelMainBackground.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMatches
@@ -53,14 +60,14 @@ namespace FormUI.Forms
             this.dgvMatches.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMatches.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvMatches.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMatches.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMatches.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvMatches.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMatches.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -68,27 +75,27 @@ namespace FormUI.Forms
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMatches.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMatches.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvMatches.EnableHeadersVisualStyles = false;
             this.dgvMatches.Location = new System.Drawing.Point(12, 76);
             this.dgvMatches.MultiSelect = false;
             this.dgvMatches.Name = "dgvMatches";
             this.dgvMatches.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMatches.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMatches.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvMatches.RowHeadersVisible = false;
             this.dgvMatches.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMatches.Size = new System.Drawing.Size(766, 307);
@@ -197,26 +204,104 @@ namespace FormUI.Forms
             this.btnNewMatch.UseVisualStyleBackColor = false;
             this.btnNewMatch.Click += new System.EventHandler(this.btnNewMatch_Click);
             // 
+            // panelMainBackground
+            // 
+            this.panelMainBackground.Controls.Add(this.cbxHidePlayedMatches);
+            this.panelMainBackground.Controls.Add(this.btnNewMatch);
+            this.panelMainBackground.Controls.Add(this.btnDeleteMatch);
+            this.panelMainBackground.Controls.Add(this.btnEditMatch);
+            this.panelMainBackground.Controls.Add(this.label1);
+            this.panelMainBackground.Controls.Add(this.dgvMatches);
+            this.panelMainBackground.Location = new System.Drawing.Point(-2, 77);
+            this.panelMainBackground.Name = "panelMainBackground";
+            this.panelMainBackground.Size = new System.Drawing.Size(807, 465);
+            this.panelMainBackground.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnOpenPlayers);
+            this.panel1.Controls.Add(this.btnOpenColors);
+            this.panel1.Controls.Add(this.btnOpenTeams);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(800, 71);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnOpenTeams
+            // 
+            this.btnOpenTeams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenTeams.FlatAppearance.BorderSize = 0;
+            this.btnOpenTeams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenTeams.ForeColor = System.Drawing.Color.White;
+            this.btnOpenTeams.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenTeams.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenTeams.KLCBorderRadius = 40;
+            this.btnOpenTeams.KLCBorderSize = 0;
+            this.btnOpenTeams.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenTeams.Location = new System.Drawing.Point(114, 12);
+            this.btnOpenTeams.Name = "btnOpenTeams";
+            this.btnOpenTeams.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenTeams.TabIndex = 0;
+            this.btnOpenTeams.Text = "TAKIMLAR";
+            this.btnOpenTeams.UseVisualStyleBackColor = false;
+            this.btnOpenTeams.Click += new System.EventHandler(this.btnOpenTeams_Click);
+            // 
+            // btnOpenColors
+            // 
+            this.btnOpenColors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenColors.FlatAppearance.BorderSize = 0;
+            this.btnOpenColors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenColors.ForeColor = System.Drawing.Color.White;
+            this.btnOpenColors.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenColors.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenColors.KLCBorderRadius = 40;
+            this.btnOpenColors.KLCBorderSize = 0;
+            this.btnOpenColors.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenColors.Location = new System.Drawing.Point(297, 12);
+            this.btnOpenColors.Name = "btnOpenColors";
+            this.btnOpenColors.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenColors.TabIndex = 0;
+            this.btnOpenColors.Text = "RENKLER";
+            this.btnOpenColors.UseVisualStyleBackColor = false;
+            this.btnOpenColors.Click += new System.EventHandler(this.btnOpenColors_Click);
+            // 
+            // btnOpenPlayers
+            // 
+            this.btnOpenPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenPlayers.FlatAppearance.BorderSize = 0;
+            this.btnOpenPlayers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenPlayers.ForeColor = System.Drawing.Color.White;
+            this.btnOpenPlayers.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenPlayers.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenPlayers.KLCBorderRadius = 40;
+            this.btnOpenPlayers.KLCBorderSize = 0;
+            this.btnOpenPlayers.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenPlayers.Location = new System.Drawing.Point(484, 12);
+            this.btnOpenPlayers.Name = "btnOpenPlayers";
+            this.btnOpenPlayers.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenPlayers.TabIndex = 0;
+            this.btnOpenPlayers.Text = "OYUNCULAR";
+            this.btnOpenPlayers.UseVisualStyleBackColor = false;
+            // 
             // FrmMatches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbxHidePlayedMatches);
-            this.Controls.Add(this.btnNewMatch);
-            this.Controls.Add(this.btnDeleteMatch);
-            this.Controls.Add(this.btnEditMatch);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvMatches);
+            this.ClientSize = new System.Drawing.Size(800, 546);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMainBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMatches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KARŞILAŞMALAR";
             this.Load += new System.EventHandler(this.FrmMatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();
+            this.panelMainBackground.ResumeLayout(false);
+            this.panelMainBackground.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -233,5 +318,10 @@ namespace FormUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.CheckBox cbxHidePlayedMatches;
+        private System.Windows.Forms.Panel panelMainBackground;
+        private System.Windows.Forms.Panel panel1;
+        private KLCToolbox.KLCControls.KLCButton btnOpenPlayers;
+        private KLCToolbox.KLCControls.KLCButton btnOpenColors;
+        private KLCToolbox.KLCControls.KLCButton btnOpenTeams;
     }
 }

@@ -685,6 +685,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPlayersOnTeam.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPlayersOnTeam.EnableHeadersVisualStyles = false;
             this.dgvPlayersOnTeam.Location = new System.Drawing.Point(616, 34);
             this.dgvPlayersOnTeam.MultiSelect = false;
             this.dgvPlayersOnTeam.Name = "dgvPlayersOnTeam";
@@ -747,6 +748,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllPlayers.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvAllPlayers.EnableHeadersVisualStyles = false;
             this.dgvAllPlayers.Location = new System.Drawing.Point(30, 34);
             this.dgvAllPlayers.MultiSelect = false;
             this.dgvAllPlayers.Name = "dgvAllPlayers";
@@ -785,8 +787,8 @@ namespace FormUI.Forms.TeamsForms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
             this.ClientSize = new System.Drawing.Size(976, 608);
-            this.Controls.Add(this.panelPlayers);
             this.Controls.Add(this.panelColors);
+            this.Controls.Add(this.panelPlayers);
             this.Controls.Add(this.lblToolTipColors);
             this.Controls.Add(this.panelNewTeam);
             this.Controls.Add(this.lblPlayers);
