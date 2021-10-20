@@ -29,6 +29,18 @@ namespace FormUI.Forms.TeamsForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTeamName = new System.Windows.Forms.Label();
             this.txtTeamName = new System.Windows.Forms.TextBox();
             this.panelUnderline = new System.Windows.Forms.Panel();
@@ -68,26 +80,26 @@ namespace FormUI.Forms.TeamsForms
             this.labelRed = new System.Windows.Forms.Label();
             this.lblToolTipColors = new System.Windows.Forms.Label();
             this.panelPlayers = new System.Windows.Forms.Panel();
+            this.btnFinish = new System.Windows.Forms.Button();
+            this.btnAddNewPlayer = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtNewPlayerName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dgvPlayersOnTeam = new System.Windows.Forms.DataGridView();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvAllPlayers = new System.Windows.Forms.DataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPlayersOnTeam = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddNewPlayer = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtNewPlayerName = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnFinish = new System.Windows.Forms.Button();
             this.panelNewTeam.SuspendLayout();
             this.panelColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamColors)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).BeginInit();
             this.panelPlayers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTeamName
@@ -248,16 +260,41 @@ namespace FormUI.Forms.TeamsForms
             this.dgvTeamColors.AllowUserToDeleteRows = false;
             this.dgvTeamColors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTeamColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvTeamColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTeamColors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTeamColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTeamColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column9,
             this.Column6,
             this.Column7,
             this.Column8});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTeamColors.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTeamColors.Location = new System.Drawing.Point(305, 252);
             this.dgvTeamColors.MultiSelect = false;
             this.dgvTeamColors.Name = "dgvTeamColors";
             this.dgvTeamColors.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTeamColors.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTeamColors.RowHeadersVisible = false;
             this.dgvTeamColors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTeamColors.Size = new System.Drawing.Size(511, 122);
@@ -318,16 +355,41 @@ namespace FormUI.Forms.TeamsForms
             this.dgvColors.AllowUserToDeleteRows = false;
             this.dgvColors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvColors.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvColors.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvColors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvColors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColors.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvColors.Location = new System.Drawing.Point(305, 44);
             this.dgvColors.MultiSelect = false;
             this.dgvColors.Name = "dgvColors";
             this.dgvColors.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvColors.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvColors.RowHeadersVisible = false;
             this.dgvColors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvColors.Size = new System.Drawing.Size(511, 151);
@@ -521,85 +583,19 @@ namespace FormUI.Forms.TeamsForms
             this.panelPlayers.Size = new System.Drawing.Size(853, 490);
             this.panelPlayers.TabIndex = 13;
             // 
-            // label4
+            // btnFinish
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(241, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 20);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Mevcut Oyuncular";
-            // 
-            // dgvAllPlayers
-            // 
-            this.dgvAllPlayers.AllowUserToAddRows = false;
-            this.dgvAllPlayers.AllowUserToDeleteRows = false;
-            this.dgvAllPlayers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvAllPlayers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvAllPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column10,
-            this.Column5});
-            this.dgvAllPlayers.Location = new System.Drawing.Point(30, 34);
-            this.dgvAllPlayers.MultiSelect = false;
-            this.dgvAllPlayers.Name = "dgvAllPlayers";
-            this.dgvAllPlayers.ReadOnly = true;
-            this.dgvAllPlayers.RowHeadersVisible = false;
-            this.dgvAllPlayers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAllPlayers.Size = new System.Drawing.Size(561, 328);
-            this.dgvAllPlayers.TabIndex = 0;
-            this.dgvAllPlayers.DoubleClick += new System.EventHandler(this.dgvAllPlayers_DoubleClick);
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "PlayerName";
-            this.Column10.HeaderText = "Oyuncu Adı";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Team";
-            this.Column5.HeaderText = "Oynadığı Takım";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // dgvPlayersOnTeam
-            // 
-            this.dgvPlayersOnTeam.AllowUserToAddRows = false;
-            this.dgvPlayersOnTeam.AllowUserToDeleteRows = false;
-            this.dgvPlayersOnTeam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvPlayersOnTeam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvPlayersOnTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPlayersOnTeam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column11});
-            this.dgvPlayersOnTeam.Location = new System.Drawing.Point(616, 34);
-            this.dgvPlayersOnTeam.MultiSelect = false;
-            this.dgvPlayersOnTeam.Name = "dgvPlayersOnTeam";
-            this.dgvPlayersOnTeam.ReadOnly = true;
-            this.dgvPlayersOnTeam.RowHeadersVisible = false;
-            this.dgvPlayersOnTeam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPlayersOnTeam.Size = new System.Drawing.Size(216, 328);
-            this.dgvPlayersOnTeam.TabIndex = 2;
-            this.dgvPlayersOnTeam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPlayersOnTeam_KeyDown);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(621, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(207, 20);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Takımda Bulunan Oyuncular";
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "PlayerName";
-            this.Column11.HeaderText = "Oyuncu Adı";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
+            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnFinish.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnFinish.Location = new System.Drawing.Point(722, 407);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Size = new System.Drawing.Size(93, 38);
+            this.btnFinish.TabIndex = 13;
+            this.btnFinish.Text = "BİTİR";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // btnAddNewPlayer
             // 
@@ -633,16 +629,6 @@ namespace FormUI.Forms.TeamsForms
             this.txtNewPlayerName.Size = new System.Drawing.Size(124, 19);
             this.txtNewPlayerName.TabIndex = 10;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(34, 425);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(94, 20);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Oyuncu Adı:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -653,19 +639,145 @@ namespace FormUI.Forms.TeamsForms
             this.label7.TabIndex = 9;
             this.label7.Text = "Yeni Oyuncu Oluştur";
             // 
-            // btnFinish
+            // label6
             // 
-            this.btnFinish.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
-            this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnFinish.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnFinish.Location = new System.Drawing.Point(722, 407);
-            this.btnFinish.Name = "btnFinish";
-            this.btnFinish.Size = new System.Drawing.Size(93, 38);
-            this.btnFinish.TabIndex = 13;
-            this.btnFinish.Text = "BİTİR";
-            this.btnFinish.UseVisualStyleBackColor = false;
-            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label6.Location = new System.Drawing.Point(34, 425);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(94, 20);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Oyuncu Adı:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label5.Location = new System.Drawing.Point(621, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(207, 20);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Takımda Bulunan Oyuncular";
+            // 
+            // dgvPlayersOnTeam
+            // 
+            this.dgvPlayersOnTeam.AllowUserToAddRows = false;
+            this.dgvPlayersOnTeam.AllowUserToDeleteRows = false;
+            this.dgvPlayersOnTeam.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPlayersOnTeam.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvPlayersOnTeam.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayersOnTeam.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvPlayersOnTeam.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPlayersOnTeam.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column11});
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlayersOnTeam.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPlayersOnTeam.Location = new System.Drawing.Point(616, 34);
+            this.dgvPlayersOnTeam.MultiSelect = false;
+            this.dgvPlayersOnTeam.Name = "dgvPlayersOnTeam";
+            this.dgvPlayersOnTeam.ReadOnly = true;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayersOnTeam.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvPlayersOnTeam.RowHeadersVisible = false;
+            this.dgvPlayersOnTeam.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPlayersOnTeam.Size = new System.Drawing.Size(216, 328);
+            this.dgvPlayersOnTeam.TabIndex = 2;
+            this.dgvPlayersOnTeam.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvPlayersOnTeam_KeyDown);
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "PlayerName";
+            this.Column11.HeaderText = "Oyuncu Adı";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(241, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(135, 20);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Mevcut Oyuncular";
+            // 
+            // dgvAllPlayers
+            // 
+            this.dgvAllPlayers.AllowUserToAddRows = false;
+            this.dgvAllPlayers.AllowUserToDeleteRows = false;
+            this.dgvAllPlayers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAllPlayers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvAllPlayers.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllPlayers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvAllPlayers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllPlayers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column10,
+            this.Column5});
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllPlayers.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvAllPlayers.Location = new System.Drawing.Point(30, 34);
+            this.dgvAllPlayers.MultiSelect = false;
+            this.dgvAllPlayers.Name = "dgvAllPlayers";
+            this.dgvAllPlayers.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllPlayers.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            this.dgvAllPlayers.RowHeadersVisible = false;
+            this.dgvAllPlayers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAllPlayers.Size = new System.Drawing.Size(561, 328);
+            this.dgvAllPlayers.TabIndex = 0;
+            this.dgvAllPlayers.DoubleClick += new System.EventHandler(this.dgvAllPlayers_DoubleClick);
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "PlayerName";
+            this.Column10.HeaderText = "Oyuncu Adı";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Team";
+            this.Column5.HeaderText = "Oynadığı Takım";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
             // 
             // FrmNewTeam
             // 
@@ -694,8 +806,8 @@ namespace FormUI.Forms.TeamsForms
             ((System.ComponentModel.ISupportInitialize)(this.dgvColors)).EndInit();
             this.panelPlayers.ResumeLayout(false);
             this.panelPlayers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

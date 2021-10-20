@@ -47,6 +47,11 @@ namespace FormUI.Forms.TeamsForms
         }
         private void PropertyChanges()
         {
+            dgvAllPlayers.EnableHeadersVisualStyles = false;
+            dgvPlayersOnTeam.EnableHeadersVisualStyles = false;
+            dgvColors.EnableHeadersVisualStyles = false;
+            dgvTeamColors.EnableHeadersVisualStyles = false;
+
             dgvColors.AutoGenerateColumns = false;
             dgvTeamColors.AutoGenerateColumns = false;
             dgvAllPlayers.AutoGenerateColumns = false;

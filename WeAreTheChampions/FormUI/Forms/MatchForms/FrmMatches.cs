@@ -27,6 +27,7 @@ namespace FormUI.Forms
 
         private void FrmMatches_Load(object sender, EventArgs e)
         {
+            dgvMatches.EnableHeadersVisualStyles = false;
             ListAllMatches();
         }
 
