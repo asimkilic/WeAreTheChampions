@@ -49,9 +49,13 @@ namespace FormUI.Forms.MatchForms
             this.btnSaveMatch = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnClose = new KLCToolbox.KLCControls.KLCButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHomeTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTodaysDate
@@ -59,7 +63,7 @@ namespace FormUI.Forms.MatchForms
             this.lblTodaysDate.AutoSize = true;
             this.lblTodaysDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblTodaysDate.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblTodaysDate.Location = new System.Drawing.Point(788, 9);
+            this.lblTodaysDate.Location = new System.Drawing.Point(894, 65);
             this.lblTodaysDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTodaysDate.Name = "lblTodaysDate";
             this.lblTodaysDate.Size = new System.Drawing.Size(89, 20);
@@ -111,7 +115,7 @@ namespace FormUI.Forms.MatchForms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(178, 55);
+            this.label4.Location = new System.Drawing.Point(185, 147);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 20);
             this.label4.TabIndex = 6;
@@ -122,7 +126,7 @@ namespace FormUI.Forms.MatchForms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(650, 55);
+            this.label5.Location = new System.Drawing.Point(657, 147);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 20);
             this.label5.TabIndex = 7;
@@ -155,7 +159,7 @@ namespace FormUI.Forms.MatchForms
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvHomeTeam.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHomeTeam.EnableHeadersVisualStyles = false;
-            this.dgvHomeTeam.Location = new System.Drawing.Point(32, 93);
+            this.dgvHomeTeam.Location = new System.Drawing.Point(39, 185);
             this.dgvHomeTeam.MultiSelect = false;
             this.dgvHomeTeam.Name = "dgvHomeTeam";
             this.dgvHomeTeam.ReadOnly = true;
@@ -207,7 +211,7 @@ namespace FormUI.Forms.MatchForms
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAwayTeam.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAwayTeam.EnableHeadersVisualStyles = false;
-            this.dgvAwayTeam.Location = new System.Drawing.Point(523, 93);
+            this.dgvAwayTeam.Location = new System.Drawing.Point(530, 185);
             this.dgvAwayTeam.MultiSelect = false;
             this.dgvAwayTeam.Name = "dgvAwayTeam";
             this.dgvAwayTeam.ReadOnly = true;
@@ -236,7 +240,7 @@ namespace FormUI.Forms.MatchForms
             this.btnSaveMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.btnSaveMatch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveMatch.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSaveMatch.Location = new System.Drawing.Point(729, 481);
+            this.btnSaveMatch.Location = new System.Drawing.Point(736, 573);
             this.btnSaveMatch.Name = "btnSaveMatch";
             this.btnSaveMatch.Size = new System.Drawing.Size(192, 52);
             this.btnSaveMatch.TabIndex = 10;
@@ -249,7 +253,7 @@ namespace FormUI.Forms.MatchForms
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnExit.Location = new System.Drawing.Point(553, 481);
+            this.btnExit.Location = new System.Drawing.Point(560, 573);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(157, 52);
             this.btnExit.TabIndex = 10;
@@ -264,17 +268,60 @@ namespace FormUI.Forms.MatchForms
             this.panel1.Controls.Add(this.dtpMatchDate);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(266, 9);
+            this.panel1.Location = new System.Drawing.Point(273, 101);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(427, 33);
             this.panel1.TabIndex = 11;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel5.Controls.Add(this.lblWelcome);
+            this.panel5.Controls.Add(this.btnClose);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(996, 47);
+            this.panel5.TabIndex = 15;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblWelcome.Location = new System.Drawing.Point(13, 13);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(0, 17);
+            this.lblWelcome.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::FormUI.Properties.Resources.close;
+            this.btnClose.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.KLCBorderRadius = 40;
+            this.btnClose.KLCBorderSize = 0;
+            this.btnClose.KLCTextColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(944, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = " ";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmNewMatch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(940, 554);
+            this.ClientSize = new System.Drawing.Size(996, 653);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSaveMatch);
@@ -284,6 +331,7 @@ namespace FormUI.Forms.MatchForms
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblTodaysDate);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmNewMatch";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -293,6 +341,8 @@ namespace FormUI.Forms.MatchForms
             ((System.ComponentModel.ISupportInitialize)(this.dgvAwayTeam)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +363,8 @@ namespace FormUI.Forms.MatchForms
         private System.Windows.Forms.Button btnSaveMatch;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblWelcome;
+        private KLCToolbox.KLCControls.KLCButton btnClose;
     }
 }

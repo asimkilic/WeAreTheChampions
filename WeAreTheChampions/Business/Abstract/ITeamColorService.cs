@@ -17,6 +17,7 @@ namespace Business.Abstract
         IDataResult<List<TeamColorDto>> GetAllDetailsWithAssociatedPropertiesByColorId(int colorId);
         IDataResult<List<TeamColorDto>> GetAllDetailsWithAssociatedPropertiesByTeamId(int teamId);
         IResult DeleteByColorIdTeamId(int colorId, int teamId);
+        IResult DeleteByColorId(int colorId);
 
     }
 }

@@ -2,7 +2,10 @@
 using Business.DependencyResolvers.Autofac;
 using Entities.Concrete;
 using Entities.DTOs;
+using FormUI.Forms.ColorForms;
 using FormUI.Forms.MatchForms;
+using FormUI.Forms.PlayerForms;
+using FormUI.Forms.TeamsForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,16 +32,17 @@ namespace FormUI.Forms
         {
             dgvMatches.EnableHeadersVisualStyles = false;
             ListAllMatches();
+            lblWelcome.Text =KLCCache.KLCCacheManager.NameSurname;
         }
 
         private void btnNewMatch_Click(object sender, EventArgs e)
         {
 
             FrmNewMatch frmNewMatch = new FrmNewMatch();
-            this.Hide();
+
             frmNewMatch.ShowDialog();
             ListAllMatches();
-            this.Show();
+
         }
 
         private void ListAllMatchesWithoutPlayed()
@@ -117,12 +121,35 @@ namespace FormUI.Forms
         private void EditMatch(int matchId)
         {
             FrmMatchEdit frmMatchEdit = new FrmMatchEdit(matchId);
-            this.Hide();
+
             frmMatchEdit.ShowDialog();
             ListAllMatches();
-            this.Show();
+
+
 
         }
 
+        private void btnOpenTeams_Click(object sender, EventArgs e)
+        {
+            FrmTeams frmTeams = new FrmTeams();
+            frmTeams.ShowDialog();
+        }
+
+        private void btnOpenColors_Click(object sender, EventArgs e)
+        {
+            FrmNewColor frmNewColor = new FrmNewColor();
+            frmNewColor.ShowDialog();
+        }
+
+        private void btnOpenPlayers_Click(object sender, EventArgs e)
+        {
+            FrmNewPlayer frmNewPlayer = new FrmNewPlayer();
+            frmNewPlayer.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

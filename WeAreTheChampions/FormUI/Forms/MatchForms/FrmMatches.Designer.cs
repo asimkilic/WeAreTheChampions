@@ -42,8 +42,17 @@ namespace FormUI.Forms
             this.btnEditMatch = new System.Windows.Forms.Button();
             this.btnDeleteMatch = new System.Windows.Forms.Button();
             this.cbxHidePlayedMatches = new System.Windows.Forms.CheckBox();
+            this.panelMainBackground = new System.Windows.Forms.Panel();
             this.btnNewMatch = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOpenPlayers = new KLCToolbox.KLCControls.KLCButton();
+            this.btnOpenColors = new KLCToolbox.KLCControls.KLCButton();
+            this.btnOpenTeams = new KLCToolbox.KLCControls.KLCButton();
+            this.btnClose = new KLCToolbox.KLCControls.KLCButton();
+            this.lblWelcome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).BeginInit();
+            this.panelMainBackground.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvMatches
@@ -181,6 +190,20 @@ namespace FormUI.Forms
             this.cbxHidePlayedMatches.UseVisualStyleBackColor = true;
             this.cbxHidePlayedMatches.CheckedChanged += new System.EventHandler(this.cbxHidePlayedMatches_CheckedChanged);
             // 
+            // panelMainBackground
+            // 
+            this.panelMainBackground.Controls.Add(this.lblWelcome);
+            this.panelMainBackground.Controls.Add(this.cbxHidePlayedMatches);
+            this.panelMainBackground.Controls.Add(this.btnNewMatch);
+            this.panelMainBackground.Controls.Add(this.btnDeleteMatch);
+            this.panelMainBackground.Controls.Add(this.btnEditMatch);
+            this.panelMainBackground.Controls.Add(this.label1);
+            this.panelMainBackground.Controls.Add(this.dgvMatches);
+            this.panelMainBackground.Location = new System.Drawing.Point(-2, 77);
+            this.panelMainBackground.Name = "panelMainBackground";
+            this.panelMainBackground.Size = new System.Drawing.Size(807, 465);
+            this.panelMainBackground.TabIndex = 4;
+            // 
             // btnNewMatch
             // 
             this.btnNewMatch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(124)))), ((int)(((byte)(105)))));
@@ -197,26 +220,125 @@ namespace FormUI.Forms
             this.btnNewMatch.UseVisualStyleBackColor = false;
             this.btnNewMatch.Click += new System.EventHandler(this.btnNewMatch_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnOpenPlayers);
+            this.panel1.Controls.Add(this.btnClose);
+            this.panel1.Controls.Add(this.btnOpenColors);
+            this.panel1.Controls.Add(this.btnOpenTeams);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(825, 71);
+            this.panel1.TabIndex = 5;
+            // 
+            // btnOpenPlayers
+            // 
+            this.btnOpenPlayers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenPlayers.FlatAppearance.BorderSize = 0;
+            this.btnOpenPlayers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenPlayers.ForeColor = System.Drawing.Color.White;
+            this.btnOpenPlayers.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenPlayers.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenPlayers.KLCBorderRadius = 40;
+            this.btnOpenPlayers.KLCBorderSize = 0;
+            this.btnOpenPlayers.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenPlayers.Location = new System.Drawing.Point(402, 12);
+            this.btnOpenPlayers.Name = "btnOpenPlayers";
+            this.btnOpenPlayers.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenPlayers.TabIndex = 0;
+            this.btnOpenPlayers.Text = "OYUNCULAR";
+            this.btnOpenPlayers.UseVisualStyleBackColor = false;
+            this.btnOpenPlayers.Click += new System.EventHandler(this.btnOpenPlayers_Click);
+            // 
+            // btnOpenColors
+            // 
+            this.btnOpenColors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenColors.FlatAppearance.BorderSize = 0;
+            this.btnOpenColors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenColors.ForeColor = System.Drawing.Color.White;
+            this.btnOpenColors.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenColors.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenColors.KLCBorderRadius = 40;
+            this.btnOpenColors.KLCBorderSize = 0;
+            this.btnOpenColors.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenColors.Location = new System.Drawing.Point(215, 12);
+            this.btnOpenColors.Name = "btnOpenColors";
+            this.btnOpenColors.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenColors.TabIndex = 0;
+            this.btnOpenColors.Text = "RENKLER";
+            this.btnOpenColors.UseVisualStyleBackColor = false;
+            this.btnOpenColors.Click += new System.EventHandler(this.btnOpenColors_Click);
+            // 
+            // btnOpenTeams
+            // 
+            this.btnOpenTeams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenTeams.FlatAppearance.BorderSize = 0;
+            this.btnOpenTeams.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOpenTeams.ForeColor = System.Drawing.Color.White;
+            this.btnOpenTeams.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnOpenTeams.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnOpenTeams.KLCBorderRadius = 40;
+            this.btnOpenTeams.KLCBorderSize = 0;
+            this.btnOpenTeams.KLCTextColor = System.Drawing.Color.White;
+            this.btnOpenTeams.Location = new System.Drawing.Point(32, 12);
+            this.btnOpenTeams.Name = "btnOpenTeams";
+            this.btnOpenTeams.Size = new System.Drawing.Size(150, 40);
+            this.btnOpenTeams.TabIndex = 0;
+            this.btnOpenTeams.Text = "TAKIMLAR";
+            this.btnOpenTeams.UseVisualStyleBackColor = false;
+            this.btnOpenTeams.Click += new System.EventHandler(this.btnOpenTeams_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::FormUI.Properties.Resources.close;
+            this.btnClose.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.KLCBorderRadius = 40;
+            this.btnClose.KLCBorderSize = 0;
+            this.btnClose.KLCTextColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(765, 12);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = " ";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblWelcome.Location = new System.Drawing.Point(12, 12);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(46, 17);
+            this.lblWelcome.TabIndex = 4;
+            this.lblWelcome.Text = "label2";
+            // 
             // FrmMatches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbxHidePlayedMatches);
-            this.Controls.Add(this.btnNewMatch);
-            this.Controls.Add(this.btnDeleteMatch);
-            this.Controls.Add(this.btnEditMatch);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvMatches);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(825, 546);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMainBackground);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmMatches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "KARŞILAŞMALAR";
             this.Load += new System.EventHandler(this.FrmMatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMatches)).EndInit();
+            this.panelMainBackground.ResumeLayout(false);
+            this.panelMainBackground.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -233,5 +355,12 @@ namespace FormUI.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.CheckBox cbxHidePlayedMatches;
+        private System.Windows.Forms.Panel panelMainBackground;
+        private System.Windows.Forms.Panel panel1;
+        private KLCToolbox.KLCControls.KLCButton btnOpenPlayers;
+        private KLCToolbox.KLCControls.KLCButton btnOpenColors;
+        private KLCToolbox.KLCControls.KLCButton btnOpenTeams;
+        private System.Windows.Forms.Label lblWelcome;
+        private KLCToolbox.KLCControls.KLCButton btnClose;
     }
 }

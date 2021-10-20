@@ -42,14 +42,20 @@ namespace FormUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            lblWarning.Visible = false;
             var user = new UserForLoginDto { Email = txtEmail.Text, Password = txtPassword.Text };
             var result = _authService.Login(user);
             if (!result.Success)
             {
-                lblWarning.Enabled = true;
+                lblWarning.Visible = true;
                 lblWarning.Text = result.Message == null || result.Message != "" ? result.Message : "Hatalı giriş";
+                return;
             }
-            //TODO: success redirect another page
+            KLCCache.KLCCacheManager.SetNameSurname(result.Data);
+            FrmMatches frmMatches = new FrmMatches();
+            this.Hide();
+            frmMatches.ShowDialog();
+            Application.Exit();
 
 
         }

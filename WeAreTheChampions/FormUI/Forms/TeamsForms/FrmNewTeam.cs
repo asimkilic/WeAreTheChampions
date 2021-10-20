@@ -59,6 +59,7 @@ namespace FormUI.Forms.TeamsForms
         }
         private void FrmNewTeam_Load(object sender, EventArgs e)
         {
+            lblWelcome.Text = KLCCache.KLCCacheManager.NameSurname;
             panelNewTeam.BringToFront();
         }
 
@@ -301,6 +302,11 @@ namespace FormUI.Forms.TeamsForms
         #endregion
 
         private void btnFinish_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }

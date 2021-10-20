@@ -8,9 +8,10 @@ using System.Threading.Tasks;
 
 namespace Business.Abstract
 {
-    public interface ITeamService:IServiceBase<Team>,IEntityServiceBase<Team>
+    public interface ITeamService : IServiceBase<Team>, IEntityServiceBase<Team>
     {
         IDataResult<Team> GetTeamByName(string teamName);
-       
+        IResult DeleteTeamAndSetPlayerTeamsNull(int teamId);
+
     }
 }

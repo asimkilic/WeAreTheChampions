@@ -13,10 +13,12 @@ namespace Business.Concrete
     public class TeamManager : ITeamService
     {
         private ITeamDal _teamDal;
+        private IPlayerService _playerService;
 
-        public TeamManager(ITeamDal teamDal)
+        public TeamManager(ITeamDal teamDal, IPlayerService playerService)
         {
             _teamDal = teamDal;
+            _playerService = playerService;
         }
 
         public IResult Add(Team team)
@@ -35,6 +37,19 @@ namespace Business.Concrete
         public IResult DeleteById(int teamId)
         {
             return Delete(_teamDal.Get(t => t.Id == teamId));
+        }
+
+        public IResult DeleteTeamAndSetPlayerTeamsNull(int teamId)
+        {
+            var deletedPlayers = _playerService.GetPlayersByTeamId(teamId).Data;
+            foreach (var player in deletedPlayers)
+            {
+                player.TeamId = null;
+                player.Team = null;
+                _playerService.Update(player);
+            }
+            _teamDal.Delete(_teamDal.Get(x => x.Id == teamId));
+            return new SuccessResult();
         }
 
         public IDataResult<List<Team>> GetAll()

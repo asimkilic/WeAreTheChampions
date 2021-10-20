@@ -93,6 +93,9 @@ namespace FormUI.Forms.TeamsForms
             this.dgvAllPlayers = new System.Windows.Forms.DataGridView();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.btnClose = new KLCToolbox.KLCControls.KLCButton();
             this.panelNewTeam.SuspendLayout();
             this.panelColors.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTeamColors)).BeginInit();
@@ -100,6 +103,7 @@ namespace FormUI.Forms.TeamsForms
             this.panelPlayers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTeamName
@@ -137,7 +141,7 @@ namespace FormUI.Forms.TeamsForms
             this.lblCreateTeam.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCreateTeam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblCreateTeam.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblCreateTeam.Location = new System.Drawing.Point(101, 18);
+            this.lblCreateTeam.Location = new System.Drawing.Point(101, 92);
             this.lblCreateTeam.Name = "lblCreateTeam";
             this.lblCreateTeam.Size = new System.Drawing.Size(200, 45);
             this.lblCreateTeam.TabIndex = 0;
@@ -149,7 +153,7 @@ namespace FormUI.Forms.TeamsForms
             this.lblColors.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblColors.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblColors.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblColors.Location = new System.Drawing.Point(301, 18);
+            this.lblColors.Location = new System.Drawing.Point(301, 92);
             this.lblColors.Name = "lblColors";
             this.lblColors.Size = new System.Drawing.Size(200, 45);
             this.lblColors.TabIndex = 0;
@@ -161,7 +165,7 @@ namespace FormUI.Forms.TeamsForms
             this.lblPlayers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPlayers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblPlayers.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblPlayers.Location = new System.Drawing.Point(501, 18);
+            this.lblPlayers.Location = new System.Drawing.Point(501, 92);
             this.lblPlayers.Name = "lblPlayers";
             this.lblPlayers.Size = new System.Drawing.Size(200, 45);
             this.lblPlayers.TabIndex = 0;
@@ -189,7 +193,7 @@ namespace FormUI.Forms.TeamsForms
             this.panelNewTeam.Controls.Add(this.lblTeamName);
             this.panelNewTeam.Controls.Add(this.txtTeamName);
             this.panelNewTeam.Controls.Add(this.panelUnderline);
-            this.panelNewTeam.Location = new System.Drawing.Point(34, 92);
+            this.panelNewTeam.Location = new System.Drawing.Point(34, 166);
             this.panelNewTeam.Name = "panelNewTeam";
             this.panelNewTeam.Size = new System.Drawing.Size(854, 477);
             this.panelNewTeam.TabIndex = 5;
@@ -225,7 +229,7 @@ namespace FormUI.Forms.TeamsForms
             this.panelColors.Controls.Add(this.lblBlue);
             this.panelColors.Controls.Add(this.lblGreen);
             this.panelColors.Controls.Add(this.labelRed);
-            this.panelColors.Location = new System.Drawing.Point(34, 92);
+            this.panelColors.Location = new System.Drawing.Point(34, 166);
             this.panelColors.Name = "panelColors";
             this.panelColors.Size = new System.Drawing.Size(854, 474);
             this.panelColors.TabIndex = 5;
@@ -558,7 +562,7 @@ namespace FormUI.Forms.TeamsForms
             this.lblToolTipColors.AutoSize = true;
             this.lblToolTipColors.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lblToolTipColors.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblToolTipColors.Location = new System.Drawing.Point(49, 572);
+            this.lblToolTipColors.Location = new System.Drawing.Point(49, 646);
             this.lblToolTipColors.Name = "lblToolTipColors";
             this.lblToolTipColors.Size = new System.Drawing.Size(801, 17);
             this.lblToolTipColors.TabIndex = 12;
@@ -578,7 +582,7 @@ namespace FormUI.Forms.TeamsForms
             this.panelPlayers.Controls.Add(this.dgvPlayersOnTeam);
             this.panelPlayers.Controls.Add(this.label4);
             this.panelPlayers.Controls.Add(this.dgvAllPlayers);
-            this.panelPlayers.Location = new System.Drawing.Point(35, 79);
+            this.panelPlayers.Location = new System.Drawing.Point(35, 153);
             this.panelPlayers.Name = "panelPlayers";
             this.panelPlayers.Size = new System.Drawing.Size(853, 490);
             this.panelPlayers.TabIndex = 13;
@@ -685,6 +689,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPlayersOnTeam.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvPlayersOnTeam.EnableHeadersVisualStyles = false;
             this.dgvPlayersOnTeam.Location = new System.Drawing.Point(616, 34);
             this.dgvPlayersOnTeam.MultiSelect = false;
             this.dgvPlayersOnTeam.Name = "dgvPlayersOnTeam";
@@ -747,6 +752,7 @@ namespace FormUI.Forms.TeamsForms
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvAllPlayers.DefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvAllPlayers.EnableHeadersVisualStyles = false;
             this.dgvAllPlayers.Location = new System.Drawing.Point(30, 34);
             this.dgvAllPlayers.MultiSelect = false;
             this.dgvAllPlayers.Name = "dgvAllPlayers";
@@ -779,12 +785,55 @@ namespace FormUI.Forms.TeamsForms
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel5.Controls.Add(this.lblWelcome);
+            this.panel5.Controls.Add(this.btnClose);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1008, 47);
+            this.panel5.TabIndex = 14;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblWelcome.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblWelcome.Location = new System.Drawing.Point(13, 13);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(0, 17);
+            this.lblWelcome.TabIndex = 1;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Image = global::FormUI.Properties.Resources.close;
+            this.btnClose.KLCBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(68)))), ((int)(((byte)(96)))));
+            this.btnClose.KLCBorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnClose.KLCBorderRadius = 40;
+            this.btnClose.KLCBorderSize = 0;
+            this.btnClose.KLCTextColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(951, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 40);
+            this.btnClose.TabIndex = 0;
+            this.btnClose.Text = " ";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmNewTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(976, 608);
+            this.ClientSize = new System.Drawing.Size(1008, 692);
+            this.ControlBox = false;
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panelPlayers);
             this.Controls.Add(this.panelColors);
             this.Controls.Add(this.lblToolTipColors);
@@ -793,6 +842,7 @@ namespace FormUI.Forms.TeamsForms
             this.Controls.Add(this.lblColors);
             this.Controls.Add(this.lblCreateTeam);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmNewTeam";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -808,6 +858,8 @@ namespace FormUI.Forms.TeamsForms
             this.panelPlayers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayersOnTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPlayers)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -866,5 +918,8 @@ namespace FormUI.Forms.TeamsForms
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnFinish;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblWelcome;
+        private KLCToolbox.KLCControls.KLCButton btnClose;
     }
 }

@@ -97,5 +97,15 @@ namespace Business.Concrete
             }
             return new SuccessResult();
         }
+
+        public IResult DeleteByColorId(int colorId)
+        {
+            var deletedItems = _teamColorDal.GetAll(x => x.ColorId == colorId);
+            foreach (var color in deletedItems)
+            {
+                _teamColorDal.Delete(color);
+            }
+            return new SuccessResult();
+        }
     }
 }
